@@ -1,6 +1,6 @@
 # Codex Personal Capabilities
 
-个人 Codex 技能与插件的私人 Git 仓库。版本：`v1.0.1`（2026-11-13）。
+个人 Codex 技能与插件的私人 Git 仓库。版本：`v1.1.0`（2026-11-13）。
 
 包含 8 个个人工具/光学插件，以及 `personal-skills`、`dingtalk-skills` 两个技能集合。保留技能来源声明与上游许可证，不代表这些第三方技能均由仓库所有者编写。OpenAI 内置、官方商店下载包不复制；新电脑从官方插件目录重新安装。
 
@@ -12,8 +12,8 @@
 gh auth login
 gh repo clone dengdenghua/codex-personal-capabilities
 cd codex-personal-capabilities
-git checkout v1.0.1
-python scripts/install.py
+git checkout v1.1.0
+./Install.ps1
 ```
 
 安装后开一个新的 Codex 对话。也可只装部分包：
@@ -28,7 +28,7 @@ python scripts/install.py --plugins personal-skills projection-optics lens-toolk
 
 ```powershell
 git fetch origin --tags
-git checkout v1.0.1
+git checkout v1.1.0
 python scripts/install.py
 ```
 
@@ -36,7 +36,7 @@ python scripts/install.py
 
 ## 本地软件依赖
 
-技能与插件可直接安装；CAD 软件、许可证、Python/Node 运行环境和私人资料库不随仓库传输。工具插件需要在新电脑配置一次运行环境，见 [RUNTIMES.md](RUNTIMES.md)。安装成功不是原生 CAD 建模或仿真验收通过。
+安装器自动创建六种 MCP 隔离运行环境并检查服务。商业软件、许可证、私人资料库由你配置，Blender 附加组件首次需要启用，详见 [RUNTIMES.md](RUNTIMES.md)。安装成功不是原生 CAD 建模或仿真验收通过。
 
 ## 隐私和内容边界
 

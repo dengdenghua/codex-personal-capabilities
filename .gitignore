@@ -19,3 +19,4 @@ node_modules/
 private/
 output/
 artifacts/
+plugins/blender-control/server/mcp/build/

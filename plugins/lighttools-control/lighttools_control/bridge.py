@@ -622,7 +622,7 @@ class Jobs:
 
         self.jobs = {}
 
-        self.log = Path(__file__).resolve().parents[1] / "logs" / "jobs.jsonl"
+        self.log = Path(os.environ.get('PERSONAL_MCP_DATA', Path.home()/'.codex/personal-mcp-data')) / 'lighttools' / 'logs' / 'jobs.jsonl'
 
 
 
@@ -1026,7 +1026,7 @@ class Jobs:
 
         # current state before either command; a failed SaveAs stops replacement.
 
-        folder = Path(__file__).resolve().parents[1] / "recovery"
+        folder = Path(os.environ.get('PERSONAL_MCP_DATA', Path.home()/'.codex/personal-mcp-data')) / 'lighttools' / 'recovery'
 
         # Never prune unclassified prior models before a new backup has succeeded.
 

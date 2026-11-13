@@ -1,6 +1,6 @@
 {
   "name": "rea-control",
-  "version": "0.2.0+portable.20261113",
+  "version": "1.1.0",
   "description": "Local REA 6.8.0 software reverse engineering MCP and matching investigation skills.",
   "author": {
     "name": "Personal"

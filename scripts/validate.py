@@ -4,15 +4,21 @@ import json
 from pathlib import Path
 import re
 import sys
+import os
 
 ROOT=Path(__file__).resolve().parents[1]
 SECRET=re.compile(r'(?<![\w-])(?:gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{25,}|sk-[A-Za-z0-9_-]{30,}|AKIA[A-Z0-9]{16})|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
 FORBIDDEN={'.env','auth.json','credentials.json','personal-runtime.json','config.toml'}
 SUFFIX={'.sqlite','.sqlite3','.db','.jsonl','.log','.pem','.key','.pfx','.pyc','.zmx','.zos','.sldprt','.sldasm','.blend','.drwdot','.slddrt'}
 
+def files(root):
+    for base,dirs,names in os.walk(root):
+        dirs[:]=[d for d in dirs if d not in ['.git','__pycache__'] and Path(base,d).relative_to(root).as_posix()!='plugins/blender-control/server/mcp/build']
+        for name in names:yield Path(base,name)
+
 def problems(root=ROOT):
     errors=[]
-    for f in root.rglob('*'):
+    for f in files(root):
         rel=f.relative_to(root)
         if '.git' in rel.parts or '__pycache__' in rel.parts:continue
         if f.is_symlink():errors.append(str(rel)+': symlink');continue
@@ -42,7 +48,7 @@ def main():
     lock=ROOT/'files.sha256.json'
     if lock.exists():
         expected=json.loads(lock.read_text(encoding='utf8'))
-        current={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts and p!=lock}
+        current={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files(ROOT) if p.is_file() and p!=lock}
         if expected!=current:errors.append('file integrity manifest mismatch: refresh intentionally before committing')
     if errors:
         print('\n'.join(errors),file=sys.stderr);return 1

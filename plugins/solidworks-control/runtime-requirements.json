@@ -3,5 +3,6 @@
   "servers": [
     "solidworks_local"
   ],
-  "setup": "Configure ~/.codex/personal-runtime.json locally. No credentials are included."
+  "setup": "Run Install.ps1 or python scripts/install.py. Six native MCP runtimes are installed in isolated versioned directories; commercial applications/licenses remain local prerequisites.",
+  "portable_release": "1.1.0"
 }

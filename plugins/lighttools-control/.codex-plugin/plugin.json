@@ -1,6 +1,6 @@
 {
   "name": "lighttools-control",
-  "version": "0.2.1+portable.20261113",
+  "version": "1.1.0",
   "description": "Control local LightTools through official LTAPI4 COM, with optical modeling skills and MCP tools.",
   "author": {
     "name": "Personal"

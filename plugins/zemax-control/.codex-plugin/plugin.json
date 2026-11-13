@@ -1,6 +1,6 @@
 {
   "name": "zemax-control",
-  "version": "0.1.1+portable.20261113",
+  "version": "1.1.0",
   "description": "Control local Zemax OpticStudio through ZOS-API with optical design skills and MCP tools.",
   "author": {
     "name": "Local developer"
