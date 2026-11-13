@@ -1,0 +1,7 @@
+{
+  "source_version": "0.1.0",
+  "servers": [
+    "kicad"
+  ],
+  "setup": "Configure ~/.codex/personal-runtime.json locally. No credentials are included."
+}

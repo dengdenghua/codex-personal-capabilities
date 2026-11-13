@@ -1,0 +1,7 @@
+{
+  "source_version": "0.1.0",
+  "servers": [
+    "blender_official"
+  ],
+  "setup": "Configure ~/.codex/personal-runtime.json locally. No credentials are included."
+}

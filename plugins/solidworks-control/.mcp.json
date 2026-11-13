@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "solidworks_local": {
+      "command": "python",
+      "args": [
+        "${PLUGIN_ROOT}/scripts/launch_mcp.py",
+        "solidworks_local"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "blender_official": {
+      "command": "python",
+      "args": [
+        "${PLUGIN_ROOT}/scripts/launch_mcp.py",
+        "blender_official"
+      ]
+    }
+  }
+}

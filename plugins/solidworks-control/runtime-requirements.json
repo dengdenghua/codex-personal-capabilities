@@ -1,0 +1,7 @@
+{
+  "source_version": "0.2.0+codex.20260921125028",
+  "servers": [
+    "solidworks_local"
+  ],
+  "setup": "Configure ~/.codex/personal-runtime.json locally. No credentials are included."
+}

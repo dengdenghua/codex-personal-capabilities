@@ -1,0 +1,7 @@
+{
+  "source_version": "0.1.1",
+  "servers": [
+    "zemax"
+  ],
+  "setup": "Configure ~/.codex/personal-runtime.json locally. No credentials are included."
+}

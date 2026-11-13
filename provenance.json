@@ -1,0 +1,3158 @@
+{
+  "date": "2026-11-13",
+  "policy": "Local personal plugin cache and user skill folders; no OpenAI bundled plugins, credentials or project archives. Source hashes refer to pre-portability source files, not final bytes.",
+  "files": [
+    {
+      "file": "plugins/blender-control/.codex-plugin/plugin.json",
+      "source_sha256": "28c50216674e78eda7236596ef330471a1ca0e9ff0c3b7313045c995bccd7396"
+    },
+    {
+      "file": "plugins/blender-control/skills/blender-control/references/sleep-review-index.md",
+      "source_sha256": "a7a5c540cb46d6ef71e3bbf1f6d246e8bf44da072113100b7c50e2a47cf4d871"
+    },
+    {
+      "file": "plugins/blender-control/skills/blender-control/references/structural-review-index.md",
+      "source_sha256": "6ec7d19b4365bd4ab0e29d3839e5d87effa17aa5cc41cf29cfca4192065dac93"
+    },
+    {
+      "file": "plugins/blender-control/skills/blender-control/SKILL.md",
+      "source_sha256": "a689f7f49f1924233ea9f499e6412571308a6c14b0ada89debbe884872ebd04f"
+    },
+    {
+      "file": "plugins/blender-control/skills/internal-stack-safety/agents/openai.yaml",
+      "source_sha256": "4d67fc4c171be5fa1ca5d04850b76401357702fddefa22071330b2c7e0c96631"
+    },
+    {
+      "file": "plugins/blender-control/skills/internal-stack-safety/assets/review-template.md",
+      "source_sha256": "d1b075e34236832973c54ef1493a172015268f7e3f3305b44a9fbbd3072f54a1"
+    },
+    {
+      "file": "plugins/blender-control/skills/internal-stack-safety/references/checklist.md",
+      "source_sha256": "9ca03176ac1d9318403c6e258d5bce0405c0bb94a21b6ae8bd0bb740ff4dd6d0"
+    },
+    {
+      "file": "plugins/blender-control/skills/internal-stack-safety/references/model-review.md",
+      "source_sha256": "a5090188181efc91495919905e9b562d8da68451261bba5d1c106700f07838e4"
+    },
+    {
+      "file": "plugins/blender-control/skills/internal-stack-safety/references/sleep-system.md",
+      "source_sha256": "76864008f4a46fbac08555f16f5055405224dc682a830c2993914c33a75d1ac2"
+    },
+    {
+      "file": "plugins/blender-control/skills/internal-stack-safety/references/standards.md",
+      "source_sha256": "4f8433316914702739b6ec293bf832ed520094d64626e97cf7bd7767821f12a2"
+    },
+    {
+      "file": "plugins/blender-control/skills/internal-stack-safety/SKILL.md",
+      "source_sha256": "e548ce44ee14c5725713513e3412c084767f9bcabef59bcbc4f3dcc795363d5f"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-assembly-service-review/agents/openai.yaml",
+      "source_sha256": "6b7d1b3974e9cafe766e2c863319f70a3605735ad4961f04c15316e76612d789"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-assembly-service-review/references/basis.md",
+      "source_sha256": "67ac4df69bb57abbce5e01b204227e3e2a0893c616ad7e11c2d26e8f11c929c7"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-assembly-service-review/references/checklist.md",
+      "source_sha256": "43d41d6a0f3509088ba1bb1a3338f031ee26d8c4bf4ef85d2cfe9ad2c9792a59"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-assembly-service-review/SKILL.md",
+      "source_sha256": "169929051e1484d22aeae746d67b4270a04e54ddd2881231acd6fef8339272f4"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-dfm-review/agents/openai.yaml",
+      "source_sha256": "3bbdbbebaf4fd761091eda63cf75d625dee58609a93f01319dfa3b55905e6423"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-dfm-review/references/basis.md",
+      "source_sha256": "870eb2bdaeff7ee0fe1289db6d1aa39bfb0e8374ce93bf7325c02ea2f83960c8"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-dfm-review/references/checklist.md",
+      "source_sha256": "e9ca5c39a43333d18c0594ffd22d73013b75346c37de4c90abe058ad543f3105"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-dfm-review/SKILL.md",
+      "source_sha256": "d10543f38d8f6b0a935a8199296d14d670b21fa4c93103291f700ce06f6b34e1"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-stack-review/agents/openai.yaml",
+      "source_sha256": "992b1b8d9c84241ad52b6913a6bcc31ceceb398fd98d80ff7ff9a3d8f1f7af1a"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-stack-review/references/basis.md",
+      "source_sha256": "49010a4874e3303dc39bba4e9bf4fe07b883e5384fd06ed8ad43b7b6950e969d"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-stack-review/references/change-verification.md",
+      "source_sha256": "31d6bef834895f8289eb6c7693f4bfb4d57549fcb1fd367188c1807157ccff8a"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-stack-review/references/checklist.md",
+      "source_sha256": "d17384c106f46af7b24b1f66e82208a6dae24b541294b5af5d67b12dcbe9a641"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-stack-review/SKILL.md",
+      "source_sha256": "b2b6fa6f6c1711003c90e9a08b2542c941591344170516f22279f803008bbd76"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-thermal-airflow-review/agents/openai.yaml",
+      "source_sha256": "f71c2d2693ae224bb0ee3ee0036288da902fbb43b556494f5fe055ff7b65500d"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-thermal-airflow-review/references/basis.md",
+      "source_sha256": "9a448cf941d59d791a4ce8b792cdae976993f85f9e7244ec4d8f13c76c81e4a8"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-thermal-airflow-review/references/checklist.md",
+      "source_sha256": "80acb0fa74f8d03d5a3faa50b1ce51caced31267696b8db48299ced1e79ecb00"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-thermal-airflow-review/references/sleep-system.md",
+      "source_sha256": "8b0d68b0d95e7dd697cb85232ad5a1e12ff7d305537921f2e48e5872939e29e7"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-thermal-airflow-review/SKILL.md",
+      "source_sha256": "f4f6af99dad9bb014f59d47897927228943f843547edb5ec7e9540f922d1f752"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-tolerance-review/agents/openai.yaml",
+      "source_sha256": "6deb1fad716a76b5f5ee8765ebd6fa8fbc952b8cce02bd16ba1fc076fe0d3472"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-tolerance-review/references/basis.md",
+      "source_sha256": "78b36dd789c289c36514f2aba0ebf742c95ad0619611a32f54edd4772d424b10"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-tolerance-review/references/checklist.md",
+      "source_sha256": "753038edf331bc09233232ac3a9d18d63363819947b318a605d8e0f63fceb41c"
+    },
+    {
+      "file": "plugins/blender-control/skills/mechanical-tolerance-review/SKILL.md",
+      "source_sha256": "93da1c6f25bf5ea931b12f6f1f7e7a7c0010f28c528aead9a141bfa35a3ee5b5"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-acoustic-vibration-review/agents/openai.yaml",
+      "source_sha256": "764a5a08a55b3db4eb37b88acce278bca317fc0337ab17445e6ef3408e3c3d78"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-acoustic-vibration-review/references/basis.md",
+      "source_sha256": "101bda0c281bb875801cf3004693228c82ec5b5cd2e7a5839cfe3371c4ce5a65"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-acoustic-vibration-review/references/checklist.md",
+      "source_sha256": "c93dbbe75a252313384b592a40723fd936f11a10c272bc7ebd8b0261667a6b9d"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-acoustic-vibration-review/SKILL.md",
+      "source_sha256": "7caf5fe117ab597fd7eb6272c063e2fef2b1f4328da4f05bacf246795b53accf"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-condensation-review/agents/openai.yaml",
+      "source_sha256": "d8c2143f4f06cdb398e3c9c9614169c2b073ad0b1aaa9736b0e28eff53cee966"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-condensation-review/references/basis.md",
+      "source_sha256": "1fd0402aab7ec4fad756dec2742120278dda75e5ec6036273d75e377be57f64b"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-condensation-review/references/checklist.md",
+      "source_sha256": "c166a86c2fe0a1e45b14d869186b83206d1d10157477ad1dab6fab36366433e6"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-condensation-review/references/verification-plan.md",
+      "source_sha256": "a9cdb2ad5bec1a3eeac88268c028f58dfacc81cb2bbe8c7194c4552a9dd7de5a"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-condensation-review/SKILL.md",
+      "source_sha256": "5ec8288cc9343176943e70af1f5c85e1be21eda257e5f3b5eef9bf007db104d9"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-contact-sensing-review/agents/openai.yaml",
+      "source_sha256": "92ff4c3320139901d5e2b1b83b834e5cdffda0e5a7fa35a1c8cb2a980302f431"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-contact-sensing-review/references/basis.md",
+      "source_sha256": "b7b263aa3ceb33859ee60540e0222e12500a5721e01c9e1df60273e002f11634"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-contact-sensing-review/references/checklist.md",
+      "source_sha256": "d83279a93189c77c2b27d4e6a561e8b951782664758ce3b6f2d590f1d90fea48"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-contact-sensing-review/SKILL.md",
+      "source_sha256": "152e45ffd69c849ec05bcbca83d3000361a3b540b3c803359d92b1f0eeee8bca"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-fill-prime-service-review/agents/openai.yaml",
+      "source_sha256": "3e46eebcffbde947ef60bb105601f2fc4d7c57fd1b9988bab4ece23f7c7d50ab"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-fill-prime-service-review/references/basis.md",
+      "source_sha256": "afc9fa19ec830d28bf2eaa3ca72125260b89880968aaded3eff618e8024b6a73"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-fill-prime-service-review/references/checklist.md",
+      "source_sha256": "e17e50da95d4968f9a29832bd6c8478f493d600af87e1250f2a2575e71bdef5e"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-fill-prime-service-review/SKILL.md",
+      "source_sha256": "e3016fed2f96df4cf651df9442cf15ac474a5ac2fd35f2f063dad66233b80f59"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-flexible-waterpad-review/agents/openai.yaml",
+      "source_sha256": "15e9374201fea3d0bb0688b25441d097b4e10cbc5473c836236f9cdc1784eb02"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-flexible-waterpad-review/references/basis.md",
+      "source_sha256": "37ed52f1d7d253a50133d14196089c29cccc34a75785a0b3749e26ef10fce1b9"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-flexible-waterpad-review/references/checklist.md",
+      "source_sha256": "afca0fb79049a64a2b692f22604e713aa9e53e22ab908e0b451923691a92313e"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-flexible-waterpad-review/references/verification-plan.md",
+      "source_sha256": "9cdde061c1500acd6c2887b9d0161b79f005eab1d1cff7e862bbd493cf062d6d"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-flexible-waterpad-review/SKILL.md",
+      "source_sha256": "cb2727ca0dc3f207a2b68e500ad53b9e5a9ba4ab786373bdbed0b8b81ab44b14"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-fluid-hygiene-review/agents/openai.yaml",
+      "source_sha256": "ea900ec8089691cbde53a80cbd2976cd1fdf556817edf0b44c4e68a512d44f80"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-fluid-hygiene-review/references/basis.md",
+      "source_sha256": "68842043509c1578f8913e2aff2dfd5195effc9bb9377979572c687cdf9b0cb4"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-fluid-hygiene-review/references/checklist.md",
+      "source_sha256": "7a538d7cf4abeca1be27f6fe8f1e64ffcf416792e81dcf44aafef66517fee55c"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-fluid-hygiene-review/SKILL.md",
+      "source_sha256": "dae5986e174fd5d131c8a7a1199f75bcb77681fa2b491663cb8fa9e06690df31"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-hydraulic-leak-review/agents/openai.yaml",
+      "source_sha256": "23427772a3d00412b7813c084b32f1ee44ac86583a522b089919d2e3bb92eedd"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-hydraulic-leak-review/references/basis.md",
+      "source_sha256": "feee30aa83ee600e165be4f9fd46156a3a2db0f313cecd4989799345576e4134"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-hydraulic-leak-review/references/checklist.md",
+      "source_sha256": "845ce6837093c3639bfda2354b812a57abaa24202541a8f2eef671b04b1f8a7e"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-hydraulic-leak-review/references/verification-plan.md",
+      "source_sha256": "da15d7d5a2e5185c10371231dc71c4eac0e73ac3c46a11fb54738906a45cfc1c"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-hydraulic-leak-review/SKILL.md",
+      "source_sha256": "9b20747e2ea500d8072c5e49b47e387a9655a3b5b2e8fed51bc88545e10399d3"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-structural-review/agents/openai.yaml",
+      "source_sha256": "6f6d99fd211a519df0344db449cde804b5b95f03d99e05816f955aaa1913582d"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-structural-review/assets/review-report-template.md",
+      "source_sha256": "c6b07792c4e7a6c9bf35727f696424c24d765a7468ee8ab9e5d3f20c9c0bb0ad"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-structural-review/references/risk-and-closure.md",
+      "source_sha256": "327827cc12c75bb08897c40c654f5f53555a3bf9aeae102835dbf04620172be7"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-structural-review/references/stage-routing.md",
+      "source_sha256": "366bd6edfd22b8bcd9e86073bafffb9ea66f2ef300d334697162ccb2ef4f95e0"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-structural-review/SKILL.md",
+      "source_sha256": "4dfc52ef3e0a050e0762b91b73d5e4c982e0b325dae2f84edb3512e56226643c"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-temperature-fault-review/agents/openai.yaml",
+      "source_sha256": "20b7f6065419444cf6716917068c626380a598a9375575e26f7a8dcdab6d029c"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-temperature-fault-review/references/basis.md",
+      "source_sha256": "062215f317b4890aef90d665bad115f351c8abc98f77983b66b196fd8c979744"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-temperature-fault-review/references/checklist.md",
+      "source_sha256": "1b069e1f800e1a91700beb257f889b5c775782877174ecc6a501e3c65072dbd9"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-temperature-fault-review/references/verification-plan.md",
+      "source_sha256": "569752ddf98a0bae8f2b90ec6adbd5d95800e2861c9f6cddf20e520c17bfe04e"
+    },
+    {
+      "file": "plugins/blender-control/skills/sleep-temperature-fault-review/SKILL.md",
+      "source_sha256": "b64f0e4458c42eb8b869e6c0a282982d19579e9b950ea2f4c814b1e47e7979f5"
+    },
+    {
+      "file": "plugins/kicad-control/.codex-plugin/plugin.json",
+      "source_sha256": "8ddb7b51f4a4846f099a6f01ee6c640f9f823c236c896f56995c06a2dbc06d57"
+    },
+    {
+      "file": "plugins/kicad-control/skills/kicad-control/SKILL.md",
+      "source_sha256": "453ad784e5e06d176f8b5cca49123422539747d9af0e4366f401f3ba59760c1d"
+    },
+    {
+      "file": "plugins/lens-toolkit/.codex-plugin/plugin.json",
+      "source_sha256": "74561d091f60fb9b9a50da031ecb1e42d03e3b1eb8f2d41bc1de4d50b7381a35"
+    },
+    {
+      "file": "plugins/lens-toolkit/plugin.json",
+      "source_sha256": "6de229c66b780a9f9a1f10d4fdc50928354957d1d33c761a3ab87cbb805a795f"
+    },
+    {
+      "file": "plugins/lens-toolkit/README.md",
+      "source_sha256": "a5626294a1619dd9ed97f24d7b57ce0b0a0404de5778107cb33368c9de9313e6"
+    },
+    {
+      "file": "plugins/lens-toolkit/skills/lens-evidence-search/agents/openai.yaml",
+      "source_sha256": "c0e198460c91b891ca88d766311b6506a06b2d325160a331c15ad5e3a919c233"
+    },
+    {
+      "file": "plugins/lens-toolkit/skills/lens-evidence-search/references/schema.md",
+      "source_sha256": "c6e12c91a155780d52801d9b837dd7ead8db34143dab5f0de3ce083f18122a70"
+    },
+    {
+      "file": "plugins/lens-toolkit/skills/lens-evidence-search/scripts/library.py",
+      "source_sha256": "36f29c5a598033fed868ed70659697e8a201d6cbe18f88b6e769876542b1f40c"
+    },
+    {
+      "file": "plugins/lens-toolkit/skills/lens-evidence-search/SKILL.md",
+      "source_sha256": "3553c6cef332396a1ef70db4badda21fb7f4e74ebb4a04a28574413ad2bc542e"
+    },
+    {
+      "file": "plugins/lens-toolkit/skills/lens-patent-research/agents/openai.yaml",
+      "source_sha256": "ed5eef11cc4cbc9a657f2326d9e36c926636ce5c343de9c911ed9b9d9f358cab"
+    },
+    {
+      "file": "plugins/lens-toolkit/skills/lens-patent-research/SKILL.md",
+      "source_sha256": "e96084f0f705cf19531374b63754b8a28ef71178495fa859c4c84de85ff3b0a8"
+    },
+    {
+      "file": "plugins/lens-toolkit/skills/lens-prescription-reuse/agents/openai.yaml",
+      "source_sha256": "ed51387e05ab2aa62575cd37378387ba7b4805dcfce331e322ad798649945c1a"
+    },
+    {
+      "file": "plugins/lens-toolkit/skills/lens-prescription-reuse/SKILL.md",
+      "source_sha256": "6de5a9ffa98b1cdd675f44a3033e10491d6b53988617c56a9a0e917f98cfa0dd"
+    },
+    {
+      "file": "plugins/lighttools-control/.codex-plugin/plugin.json",
+      "source_sha256": "d2291d99d5dab81668b1e399429fdeec5cffb8bf6c50ab091a840c477a6ef509"
+    },
+    {
+      "file": "plugins/lighttools-control/lighttools_control/__init__.py",
+      "source_sha256": "3245b6047ff46d4a3c71bed3972c45146580f31fc5da4289e0088c45341a45bf"
+    },
+    {
+      "file": "plugins/lighttools-control/lighttools_control/bridge.py",
+      "source_sha256": "43c670f7c564fc1dfb516f4d59ce697e754d4cdec36a33bff3a0dddc756104f2"
+    },
+    {
+      "file": "plugins/lighttools-control/lighttools_control/docs.py",
+      "source_sha256": "22c8ce16f7f915a88335097bb164fc9eed921d90da1b1acefad182413d154e74"
+    },
+    {
+      "file": "plugins/lighttools-control/lighttools_control/server.py",
+      "source_sha256": "34649ccb25b454b4c20da99210ec76c9a4a918fcace25ce1e917b1751b1e6f98"
+    },
+    {
+      "file": "plugins/lighttools-control/lighttools_control/verification.py",
+      "source_sha256": "c8209f82f119c4677da2950e40c048b0d3ee112233f27019a919b73baa4bb607"
+    },
+    {
+      "file": "plugins/lighttools-control/lighttools_control/workflow.py",
+      "source_sha256": "73627987f26ac2874410a729970f54d88cf38ea8efca5080da01eb0d868facf5"
+    },
+    {
+      "file": "plugins/lighttools-control/pyproject.toml",
+      "source_sha256": "059e69dc69d0794af7d6bfa4149d5cf9f66fdfcb11c0dfe8c6cb339bb78937c6"
+    },
+    {
+      "file": "plugins/lighttools-control/README.md",
+      "source_sha256": "e2c8784e585c2a55efab3fa47e5aa18fd3156853e22d9a98f0a85d334b39fdb5"
+    },
+    {
+      "file": "plugins/lighttools-control/requirements.lock",
+      "source_sha256": "a690dae3d523880110e22fdd733061de881b3275e5e245786b9aed38309510e6"
+    },
+    {
+      "file": "plugins/lighttools-control/run_server.py",
+      "source_sha256": "a8c934ce797ba36ddc9ae1044160f8160822afa08e369867e26d22423a9f38ec"
+    },
+    {
+      "file": "plugins/lighttools-control/skills/lighttools-control/agents/openai.yaml",
+      "source_sha256": "19ed126d997287ec94c38d57a740d8cdb7859509b9cc494b10208d40140029aa"
+    },
+    {
+      "file": "plugins/lighttools-control/skills/lighttools-control/references/api.md",
+      "source_sha256": "1d5a4d73bab1cc4dcb8bb50eaf8956dcd71f16a4474e6b94a69b250fe2fe87d9"
+    },
+    {
+      "file": "plugins/lighttools-control/skills/lighttools-control/references/bounded-receivers.md",
+      "source_sha256": "e238760563c5e15df3ce1c4651c97a8f01709ad2dc48a4b3af83e39da7a16aa2"
+    },
+    {
+      "file": "plugins/lighttools-control/skills/lighttools-control/references/verified-model-edits.md",
+      "source_sha256": "012497645e01ff800e3423559a5408b2c4700cd239ff78cb6dd8fbee1a6bbb24"
+    },
+    {
+      "file": "plugins/lighttools-control/skills/lighttools-control/SKILL.md",
+      "source_sha256": "181c848960f7288978b9926733d75baccb384a562d88eb125a520c82f7e86ca7"
+    },
+    {
+      "file": "plugins/projection-optics/.codex-plugin/plugin.json",
+      "source_sha256": "acb896be32f1dc57e7f32088e48d61fe12e2aeaebe2494812e723966d227c510"
+    },
+    {
+      "file": "plugins/projection-optics/plugin.json",
+      "source_sha256": "0b49662e38a1a5c22029ad0fbf7a111517f66bdb76de0a3ad8b16e3ad6d09229"
+    },
+    {
+      "file": "plugins/projection-optics/README.md",
+      "source_sha256": "984c72881052074d730cfc3fa828d6a4c5eb32294ad13c82d6934afcede01715"
+    },
+    {
+      "file": "plugins/projection-optics/skills/collector-lens-design/agents/openai.yaml",
+      "source_sha256": "6d6d15ccc1c4c67a0a5965a5e2289f1af9f157ccbabb6b3b2a054607f19a36a3"
+    },
+    {
+      "file": "plugins/projection-optics/skills/collector-lens-design/references/acceptance.md",
+      "source_sha256": "4f4c1ccd4175d55f6c1fd57b1e34f1aace06c1edda74ec82713c8165cba1a9ef"
+    },
+    {
+      "file": "plugins/projection-optics/skills/collector-lens-design/references/configuration-and-materials.md",
+      "source_sha256": "7e6aa158664791be8170698d83fb7061d4c280b803e170ce11ca4330defd583e"
+    },
+    {
+      "file": "plugins/projection-optics/skills/collector-lens-design/references/focal-check.md",
+      "source_sha256": "5e13bc916c6463a8d8c10b5d27872ec8800054ac4ac962a9a9e69ce3cebeae5d"
+    },
+    {
+      "file": "plugins/projection-optics/skills/collector-lens-design/references/surface-coatings-and-transport.md",
+      "source_sha256": "02b2412cc39ac92f7b7570c6e93286d652ba3dc67fb32fe2204b54b465f60daa"
+    },
+    {
+      "file": "plugins/projection-optics/skills/collector-lens-design/scripts/focal_budget.py",
+      "source_sha256": "aff83d50b0388d08dcbf1e7e45e4e107b384bea8d3224b52b4735a5c507b7ead"
+    },
+    {
+      "file": "plugins/projection-optics/skills/collector-lens-design/SKILL.md",
+      "source_sha256": "b722a01bd90b81d743a9908ee6ccf40190ecef17847bce57375514644efe2dac"
+    },
+    {
+      "file": "plugins/projection-optics/skills/flyeye-design/agents/openai.yaml",
+      "source_sha256": "d28b0377d5bcbae66de3da5d23dc1e0270b7e2e048dec314bbbd233e60ae617b"
+    },
+    {
+      "file": "plugins/projection-optics/skills/flyeye-design/references/case-evidence-routing.md",
+      "source_sha256": "df9d7f6a6d743f43994f1e40e4b0a8a791b339e9bbd3b93c27adb08cc32834f6"
+    },
+    {
+      "file": "plugins/projection-optics/skills/flyeye-design/references/flyeye-inspection-and-assembly.md",
+      "source_sha256": "6c95763347a355375e40cde1cfc14bc354efd91b47492de70d7e315a4acbeac7"
+    },
+    {
+      "file": "plugins/projection-optics/skills/flyeye-design/references/flyeye-wave-sampling.md",
+      "source_sha256": "01d00d26cf177e94acdeb9ab86e27e7d13353962f1353522779c0fd4271cb05c"
+    },
+    {
+      "file": "plugins/projection-optics/skills/flyeye-design/references/homogenizer-comparison.md",
+      "source_sha256": "3d37a402da61634369c98671986c2e4b533941703185ca82a19c2caa36ef0d29"
+    },
+    {
+      "file": "plugins/projection-optics/skills/flyeye-design/references/main-lobe-shape-envelope.md",
+      "source_sha256": "baf195d1f3c3d39c267907c48426a07e252f5bdb8f8dff8189715e50e0f92c13"
+    },
+    {
+      "file": "plugins/projection-optics/skills/flyeye-design/references/panel-joint-domain-diagnostics.md",
+      "source_sha256": "44f1f0aae9a6a55a03885dbc26e8c5a6b6467f5b7aa5edcdbcf039ac614e43e4"
+    },
+    {
+      "file": "plugins/projection-optics/skills/flyeye-design/SKILL.md",
+      "source_sha256": "276942f76c5e21228f89d210b9f293b1d4dd6361b7d8f2a0a55a1235fbb080d6"
+    },
+    {
+      "file": "plugins/projection-optics/skills/lcos-polarization-design/agents/openai.yaml",
+      "source_sha256": "f67d7ec02d76552d59389e2bfbe50c33a3eb2cf0bc5d68dec2f99cb69ba9e5d2"
+    },
+    {
+      "file": "plugins/projection-optics/skills/lcos-polarization-design/references/absolute-source-and-power-operator.md",
+      "source_sha256": "8beac0a5d2daa4c1a652c3044b0ecf2b35edf6df70bf0a42978c2bbeee81c2be"
+    },
+    {
+      "file": "plugins/projection-optics/skills/lcos-polarization-design/references/interferometer-and-coating-evidence.md",
+      "source_sha256": "e55de19fb573b4078c427790bc937825724c559b03397bcedd944ae57fdb612f"
+    },
+    {
+      "file": "plugins/projection-optics/skills/lcos-polarization-design/SKILL.md",
+      "source_sha256": "8c8305126bffb091f49cfe85b192750a0a80a51f882fb242613d6f0c74b6f939"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-design-verification/agents/openai.yaml",
+      "source_sha256": "612fd7015fddcff722dce0ae92125295fd28e773776be5b87eac76c607f6b932"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-design-verification/references/engine-and-recalculation-probes.md",
+      "source_sha256": "efd6f334eda2f8315fdf9706ecad912cedc1cac64f8008eedaeb1852b575c638"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-design-verification/references/illumination-cache-binding.md",
+      "source_sha256": "aaa63322ac92e328252e1f5aecca19adc502368be37cbadb39846f1303084311"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-design-verification/references/laser-dmd-checks.md",
+      "source_sha256": "3fa5a212b140f4ba3ccba14c2049bce2b5a1b6ca616b8a21a998a6ed1e304198"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-design-verification/references/native-prescription-binding.md",
+      "source_sha256": "06a681f0af75067b324f0d26a9249ad6c1dfedb9e3d68291add62aabfaa409e3"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-design-verification/references/pop-complex-handoff.md",
+      "source_sha256": "01a89c9834866169bfcb3fa7ee52352a05587cdee4ff3afb9c6126790a7609e5"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-design-verification/references/receiver-boundary-loss-audit.md",
+      "source_sha256": "ee9a05cfd84398999b43fa7d15f7bcde319a7eae3aec3a03bc59fa968b7bc908"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-design-verification/references/screen-metrics-and-record-identity.md",
+      "source_sha256": "8e646bc4d93fc7dfaae53314d072b3ad3a644be2d35bdb8415fbb5f4f58602d6"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-design-verification/references/search-selection-and-validation.md",
+      "source_sha256": "69649e4a7621fac20d143d1ae2dcae4683fe24ebabcf978f2c3f4fdc952c2536"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-design-verification/references/tolerance-compensation-and-cache.md",
+      "source_sha256": "5159bd9a445401cf1b037c90fbd52ebe4d374b85427f2374f1552daafc043b52"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-design-verification/SKILL.md",
+      "source_sha256": "65bb01488c3581a3054c0d68dc7b25d8bbcdcf20c76f8c45bd4c979cd93bae8e"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-etendue-budget/agents/openai.yaml",
+      "source_sha256": "269bd4703219e0dc850ee17565386940a1bf5dfcb76d0458c097d6633b1d8801"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-etendue-budget/references/tilted-cone-and-joint-acceptance.md",
+      "source_sha256": "cd78f538f8d47fcb309013f09f6698f3d66063cdea505922c768d99c7e370aa5"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-etendue-budget/SKILL.md",
+      "source_sha256": "b86466d5a9adfbcf26e401ad95e683a2f1c096c6db5b1fee938b15d1b44c83f0"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-evidence-library/agents/openai.yaml",
+      "source_sha256": "1ca41989c194cea08f05b061f7b2b0f5d2026dd490862bb209352b4f80daf900"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-evidence-library/SKILL.md",
+      "source_sha256": "72474100fc2ab30bdbd2625256339813568960c36686729279be98058ca05738"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-knowledge-memory/agents/openai.yaml",
+      "source_sha256": "73f898682a35520a487a8d732c3f418ebfefaec17fe8c4fc1fab0714af78673f"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-knowledge-memory/references/offline-workflow-memory.md",
+      "source_sha256": "0d99c558b4f84459d32edc3752f1531178d3744bc591a1b1d5c1d16dd9ce7e0c"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-knowledge-memory/scripts/local_memory.py",
+      "source_sha256": "40d9faeeff3ce1cef077aa935fc22f34c62fc42220c6b52a7da9f0ac4d8f4965"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-knowledge-memory/SKILL.md",
+      "source_sha256": "8ea0696d4f232f93b5ae64668c1ce53c068bcc38813d5b93213225bc8a5190a5"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-rapid-prototyping/references/scaling-and-validation.md",
+      "source_sha256": "daf89a0170854a59a34f00c723e53bac0303b20e417e4abfef9bcc570b676469"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-rapid-prototyping/scripts/scaling_draft.py",
+      "source_sha256": "78794153ada824ff902806f109a1bd1c11cd649fce354b02923b2076365d55e6"
+    },
+    {
+      "file": "plugins/projection-optics/skills/optical-rapid-prototyping/SKILL.md",
+      "source_sha256": "5750ec4a5baca5cdd1047bb79f191e7747fc437d2091d13661377b7c56a9e774"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-color-brightness/agents/openai.yaml",
+      "source_sha256": "79eaa8833674306303b7154d1b624b18291ba87bafa539af9e7e72bebc096f21"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-color-brightness/references/color-grid-and-uniformity-audit.md",
+      "source_sha256": "03d0785d61263d1854a0308a2c9e6f32dad1d05c9eb02e3fba2f8b9df25e0d02"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-color-brightness/references/conversion-stage-test-audit.md",
+      "source_sha256": "a536715cb8b498e3380e1b2644d88432b6256d891259288b30d27d33bd106c3b"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-color-brightness/SKILL.md",
+      "source_sha256": "ce59c2aeb62ca83a3621f58dfa386f0d55b366657981074479d1a0de31d743fb"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-prism-design/agents/openai.yaml",
+      "source_sha256": "c1741c294a70b145f529fea3bee668e2c0292cdae2456596825b4d3f7248691f"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-prism-design/references/assembly-interface-checklist.md",
+      "source_sha256": "d8aa3514477a01d550e0acc5d1f24349805645de428700bcc103a43cd8cb945b"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-prism-design/references/stray-light-and-gap.md",
+      "source_sha256": "229ecb27097a7c2558f72a1e7dc5773255b38ce85946e4e71a4584d23892205d"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-prism-design/SKILL.md",
+      "source_sha256": "3ca361aa7d259b8b115e225a123948cccb8ffaf8db19be561b7d364a06245af4"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-source-architecture/agents/openai.yaml",
+      "source_sha256": "59fb16a77bf8938589c27d8e4829d7ee4020dc4a14d216d837559bc0cb00c8cc"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-source-architecture/references/laser-phosphor.md",
+      "source_sha256": "a6fa10c86afd48a6505cbfcb8a5e67a01def4c6f443fca9dd62c6cdea646fec9"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-source-architecture/references/rgb-laser.md",
+      "source_sha256": "fcaf42e8304e560cb5cb54a97249a55307be52e51c4f18eab9fae7b715c914c8"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-source-architecture/references/ti-laser-sources.md",
+      "source_sha256": "afc1e2c35de1da1430fceabde68f4c161f4adabb4a8ce42d7778d6f9a3bc1c9d"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-source-architecture/references/ti-led-architecture.md",
+      "source_sha256": "adc5b28ae03936b1f1896c731e1b17cebe44698b3145dae5822f8b368910d4d5"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-source-architecture/SKILL.md",
+      "source_sha256": "1322e17328fed109acc60cd89541b2bcd4df48b8ab0f718a8ff6a12e6073ad50"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-system-design/agents/openai.yaml",
+      "source_sha256": "f4eaf0d476c819b6177824325d763f8163ce18ddc8728813dadc4d3840315d61"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-system-design/references/plate-compensation-and-thermal-interface.md",
+      "source_sha256": "6f8ae48e21340c05091ddb3c8e13f1ab67969f430d754d101f2c6b12072c071a"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-system-design/references/stage-budget-and-platform-evidence.md",
+      "source_sha256": "35969d13dff9897dfd849214e3fc1a79f44b277704de99038b69f8ed179a5acb"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-system-design/references/system-requirements-and-joint-budget.md",
+      "source_sha256": "f71eddf75ef04c0920940828eb037e51bcf7d61104b32d5573b246fd530a21e2"
+    },
+    {
+      "file": "plugins/projection-optics/skills/projection-system-design/SKILL.md",
+      "source_sha256": "b42883c98ae98f014673e16549e6b6b0f4955f29f361f434fa2389574c5cad9b"
+    },
+    {
+      "file": "plugins/rea-control/.codex-plugin/plugin.json",
+      "source_sha256": "21257c2d2b707f0081b021254ca3958f5a2eeaa160b338d11a074ae874546a71"
+    },
+    {
+      "file": "plugins/rea-control/providers/ida-native.json",
+      "source_sha256": "0fe8cedcdb25b27b6d19049bca573b0239632ce02ce2e6ac4dde953129dde005"
+    },
+    {
+      "file": "plugins/rea-control/README.md",
+      "source_sha256": "a32dc80ec44b56a42c167bd7c9b227fbe7cdaf28d390682069524821c877a217"
+    },
+    {
+      "file": "plugins/rea-control/runtime/package-lock.json",
+      "source_sha256": "ccd96adbedb0835960af5bb29bf90c10eb7a83738cd39c62baaebe77bdfc60c1"
+    },
+    {
+      "file": "plugins/rea-control/runtime/package.json",
+      "source_sha256": "c39c38605193494ff876fc8881d213d8151337e89e77db1abbb982ca1cb68a75"
+    },
+    {
+      "file": "plugins/rea-control/scripts/check-mcp.mjs",
+      "source_sha256": "9af59432fc802de1822cf35c30b0d78aad61f77ef3074ef12171e22019c3d18a"
+    },
+    {
+      "file": "plugins/rea-control/skills/rea-reverse-engineering/agents/openai.yaml",
+      "source_sha256": "16e933f68315be54577d75d04118429920ca136733ff1bb46d37344943e16f31"
+    },
+    {
+      "file": "plugins/rea-control/skills/rea-reverse-engineering/references/upstream/references/android-applications.md",
+      "source_sha256": "24ecaa1798eb4f28591884a7deb68df31e90313865515a23e3b466403f1abc39"
+    },
+    {
+      "file": "plugins/rea-control/skills/rea-reverse-engineering/references/upstream/references/connection-and-recovery.md",
+      "source_sha256": "4754441e63e4252a0b230cf5aa12b78c0716463905305059bb7dea6713ba0bfc"
+    },
+    {
+      "file": "plugins/rea-control/skills/rea-reverse-engineering/references/upstream/references/environments.md",
+      "source_sha256": "83e041f0a5243172af69eaadf62da0699617add3ff1d46b294e4bba7ece9d95f"
+    },
+    {
+      "file": "plugins/rea-control/skills/rea-reverse-engineering/references/upstream/references/evidence-workflows.md",
+      "source_sha256": "f44b68acc6ebaa60c1f5d0670e4f9ff7212d351a0ecc6e6ca77ce38b9177ea57"
+    },
+    {
+      "file": "plugins/rea-control/skills/rea-reverse-engineering/references/upstream/references/javascript-applications.md",
+      "source_sha256": "619cfd15ffdf466452cc32002ae357fefec59d5dcad4c9dfc27630138f0f719d"
+    },
+    {
+      "file": "plugins/rea-control/skills/rea-reverse-engineering/references/upstream/references/native-and-artifacts.md",
+      "source_sha256": "cf394568ae91e9017d63056adb8872fb1df9e2f6bbe544a95d0fd9f064b06dd5"
+    },
+    {
+      "file": "plugins/rea-control/skills/rea-reverse-engineering/references/upstream/references/runtime-observation.md",
+      "source_sha256": "852bd1e25e9f83f0e8c7d4f8441a043e2b2a7d5e39f729bf22ac77259a0207bd"
+    },
+    {
+      "file": "plugins/rea-control/skills/rea-reverse-engineering/references/upstream/WORKFLOW.md",
+      "source_sha256": "8818b645c9fd348399a50a8678b91cff20215690adad484e70282ff9f2ef91ee"
+    },
+    {
+      "file": "plugins/rea-control/skills/rea-reverse-engineering/SKILL.md",
+      "source_sha256": "26faf5b9ad0c2b773534a851b89bb524fdaf996c5b4f5589f9fcff5facbf695e"
+    },
+    {
+      "file": "plugins/rea-control/UPSTREAM-LICENSE",
+      "source_sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b"
+    },
+    {
+      "file": "plugins/rea-control/UPSTREAM-NOTICES.md",
+      "source_sha256": "d2fa6973ee32ec2c3ef2d214cd5b8482f50511dcf9ba84937da3385920ebd1e6"
+    },
+    {
+      "file": "plugins/rea-control/upstream-skill-sha256.json",
+      "source_sha256": "027d850ebfd317ccaaf09a0853caa4b3f17da7cbd681fdcdd911686024eb740f"
+    },
+    {
+      "file": "plugins/rea-control/upstream.json",
+      "source_sha256": "eb5a6da0178e25c44806fab363af1aa0658d5c2cc571156d9baadbb4e79e755b"
+    },
+    {
+      "file": "plugins/solidworks-control/.codex-plugin/plugin.json",
+      "source_sha256": "dd7a9fb461f5903d24f7507bafb71943609a77eaa77691afe401371ca6e658c5"
+    },
+    {
+      "file": "plugins/solidworks-control/README.md",
+      "source_sha256": "c1534d08190951c83cb367a1667196cb633ea8bc231dbf25a31b8618dd6630b1"
+    },
+    {
+      "file": "plugins/solidworks-control/skills/solidworks-control/references/change-verification.md",
+      "source_sha256": "3c43f4dfdc1da58f4062f8a44b574c051cd408aca628242f701ad119a2e41d0e"
+    },
+    {
+      "file": "plugins/solidworks-control/skills/solidworks-control/references/flow-new-project.md",
+      "source_sha256": "a2b4ad68604c5b89a319aa2a8ab86e3148db9d3855b34c121d0b27524fad678d"
+    },
+    {
+      "file": "plugins/solidworks-control/skills/solidworks-control/references/modeling-plan.md",
+      "source_sha256": "d75c25c05631087277ce337de77e1ebeb833523c1603ad7fcb7be21803c88901"
+    },
+    {
+      "file": "plugins/solidworks-control/skills/solidworks-control/references/upstream-research.md",
+      "source_sha256": "b5b431b4dc750610ad2f501cc7a94c6e72d2cfab7d26219ea03c1aa006578021"
+    },
+    {
+      "file": "plugins/solidworks-control/skills/solidworks-control/SKILL.md",
+      "source_sha256": "ae285cf1227b055306cea185b497fa16bad29516a8f94aaef1ef1a50575c3bc0"
+    },
+    {
+      "file": "plugins/zemax-control/.codex-plugin/plugin.json",
+      "source_sha256": "8677e55dd056e0a8e9337c4292b95ae6963dea4155a54adb310d87087be5da0f"
+    },
+    {
+      "file": "plugins/zemax-control/README.md",
+      "source_sha256": "1505cd042cb0e9115168f119790c04cb2844826300e84c4e3ed593a042cb306c"
+    },
+    {
+      "file": "plugins/zemax-control/requirements-lock.txt",
+      "source_sha256": "87b2cf16dda8b00b88cddf8b0cc42834c4ca41865b8927ef49f247f31b3417f7"
+    },
+    {
+      "file": "plugins/zemax-control/scripts/run_server.py",
+      "source_sha256": "29639d1e29cf16ec60e5720c8ea6ff211caf9032208b9c1df847c33804b13adf"
+    },
+    {
+      "file": "plugins/zemax-control/skills/zemax-control/references.md",
+      "source_sha256": "736e3b28822cc16007d74548462c581f57810632d42ee50f3f23b0bf91f0a7b5"
+    },
+    {
+      "file": "plugins/zemax-control/skills/zemax-control/SKILL.md",
+      "source_sha256": "450c4c994e06a3fffa77bf56f63c18c4d9f7dfdf1dd712ea164765a8c00dd09e"
+    },
+    {
+      "file": "plugins/zemax-control/UPSTREAM-README.md",
+      "source_sha256": "b6e228dc03fd597454164cc9aaf9911db99c68e2268c2af79095c67b9a17026a"
+    },
+    {
+      "file": "plugins/zemax-control/zemax_mcp/__init__.py",
+      "source_sha256": "a05d149f8c5c8e76e2ea731c6e60f840fa9076e038ac6c0c1d18353a1986f952"
+    },
+    {
+      "file": "plugins/zemax-control/zemax_mcp/connection.py",
+      "source_sha256": "988e1a1979b2de09450552c1c6087e205e430ec30ad553e6c9cd0091455c8376"
+    },
+    {
+      "file": "plugins/zemax-control/zemax_mcp/optimization.py",
+      "source_sha256": "a6a8c6ebfca2747d972bb683e8ac562fbdd7f8f239a1fc8120eda79bf843b98c"
+    },
+    {
+      "file": "plugins/zemax-control/zemax_mcp/server.py",
+      "source_sha256": "5f708d91534f6bef2e801011063239edf712e5b72c9d84d1d828460a32ad9b49"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-authenticate-wallet/references/cli-setup.md",
+      "source_sha256": "0e0dbc5d8bc4a5f330111bc246932a8e8371cf910e8fe760234f5118d376e3cc"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-authenticate-wallet/references/env-vars.md",
+      "source_sha256": "9895d228c9c6f96b72ddda5716abda5a17211b906023c10d22f61d6ddce79b09"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-authenticate-wallet/references/feedback.md",
+      "source_sha256": "a1591424386c5e74bd6f5c6f9839f02651338eaa0c1dae00f52539cc72ff5345"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-authenticate-wallet/references/image-output.md",
+      "source_sha256": "b558618a9b7880748ea023a5bbbe37180061d9383d27bba15dab60c389f3bd49"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-authenticate-wallet/references/output-rules.md",
+      "source_sha256": "027ef345365da3d6087cf79456bc75e124953aa598def4911c0cb8ba87eb4c16"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-authenticate-wallet/references/security.md",
+      "source_sha256": "c1119c18de5a50863978df84085351316393fa2eff5c6ca628cf3590982ecc00"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-authenticate-wallet/SKILL.md",
+      "source_sha256": "dbb6d967dc8fe2dc27d629ee22f1dcf1954bb0edf4cb23f9ecb67779c4421351"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-payment-skill/references/402-payment.md",
+      "source_sha256": "b52b0018225e55c5c497d57fdbc26704bd15b80dad3f0a3c3f4c454f379f3670"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-payment-skill/references/cashier-payment.md",
+      "source_sha256": "ca3e9eea16421c8c105c1ba828932f27c4d3db3244f2028739537dd73f84b3d6"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-payment-skill/references/cli-setup.md",
+      "source_sha256": "0e0dbc5d8bc4a5f330111bc246932a8e8371cf910e8fe760234f5118d376e3cc"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-payment-skill/references/env-vars.md",
+      "source_sha256": "9895d228c9c6f96b72ddda5716abda5a17211b906023c10d22f61d6ddce79b09"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-payment-skill/references/feedback.md",
+      "source_sha256": "a1591424386c5e74bd6f5c6f9839f02651338eaa0c1dae00f52539cc72ff5345"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-payment-skill/references/image-output.md",
+      "source_sha256": "3765f6abcc7fc3626fdefc255e3d8086f4dbff96b230f097f7e25e8e341e7aa5"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-payment-skill/references/output-rules.md",
+      "source_sha256": "133fe747986d35f22878780587b1f48d5352725c108d3630ad78a3315fc16297"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-payment-skill/references/security.md",
+      "source_sha256": "946558698ab0e7baba4bbf2c6f7c4a44cda93512ea251df6b9c5d65e84bf1f0f"
+    },
+    {
+      "file": "plugins/personal-skills/skills/alipay-payment-skill/SKILL.md",
+      "source_sha256": "ca59b9c7d3f17f66f121e00c03f00e9bea909f1ef4c422a1207f403a448ad1df"
+    },
+    {
+      "file": "plugins/personal-skills/skills/engineering-resource-hygiene/agents/openai.yaml",
+      "source_sha256": "8619a54e8c098122a7f3881394f84ca89b684366e848233a29ad18b6ec363935"
+    },
+    {
+      "file": "plugins/personal-skills/skills/engineering-resource-hygiene/references/retention-manifest.md",
+      "source_sha256": "307ae51c820d4454cdc45e5e2fd50cb6941362bf7278c83fc563fca861ed8666"
+    },
+    {
+      "file": "plugins/personal-skills/skills/engineering-resource-hygiene/scripts/retention.py",
+      "source_sha256": "4224d5d5ae115e879303b949e788ff900423d9362a7a1dccbb2ff0e97db4c275"
+    },
+    {
+      "file": "plugins/personal-skills/skills/engineering-resource-hygiene/SKILL.md",
+      "source_sha256": "382dd8e0e0564d8976301f9aa186a21e244cd0be609c002a194fa75ba41741fb"
+    },
+    {
+      "file": "plugins/personal-skills/skills/internal-stack-safety/agents/openai.yaml",
+      "source_sha256": "4d67fc4c171be5fa1ca5d04850b76401357702fddefa22071330b2c7e0c96631"
+    },
+    {
+      "file": "plugins/personal-skills/skills/internal-stack-safety/assets/review-template.md",
+      "source_sha256": "d1b075e34236832973c54ef1493a172015268f7e3f3305b44a9fbbd3072f54a1"
+    },
+    {
+      "file": "plugins/personal-skills/skills/internal-stack-safety/references/checklist.md",
+      "source_sha256": "9ca03176ac1d9318403c6e258d5bce0405c0bb94a21b6ae8bd0bb740ff4dd6d0"
+    },
+    {
+      "file": "plugins/personal-skills/skills/internal-stack-safety/references/model-review.md",
+      "source_sha256": "a5090188181efc91495919905e9b562d8da68451261bba5d1c106700f07838e4"
+    },
+    {
+      "file": "plugins/personal-skills/skills/internal-stack-safety/references/sleep-system.md",
+      "source_sha256": "76864008f4a46fbac08555f16f5055405224dc682a830c2993914c33a75d1ac2"
+    },
+    {
+      "file": "plugins/personal-skills/skills/internal-stack-safety/references/standards.md",
+      "source_sha256": "4f8433316914702739b6ec293bf832ed520094d64626e97cf7bd7767821f12a2"
+    },
+    {
+      "file": "plugins/personal-skills/skills/internal-stack-safety/SKILL.md",
+      "source_sha256": "e548ce44ee14c5725713513e3412c084767f9bcabef59bcbc4f3dcc795363d5f"
+    },
+    {
+      "file": "plugins/personal-skills/skills/kicad-automation/SKILL.md",
+      "source_sha256": "216143da1d75b0a7c0f991b2787f32d43236672812928711b76632c7344a6494"
+    },
+    {
+      "file": "plugins/personal-skills/skills/lens-evidence-search/agents/openai.yaml",
+      "source_sha256": "c0e198460c91b891ca88d766311b6506a06b2d325160a331c15ad5e3a919c233"
+    },
+    {
+      "file": "plugins/personal-skills/skills/lens-evidence-search/references/schema.md",
+      "source_sha256": "c6e12c91a155780d52801d9b837dd7ead8db34143dab5f0de3ce083f18122a70"
+    },
+    {
+      "file": "plugins/personal-skills/skills/lens-evidence-search/scripts/library.py",
+      "source_sha256": "36f29c5a598033fed868ed70659697e8a201d6cbe18f88b6e769876542b1f40c"
+    },
+    {
+      "file": "plugins/personal-skills/skills/lens-evidence-search/SKILL.md",
+      "source_sha256": "3553c6cef332396a1ef70db4badda21fb7f4e74ebb4a04a28574413ad2bc542e"
+    },
+    {
+      "file": "plugins/personal-skills/skills/lens-patent-research/agents/openai.yaml",
+      "source_sha256": "ed5eef11cc4cbc9a657f2326d9e36c926636ce5c343de9c911ed9b9d9f358cab"
+    },
+    {
+      "file": "plugins/personal-skills/skills/lens-patent-research/SKILL.md",
+      "source_sha256": "e96084f0f705cf19531374b63754b8a28ef71178495fa859c4c84de85ff3b0a8"
+    },
+    {
+      "file": "plugins/personal-skills/skills/lens-prescription-reuse/agents/openai.yaml",
+      "source_sha256": "ed51387e05ab2aa62575cd37378387ba7b4805dcfce331e322ad798649945c1a"
+    },
+    {
+      "file": "plugins/personal-skills/skills/lens-prescription-reuse/SKILL.md",
+      "source_sha256": "6de5a9ffa98b1cdd675f44a3033e10491d6b53988617c56a9a0e917f98cfa0dd"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-assembly-service-review/agents/openai.yaml",
+      "source_sha256": "6b7d1b3974e9cafe766e2c863319f70a3605735ad4961f04c15316e76612d789"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-assembly-service-review/references/basis.md",
+      "source_sha256": "67ac4df69bb57abbce5e01b204227e3e2a0893c616ad7e11c2d26e8f11c929c7"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-assembly-service-review/references/checklist.md",
+      "source_sha256": "43d41d6a0f3509088ba1bb1a3338f031ee26d8c4bf4ef85d2cfe9ad2c9792a59"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-assembly-service-review/SKILL.md",
+      "source_sha256": "169929051e1484d22aeae746d67b4270a04e54ddd2881231acd6fef8339272f4"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-dfm-review/agents/openai.yaml",
+      "source_sha256": "3bbdbbebaf4fd761091eda63cf75d625dee58609a93f01319dfa3b55905e6423"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-dfm-review/references/basis.md",
+      "source_sha256": "870eb2bdaeff7ee0fe1289db6d1aa39bfb0e8374ce93bf7325c02ea2f83960c8"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-dfm-review/references/checklist.md",
+      "source_sha256": "e9ca5c39a43333d18c0594ffd22d73013b75346c37de4c90abe058ad543f3105"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-dfm-review/SKILL.md",
+      "source_sha256": "d10543f38d8f6b0a935a8199296d14d670b21fa4c93103291f700ce06f6b34e1"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-drawing-standard/checklist.json",
+      "source_sha256": "8c8bd3bc7cf7eb16c0b6f388829e884c8dab6021245248a90e3bf3b2924a553a"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-drawing-standard/SKILL.md",
+      "source_sha256": "f093c052aef0ed1febdf05205880a1677b6fd99ab2fea455ac094fe42cbfeddc"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-drawing-standard/sources.md",
+      "source_sha256": "f1d97818d6d49536b5baf0e2f3482c4fda38558c0c31f327c2ab6e5c0cc1b091"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-stack-review/agents/openai.yaml",
+      "source_sha256": "992b1b8d9c84241ad52b6913a6bcc31ceceb398fd98d80ff7ff9a3d8f1f7af1a"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-stack-review/references/basis.md",
+      "source_sha256": "49010a4874e3303dc39bba4e9bf4fe07b883e5384fd06ed8ad43b7b6950e969d"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-stack-review/references/change-verification.md",
+      "source_sha256": "31d6bef834895f8289eb6c7693f4bfb4d57549fcb1fd367188c1807157ccff8a"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-stack-review/references/checklist.md",
+      "source_sha256": "d17384c106f46af7b24b1f66e82208a6dae24b541294b5af5d67b12dcbe9a641"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-stack-review/SKILL.md",
+      "source_sha256": "b2b6fa6f6c1711003c90e9a08b2542c941591344170516f22279f803008bbd76"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-thermal-airflow-review/agents/openai.yaml",
+      "source_sha256": "f71c2d2693ae224bb0ee3ee0036288da902fbb43b556494f5fe055ff7b65500d"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-thermal-airflow-review/references/basis.md",
+      "source_sha256": "9a448cf941d59d791a4ce8b792cdae976993f85f9e7244ec4d8f13c76c81e4a8"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-thermal-airflow-review/references/checklist.md",
+      "source_sha256": "80acb0fa74f8d03d5a3faa50b1ce51caced31267696b8db48299ced1e79ecb00"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-thermal-airflow-review/references/sleep-system.md",
+      "source_sha256": "8b0d68b0d95e7dd697cb85232ad5a1e12ff7d305537921f2e48e5872939e29e7"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-thermal-airflow-review/SKILL.md",
+      "source_sha256": "f4f6af99dad9bb014f59d47897927228943f843547edb5ec7e9540f922d1f752"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-tolerance-review/agents/openai.yaml",
+      "source_sha256": "6deb1fad716a76b5f5ee8765ebd6fa8fbc952b8cce02bd16ba1fc076fe0d3472"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-tolerance-review/references/basis.md",
+      "source_sha256": "78b36dd789c289c36514f2aba0ebf742c95ad0619611a32f54edd4772d424b10"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-tolerance-review/references/checklist.md",
+      "source_sha256": "753038edf331bc09233232ac3a9d18d63363819947b318a605d8e0f63fceb41c"
+    },
+    {
+      "file": "plugins/personal-skills/skills/mechanical-tolerance-review/SKILL.md",
+      "source_sha256": "93da1c6f25bf5ea931b12f6f1f7e7a7c0010f28c528aead9a141bfa35a3ee5b5"
+    },
+    {
+      "file": "plugins/personal-skills/skills/optical-knowledge-memory/agents/openai.yaml",
+      "source_sha256": "73f898682a35520a487a8d732c3f418ebfefaec17fe8c4fc1fab0714af78673f"
+    },
+    {
+      "file": "plugins/personal-skills/skills/optical-knowledge-memory/references/offline-workflow-memory.md",
+      "source_sha256": "0d99c558b4f84459d32edc3752f1531178d3744bc591a1b1d5c1d16dd9ce7e0c"
+    },
+    {
+      "file": "plugins/personal-skills/skills/optical-knowledge-memory/scripts/local_memory.py",
+      "source_sha256": "40d9faeeff3ce1cef077aa935fc22f34c62fc42220c6b52a7da9f0ac4d8f4965"
+    },
+    {
+      "file": "plugins/personal-skills/skills/optical-knowledge-memory/SKILL.md",
+      "source_sha256": "8ea0696d4f232f93b5ae64668c1ce53c068bcc38813d5b93213225bc8a5190a5"
+    },
+    {
+      "file": "plugins/personal-skills/skills/projection-optical-design/agents/openai.yaml",
+      "source_sha256": "2b9a9620fcc2a2476ae0db802e2a4ffba5cdbac58c763417ca3fdd216e5fd763"
+    },
+    {
+      "file": "plugins/personal-skills/skills/projection-optical-design/SKILL.md",
+      "source_sha256": "5864333ba5970ed03c282109f55f3aa05c06e4bc64aa85dcd9c43de045e97a20"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/assistant.md",
+      "source_sha256": "64d915b2d8194650b9823f7e63224d62500e62a0e3ca8e097d320b5e971baf8b"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/auth.md",
+      "source_sha256": "b6164a975f00780e91fcfafb1bc94f0ba1766e5ecb0c3d665cfd5b071c76de80"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/file-batch-organize.md",
+      "source_sha256": "7fd84e5b7f993105a7645cc291b16555a104b27b10e57d63fcef333228015543"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/file-ops.md",
+      "source_sha256": "0fa802f01a6e2344f517fdb07e6dfefd704a3b49e95944fa59ea5bd05fe598f7"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/file-organize.md",
+      "source_sha256": "48528e9811b751ecafca09c4bcdc0ed86c4a01f1562ac428a037625ff6e68b6e"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/file-read.md",
+      "source_sha256": "1b8a47a055dae619bc5f4796e07b8c73d30385b6916fffdb2e7397fb342e3506"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/file-rename.md",
+      "source_sha256": "fb72dbbb065e5535b50eb890534dac7e28d816749be3f6ef1b642235fe4ebe57"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/file-saveas.md",
+      "source_sha256": "4a1a65bb44273c8777d714661c7157bf44f7d533425c9ce7b552cc4722712a22"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/file-search.md",
+      "source_sha256": "395b2fca50c6e4ef0636c3a279121ad89c76314874916cc506a4cbb0a530b901"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/file-share.md",
+      "source_sha256": "ed2e5f7018453fe5d0d5840642ff7d807352019738f43716c98b4bfdd775e8cc"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/file-upload.md",
+      "source_sha256": "692f1ca7ac0cc1303a36d44f35ddfdadc7c8b057d97b3d55cc8fb04aafae30c1"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/references/membership-benefits.md",
+      "source_sha256": "ca87e886c98c61b06ca0749e0ff27fa496b22eca34318fc17c68df70d88fd255"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/scripts/hash-worker.cjs",
+      "source_sha256": "b0d886c4835af1cd426cf7519a267d7db7311d403984a965d07e2227de7a40a2"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/scripts/install.sh",
+      "source_sha256": "c33f754bd0bb3ce2b79ce6e3c6595b928f57a18765faa53d2d05134008d55a4d"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/scripts/quark-drive.cjs",
+      "source_sha256": "b19755822486bd812c76e15de31e9213bccfa2cc6ed1e639c43201e5cf2e07b5"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/scripts/uninstall.sh",
+      "source_sha256": "d94bd82de7be3523f1f31a97478b86d4b19765e0502111a82f6eec94f03c54cb"
+    },
+    {
+      "file": "plugins/personal-skills/skills/quarkclouddrive/SKILL.md",
+      "source_sha256": "9c9abf3c031ddeba6a28cddedc66349709a2bee4a6de6283dc196408e8c0e308"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-acoustic-vibration-review/agents/openai.yaml",
+      "source_sha256": "764a5a08a55b3db4eb37b88acce278bca317fc0337ab17445e6ef3408e3c3d78"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-acoustic-vibration-review/references/basis.md",
+      "source_sha256": "101bda0c281bb875801cf3004693228c82ec5b5cd2e7a5839cfe3371c4ce5a65"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-acoustic-vibration-review/references/checklist.md",
+      "source_sha256": "c93dbbe75a252313384b592a40723fd936f11a10c272bc7ebd8b0261667a6b9d"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-acoustic-vibration-review/SKILL.md",
+      "source_sha256": "7caf5fe117ab597fd7eb6272c063e2fef2b1f4328da4f05bacf246795b53accf"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-condensation-review/agents/openai.yaml",
+      "source_sha256": "d8c2143f4f06cdb398e3c9c9614169c2b073ad0b1aaa9736b0e28eff53cee966"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-condensation-review/references/basis.md",
+      "source_sha256": "1fd0402aab7ec4fad756dec2742120278dda75e5ec6036273d75e377be57f64b"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-condensation-review/references/checklist.md",
+      "source_sha256": "c166a86c2fe0a1e45b14d869186b83206d1d10157477ad1dab6fab36366433e6"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-condensation-review/references/verification-plan.md",
+      "source_sha256": "a9cdb2ad5bec1a3eeac88268c028f58dfacc81cb2bbe8c7194c4552a9dd7de5a"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-condensation-review/SKILL.md",
+      "source_sha256": "5ec8288cc9343176943e70af1f5c85e1be21eda257e5f3b5eef9bf007db104d9"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-contact-sensing-review/agents/openai.yaml",
+      "source_sha256": "92ff4c3320139901d5e2b1b83b834e5cdffda0e5a7fa35a1c8cb2a980302f431"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-contact-sensing-review/references/basis.md",
+      "source_sha256": "b7b263aa3ceb33859ee60540e0222e12500a5721e01c9e1df60273e002f11634"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-contact-sensing-review/references/checklist.md",
+      "source_sha256": "d83279a93189c77c2b27d4e6a561e8b951782664758ce3b6f2d590f1d90fea48"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-contact-sensing-review/SKILL.md",
+      "source_sha256": "152e45ffd69c849ec05bcbca83d3000361a3b540b3c803359d92b1f0eeee8bca"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-fill-prime-service-review/agents/openai.yaml",
+      "source_sha256": "3e46eebcffbde947ef60bb105601f2fc4d7c57fd1b9988bab4ece23f7c7d50ab"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-fill-prime-service-review/references/basis.md",
+      "source_sha256": "afc9fa19ec830d28bf2eaa3ca72125260b89880968aaded3eff618e8024b6a73"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-fill-prime-service-review/references/checklist.md",
+      "source_sha256": "e17e50da95d4968f9a29832bd6c8478f493d600af87e1250f2a2575e71bdef5e"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-fill-prime-service-review/SKILL.md",
+      "source_sha256": "e3016fed2f96df4cf651df9442cf15ac474a5ac2fd35f2f063dad66233b80f59"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-flexible-waterpad-review/agents/openai.yaml",
+      "source_sha256": "15e9374201fea3d0bb0688b25441d097b4e10cbc5473c836236f9cdc1784eb02"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-flexible-waterpad-review/references/basis.md",
+      "source_sha256": "37ed52f1d7d253a50133d14196089c29cccc34a75785a0b3749e26ef10fce1b9"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-flexible-waterpad-review/references/checklist.md",
+      "source_sha256": "afca0fb79049a64a2b692f22604e713aa9e53e22ab908e0b451923691a92313e"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-flexible-waterpad-review/references/verification-plan.md",
+      "source_sha256": "9cdde061c1500acd6c2887b9d0161b79f005eab1d1cff7e862bbd493cf062d6d"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-flexible-waterpad-review/SKILL.md",
+      "source_sha256": "cb2727ca0dc3f207a2b68e500ad53b9e5a9ba4ab786373bdbed0b8b81ab44b14"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-fluid-hygiene-review/agents/openai.yaml",
+      "source_sha256": "ea900ec8089691cbde53a80cbd2976cd1fdf556817edf0b44c4e68a512d44f80"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-fluid-hygiene-review/references/basis.md",
+      "source_sha256": "68842043509c1578f8913e2aff2dfd5195effc9bb9377979572c687cdf9b0cb4"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-fluid-hygiene-review/references/checklist.md",
+      "source_sha256": "7a538d7cf4abeca1be27f6fe8f1e64ffcf416792e81dcf44aafef66517fee55c"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-fluid-hygiene-review/SKILL.md",
+      "source_sha256": "dae5986e174fd5d131c8a7a1199f75bcb77681fa2b491663cb8fa9e06690df31"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-hydraulic-leak-review/agents/openai.yaml",
+      "source_sha256": "23427772a3d00412b7813c084b32f1ee44ac86583a522b089919d2e3bb92eedd"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-hydraulic-leak-review/references/basis.md",
+      "source_sha256": "feee30aa83ee600e165be4f9fd46156a3a2db0f313cecd4989799345576e4134"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-hydraulic-leak-review/references/checklist.md",
+      "source_sha256": "845ce6837093c3639bfda2354b812a57abaa24202541a8f2eef671b04b1f8a7e"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-hydraulic-leak-review/references/verification-plan.md",
+      "source_sha256": "da15d7d5a2e5185c10371231dc71c4eac0e73ac3c46a11fb54738906a45cfc1c"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-hydraulic-leak-review/SKILL.md",
+      "source_sha256": "9b20747e2ea500d8072c5e49b47e387a9655a3b5b2e8fed51bc88545e10399d3"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-structural-review/agents/openai.yaml",
+      "source_sha256": "6f6d99fd211a519df0344db449cde804b5b95f03d99e05816f955aaa1913582d"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-structural-review/assets/review-report-template.md",
+      "source_sha256": "c6b07792c4e7a6c9bf35727f696424c24d765a7468ee8ab9e5d3f20c9c0bb0ad"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-structural-review/references/risk-and-closure.md",
+      "source_sha256": "327827cc12c75bb08897c40c654f5f53555a3bf9aeae102835dbf04620172be7"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-structural-review/references/stage-routing.md",
+      "source_sha256": "366bd6edfd22b8bcd9e86073bafffb9ea66f2ef300d334697162ccb2ef4f95e0"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-structural-review/SKILL.md",
+      "source_sha256": "4dfc52ef3e0a050e0762b91b73d5e4c982e0b325dae2f84edb3512e56226643c"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-temperature-fault-review/agents/openai.yaml",
+      "source_sha256": "20b7f6065419444cf6716917068c626380a598a9375575e26f7a8dcdab6d029c"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-temperature-fault-review/references/basis.md",
+      "source_sha256": "062215f317b4890aef90d665bad115f351c8abc98f77983b66b196fd8c979744"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-temperature-fault-review/references/checklist.md",
+      "source_sha256": "1b069e1f800e1a91700beb257f889b5c775782877174ecc6a501e3c65072dbd9"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-temperature-fault-review/references/verification-plan.md",
+      "source_sha256": "569752ddf98a0bae8f2b90ec6adbd5d95800e2861c9f6cddf20e520c17bfe04e"
+    },
+    {
+      "file": "plugins/personal-skills/skills/sleep-temperature-fault-review/SKILL.md",
+      "source_sha256": "b64f0e4458c42eb8b869e6c0a282982d19579e9b950ea2f4c814b1e47e7979f5"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/.gitattributes",
+      "source_sha256": "d41b8f792644e58c4f9f1f37025a0b24fb66c024b83e19ac9897d1fc48c9f4d6"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/.gitignore",
+      "source_sha256": "68713f78ccd8665ce917245be7c77e731c708e370391e0ac558f19b558d05f00"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/agents/openai.yaml",
+      "source_sha256": "39ffb4d18cfb0ba0b989c77c6b82692b3777b37d8d709cfd2adcfd90ed822ddb"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/CONTRIBUTING.md",
+      "source_sha256": "c97385a72d5ed10b78d34d6bee81ee21c450dfae393517d7c385ab3bb9113ddb"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/docs/agent-loop.md",
+      "source_sha256": "3e6da45023c4b35970328629faab6884b37dd0766163e933a28d0d6023dff5aa"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/docs/architecture.md",
+      "source_sha256": "d484a52e941ed7443f3c44c20f6418fba6fcb7d44f7e6fbadc5f626c604cb68f"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/docs/com-survival-guide.md",
+      "source_sha256": "8761ba9a83b5690d5fabe4a3725a77bdcdc3b63fe3ac44d3480348f892019697"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/docs/domain-adapters.md",
+      "source_sha256": "b6ddf5926ea072dceeaa7ff26f9bf2fb85a1f12eb49923b977a5e581190527a1"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/docs/migration-guide.md",
+      "source_sha256": "07e3501bf543a8f8453b96d2a6adab74d05f4a9f13108072d7763e5d4528d2ca"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/LICENSE",
+      "source_sha256": "c4fdf46b5ebb48917864deffb876ef098af2d7ac7392616c9015e1a4cf6af862"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/NOTICE",
+      "source_sha256": "86b5f641ecc4841fdfcecec04498b1b7dd4a0c6e29fdb0edf52b790adb4bccd2"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/pyproject.toml",
+      "source_sha256": "1bcaef58fa176315f89261434d9676781784d102caa45be000a183d08c3bafa9"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/README.md",
+      "source_sha256": "81f5c7f4eadf041311f66cff2ef5eeef4dceb6c6a83dcf73d3c26aee72311e3a"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/advanced.md",
+      "source_sha256": "03f44c0907a163b7b4a445f7fe899709ad0aa19b3b6dafa1a4dea45c22417a69"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/api-lookup.md",
+      "source_sha256": "c062269b1ee06f529fbb27c700ab7e722f723837529674cd8041ab69b003d1fb"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/appearance.md",
+      "source_sha256": "aa0e36d7480d2125c9adc5b7ba36a889e8e996a757049e6b561561232ce0802e"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/assembly.md",
+      "source_sha256": "be902785e275c924a98de9318c2815b01b565fea9bfbfcbf60708433b1889215"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/change-verification.md",
+      "source_sha256": "3c43f4dfdc1da58f4062f8a44b574c051cd408aca628242f701ad119a2e41d0e"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/drawing.md",
+      "source_sha256": "7c3ee5c390dded841e9e6735ad991020375c652dde10dd9bd58306e1ef97ae90"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/export.md",
+      "source_sha256": "1d335ee1751787b7ca73411122a59c07fe41ab1a54d62fb8b2e9d285a355fc3d"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/mechanical-engineering-delivery.md",
+      "source_sha256": "7fcd0079fcf6cdae8f8a46a3c18192c5ace8b21c3a4baac39409c55081839e40"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/openclaw.md",
+      "source_sha256": "be842e3cfcf5dc8ff751c4c76215a20fc260849adc3403ab108aa7e2647182e7"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/part-modeling.md",
+      "source_sha256": "69dd28cfdcff4165d873def8646c0f178c1302f4c70cdf6be8278fa916872a0f"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/performance-recycling.md",
+      "source_sha256": "348dfaa0cd4fadcf485889cc07da09265b4a62595a667e5e1de31ace2759aeac"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/review.md",
+      "source_sha256": "35662cf4e893c91a31416adb2a339b3720a662b85ad2c7c3903d0648c290df8e"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/references/troubleshooting.md",
+      "source_sha256": "9189bcb9f12715b5f94219ab4ae27778499b82ede374f06f3bb348a46497cc4c"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/requirements.txt",
+      "source_sha256": "271c0acb0fe2cb47af260e925b1dd50f64ab421035f94b00df53600e069adc9b"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/__init__.py",
+      "source_sha256": "e55c0c375517f0c2cb2163c6a927937b5720c462ac896ca61de220d6830b80d3"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_agent_loop.py",
+      "source_sha256": "b4e8698553dc27df300285ef2a6c9f53d63d20938a480b9277f330994e8baa44"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_appearance.py",
+      "source_sha256": "dcb2a201f35c8824a58b2665cabff27b902e7cf8bee4641452c442743b048d6c"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_assembly.py",
+      "source_sha256": "b5808d2b85dc41083dddc5bd6885c933fd573c8118beb608a7a727b5236db455"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_connect.py",
+      "source_sha256": "39001196ac2f9d466c4ee563b9853a2486b8d7e31ab8c3077852472ce6202e16"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_document_recycler.py",
+      "source_sha256": "c5804ba600a49d6ac1f388d903d3307b381719c4f98b4ee0b79c8b68e2dc8d4c"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_drawing.py",
+      "source_sha256": "1a07a33a6274bc97d110b3c8d7bdb140e40116ad90d2941830db3559b91e19e1"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_evidence.py",
+      "source_sha256": "89aef421361b182bc23300e7c5405fc6da0b6e439e68e87ec3c4689b782f4663"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_export.py",
+      "source_sha256": "f38c04750ef9c7982069cca781a49adf08d8e3a2959d232d82d6a7fbb0290b20"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_macro_guard.py",
+      "source_sha256": "ade23996523ffd826fb0236a080516a145d94f221c351dd50b1d3d1eaa677929"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_part.py",
+      "source_sha256": "0eedd50b464f3e841bea50f13197daf630de890248b1c2dd46851562bf7e7bb5"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_performance.py",
+      "source_sha256": "ac9877e04ddced9a07f92e863f8e097111a0a14a565b4d45f693a5d70c6e0d68"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_preflight.py",
+      "source_sha256": "b39e25b0b61ef0281f6eee5f304060d37ec24bde343cd2fe3b514113334758c3"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_resource_guard.py",
+      "source_sha256": "4a80ecf449d5a475ddae71d7f673f3dde617283a55cff17526e5f7150fc4c4e8"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_review.py",
+      "source_sha256": "ca646c86660bc0fd9d755738198e056b0e750663d1166ce037418468698f5cbe"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/sw_session.py",
+      "source_sha256": "89f67a9951f97c57c2f4b6eeddc1e4f9aca3a7350483e19e2527d9bc8533fe5e"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/scripts/validate_skill.py",
+      "source_sha256": "e07054b992cd68993c765c97b28fa45b7c0a1363287371dcb42f7712d2d31166"
+    },
+    {
+      "file": "plugins/personal-skills/skills/solidworks-agentic-automation/SKILL.md",
+      "source_sha256": "63a7eed663089384abe471c1c642c4117106b68a2a4cb801b4a24e4676355f51"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/.gitignore",
+      "source_sha256": "ed9edef605d648c70aa562b480bfb24c890c69d4512f68d0980e0c48c234dc37"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/.npmignore",
+      "source_sha256": "6333b1d27125aa2c9fa608d3766d49ed6f22338d0f67d6d740c84561d9c1b474"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/dsh-apps.cordis.yml",
+      "source_sha256": "b5efdb06c20e2ea251b06aecbcea154ad6ddf0370a6da4855ebe81c5ce104c3b"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/dsh.cordis.yml",
+      "source_sha256": "2e83431ced2f5b8e3fe0dd529e63ae0686b7f05571a97396bb98f0ff47a5951a"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/LICENSE",
+      "source_sha256": "f01b597e8d13c7c089f60d3f799edf97938785d8bc98bd948ebed606c1ff7c06"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/Makefile",
+      "source_sha256": "df002a2eea003ffd1afedd8043a088e6f6e3ced98bbffacb938e5183f8461c5f"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/README.md",
+      "source_sha256": "5a03778ee8fe60aa61c22d55c506ef4392e94cee8496e45059d774b638ccaf69"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/references/checkout-guide.md",
+      "source_sha256": "6ce252aeebe4877382b1ee32b3ce315c0c92fcd1d0169cdcccf4a89629899f4d"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/references/cloud-mode.md",
+      "source_sha256": "afdaa20c3446313917ff825900cc51b919a686aaadef85bbec92446ed66f8bd7"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/references/error-guide.md",
+      "source_sha256": "25686b653d14f23b57411fc982699d320e718f6238d2c21c25cff2b47250bb92"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/references/feedback-guide.md",
+      "source_sha256": "9cf5317004e9f122329d8456e0c1770b5d42c752a0b03afd684d3b3db91dccdb"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/references/install-guide.md",
+      "source_sha256": "8ca9dd7979e64a0accc48812c29bfae6b8123ad65b8ef3410f899302bea95b08"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/references/preferences-guide.md",
+      "source_sha256": "29f459d775e4a49cec6611c88e2e3cad3236e78b009237472645520f5f46aabd"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/references/registry.md",
+      "source_sha256": "64dd61a9a6d9435519cc8bd05b7ba18577f978ca468391277281467bdae59b6c"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/references/update-guide.md",
+      "source_sha256": "a38f638d7e04b7b3a12d4771f0164bdc29a9bb4ed3ba6b7a27d228374954b129"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/scripts/install-win.bat",
+      "source_sha256": "d06e434b852d79a18a1c0518cb7e50bdc0a55fa6c5ca1fb7fb7ed669461b477a"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/scripts/install-win.ps1",
+      "source_sha256": "be93ee38ff479ddddd095cad761e1f411d36263e51bb18e04d6340fcbc715f7f"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/scripts/install-win.sh",
+      "source_sha256": "f39e94f81ec301bee79d120490355d6fb2c0b92177b5a3e75c2e115da8a931a0"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/scripts/install.sh",
+      "source_sha256": "27023d3954722beba23a79ed52c6cfd2c34acc2d6d896fce6af1f9998e8c3acf"
+    },
+    {
+      "file": "plugins/personal-skills/skills/utp-shopping/SKILL.md",
+      "source_sha256": "653ce8eef8850eecb97e57edc2882068e960b42b7b04b4900e1cdcf530aac9ef"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/LICENSE",
+      "source_sha256": "e6f2d2b02243c2d70b63084fef1e78a20743747e6beb06eb36ab577153902963"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/NOTICE",
+      "source_sha256": "01f9592938bc715d5243ba968e38375027100d96da8639f33944a466a50908bd"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/design.md",
+      "source_sha256": "47b756c135dc1dc2d777819602e04bb5a99bc4fa7285ee295d488b7603739a1c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/index/components.md",
+      "source_sha256": "f23d459c89e344a73a49207164fde3b3d7029d6d85d20f779089c8bd7f433b34"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/index/functions.md",
+      "source_sha256": "8ea961aaba960623cd21f69bedf65e18e0ae20619d3027d71776014d22e221f9"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/index/tokens.md",
+      "source_sha256": "5a519a2eede22ed8bcf5ecd7424e7c78d4080c4968f51e27fbdff6ada540f924"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/patterns/content.md",
+      "source_sha256": "405f3479c92b7ea4e34ef2b53790e89572e6beb5a9a6f7dceccd594702caefd1"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/patterns/detail.md",
+      "source_sha256": "37baf18dd95b06183bd87ae71a8fc7c6d87ff1153e2a0dd0671dbd4d4f7962b0"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/patterns/form.md",
+      "source_sha256": "c1b85f96a62b577a6d8323f5bd8978e2b449028d86867d0d7f6d2befca37b187"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/patterns/progress.md",
+      "source_sha256": "c7004429726587b45c39953c17c4c92937b02273b6c11e916d74ecef108d027b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/patterns/report.md",
+      "source_sha256": "18c741b833b114791e9569a620bf682680cc40742083fb76320d0fee48cf918c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/agent-to-renderer.json",
+      "source_sha256": "ecd62c9b8d911c609a31758d80e8202dbd1c26a347964ec2a0e0895973c07b36"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/catalog-components-common.json",
+      "source_sha256": "f2eb7da12397e8c4420aec44e20cd09c7a30e0aaf2bb89e347d6cbbb19db7b6c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/catalog-components-composition.json",
+      "source_sha256": "f4e21dde9c1f586ee6a5267a0a526d6f0c220489fe023015f779d2685aba8c5b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/catalog-components-inputs.json",
+      "source_sha256": "9a10ccdf3609e31348117e3acd5fec47dbc08b90c2d3a979bce0c6004c185950"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/catalog-components-specialized.json",
+      "source_sha256": "a1a3bc52202886c6b967faa802ff0ccc721231c7089726170deea2ec61dc795f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/catalog-functions-core.json",
+      "source_sha256": "ac696b86604e76cef8dc08abd2ef164b43fa9e35e1b33ff6c3e4112a04639a36"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/catalog-functions-expressions.json",
+      "source_sha256": "2bffead993f4629789e67306dadc4d58812ebc5e399086bf706d4890f254c58f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/catalog-functions-host-actions.json",
+      "source_sha256": "1ca445cf8554283034fc6a5d66d3d0bad20a42387e31786cf36ec9c8747208b8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/common-types-basic.json",
+      "source_sha256": "1f0907b1fff5c609b265cd609475de98456362e6ffaf9af9ff51972eccc5d7a1"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/common-types-extended.json",
+      "source_sha256": "6b969ee468de49cdbdb21f5cd38e0199ce2bad06a5f4d14c02bd7cc624dab49d"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/common-types-visual.json",
+      "source_sha256": "3c619dbf40dcc68cbdb07c3da0b58822076106a9d9cca80d22d9e0dbb04a9039"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/LICENSE",
+      "source_sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/references/protocol/NOTICE",
+      "source_sha256": "1416e46cd8e91578bbbd57fe24a5fb35d6548f5dedd875295426a6556cfb2784"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aicard/SKILL.md",
+      "source_sha256": "fd18b1d3a613df02fdbd977a5d2592bce40a481605678c565997f93f5f6b0b96"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aisearch/references/aisearch.md",
+      "source_sha256": "3639e2ab79576e429e2cc0008e481237c197310f945846bd8e29b5922fe2eb0b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aisearch/references/intent-guide.md",
+      "source_sha256": "f0a0fa885c4b2f35e7941d80473087d48229bc218d141a94220bf3cea57f57d9"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aisearch/references/lite-recipes.md",
+      "source_sha256": "9188fcc1d83c1175a6f4b8152349881a98aab6690d74540a8d4102b63e95cf1c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aisearch/SKILL.md",
+      "source_sha256": "b815ca502ec7a42f314a026e01106b36fa25137e7c009572faf092c50ff37716"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/06-data-analytics.md",
+      "source_sha256": "b5cde126f6ca287ac290eb08985ca939df29bdb75278be9f4a9015d6364c050b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-advperm.md",
+      "source_sha256": "bf26ecfb49128e274ba33afa066105ef1a6cc20151f8ed0ed15aa80a7d24ebcb"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-api-key.md",
+      "source_sha256": "5426cac467a80ab8e4593ab3df468bbf6d455c4251af1adc5c560fb7fdc75ad5"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-attachment.md",
+      "source_sha256": "dc0c7c343cdee875a92c66b19351ae0a70a7519d4c71415d28ab8db10133a402"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-best-practices.md",
+      "source_sha256": "adeb4da1cab089df95c57426f814380e3e242089b4fc9e66bf60cc5d1821d8f0"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-cell-value.md",
+      "source_sha256": "e1c52ed89748f175fbe61ff21f16edfa51b693f06fa3120e72d716141cd49f11"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-comment.md",
+      "source_sha256": "66cf4f3aa8d983f0e7060cc7b6ce0e6174d1b35edaeac4ce7d36ae358f1d78a2"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-dashboard-chart.md",
+      "source_sha256": "e8e9ccf46d3dbd82ff978ff2aeab45e71887fe987d221787db7f3c4fa00b969b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-data-analysis-sop.md",
+      "source_sha256": "fc0482575052916ff59cac6e97b1d30565114310901e6eae58e09a82c67d6364"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-datasource.md",
+      "source_sha256": "f7f1aab0af5217fddad3b856cc1bb141077194cca873c66e64c4fdb3b6acbbe5"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-error-recovery.md",
+      "source_sha256": "eb22efab3da9e20226d932b21fe2e9c5b4ec524c28bd4cb4dcb2d9b0b8148e5f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-export-import.md",
+      "source_sha256": "8e9025c5efa04d6a07a802746d75e8678d937f5296cb8e062a6b390b8f28a5ca"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-field-properties.md",
+      "source_sha256": "fe3468f8eb8e96764eab13574a7a366e92ec8222afcebf633811b9a7b1fd55da"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-field.md",
+      "source_sha256": "cef564f70f3790f36f9263dae641cedb91acbe30f5d6ca34a428e219584d936e"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-filter-sort.md",
+      "source_sha256": "300f59a5847fc6f9427b03a3628aa21bff564f1c788ec18d1a806b84a236d881"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-form.md",
+      "source_sha256": "d9b354ec7f726e8257c24c423e8019d80e34c3075169ba13cc21594194ae3ba8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-formula-guide.md",
+      "source_sha256": "743b3a0fdb86f3cc874c2d7484fc31d04a14712fd15669993ea62c8c69d7b9f6"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-primary-doc.md",
+      "source_sha256": "de306fc90849af37c91a633070450bda3dde973b950f67b8ecd43dc8a18a3740"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-psql.md",
+      "source_sha256": "76e6995f4f65e1bdcc9577b4a2d9f0533236642173ee46e0c661661dfdab69ab"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-record-create.md",
+      "source_sha256": "274a6b32ea0b685076e98779e813051d80d7ad8bdd91fc5df98cda9de1ccbdaf"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-record-delete.md",
+      "source_sha256": "2eb097c11319919fc7987595c6d71146a2776930d817cf2ab67cddad5ac86c55"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-record-history.md",
+      "source_sha256": "42f06342f7894e686b7b40024a37f15b5ea17e4437ce1fc158e26830bf0ad2fd"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-record-name-key.md",
+      "source_sha256": "a6c333da9ff6b2475526dad1ebe58926d06d3f88a71b513f7ec7bde6a3408ac1"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-record-query.md",
+      "source_sha256": "29c6bfcf0d994606a1e62955c4ae92ed282ea0010dfd8b95f26cc2569b7cb9aa"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-record-share.md",
+      "source_sha256": "daa45e2a2b494c856eeb058b8de797aea7bb7b0f05d39306075ef213c8592546"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-record-stats.md",
+      "source_sha256": "f44158eb7113c856206f7f098af08591f40008c218342212ee202bebb3df9dec"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-record-update.md",
+      "source_sha256": "3768b561ebdabebab8299c9fbf8536674bd9dcf2a6a691d225d2e2d77f13a685"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-record-upsert.md",
+      "source_sha256": "b6728b10b694a28cdcad21c3ed63072ea45103ea21eabd321dec374a1c810db1"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-view-config.md",
+      "source_sha256": "71d95deb5a6ca9d2bdc4b89f6cbb3a2d4168c70c41f95baca8aaa2b2c8648cc8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-view-extras.md",
+      "source_sha256": "e3cfa0c1346dd235f735855be1b6a0640d23dec02264dac1a48eb2a22476fcef"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-view-types.md",
+      "source_sha256": "fbea1a5c4219c02c13da184e5adfa6130eafd3185f49e9b88d3ac24c399b7b3b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable/aitable-workflow.md",
+      "source_sha256": "28c67897af32bc2facdfe8face0e092764dd7404facfbf516f8c70d0d6452a0f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable-record-ops.md",
+      "source_sha256": "ea8b739a29730f8a2ea8508364467c84a8cb8ced03f87c7dd18d2c139acc9018"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable-section.md",
+      "source_sha256": "330ee7872fd797b5f973c6112a0cc68bf22e4555a6ea1643b018233794364a6f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/aitable.md",
+      "source_sha256": "aa44adc522545f1bf9df01e05b9f55d629726cdc60a239ccd63fc1386d1ee1e0"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/field-rules.md",
+      "source_sha256": "2cbdba32789f385b050b761190c6ed51193752ed87e94afdbab0e8661a11deea"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/intent-guide.md",
+      "source_sha256": "f3f3032b44698762420726943c8a6d10d86f096a62efd71c6bae0af80a2e4063"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/recipes/conventions.md",
+      "source_sha256": "ba3b7d98cf729b486831558e0bd6e281b6a72f062b3799828ad2180d1d13dc33"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/references/url-patterns.md",
+      "source_sha256": "b7ba999005edeedb97abe463536c92a14f41a354c30ebb8a9b2edf9409bd8e93"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/scripts/aitable_export_via_task.py",
+      "source_sha256": "c8ea6030e1b49aa4de0147dda77fc6b5b6d9217b16634ad3e49c44aa8c191756"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/scripts/aitable_import_via_task.py",
+      "source_sha256": "c479f54868474fae97c84aaf487cf00b9fd538e9c63ba29c8ed6e414a1cfa0c4"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/scripts/bulk_add_fields.py",
+      "source_sha256": "73c0c8267968e5ea8be10e8f9a4ee5cb853d2addfa97f4ef6f25dbec1bbb0a61"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/scripts/import_records.py",
+      "source_sha256": "b725f2cbee2f1e407d664aea5f5859797f753b104a44950b928725f8ceacbca1"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/scripts/upload_attachment.py",
+      "source_sha256": "312fac63da30a6241d8511716aaa2528b277ed718ef8617497cb0332c408078c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-aitable/SKILL.md",
+      "source_sha256": "4a1b5127d27cede5fe99eb9739040f79eeabf4a5244d66eea6510ff05c72187d"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-calendar/references/03-meeting.md",
+      "source_sha256": "ca2ac5b20566e35118566f7b27143f2eb26f002c0f4da4b0e0f37a3da0ac960a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-calendar/references/calendar.md",
+      "source_sha256": "1c0f3a53e9cdee84e0857de1dc2377483826df9d5eb048ddbdfc1b696036249f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-calendar/references/intent-guide.md",
+      "source_sha256": "790e59a9c837a9cf02fa973b0b79c4357ec37fdf7f72280a376ddfff0e72df8f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-calendar/references/lite-recipes.md",
+      "source_sha256": "5247b09e27f60eb495ef67c0ee290f4ebda250d1628c5dbd0085d9cfa8cbb95c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-calendar/scripts/calendar_free_slot_finder.py",
+      "source_sha256": "7a4fd3009f323e4f581cff71bc8174c93e90361519e20c8a22760c3a57964879"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-calendar/scripts/calendar_schedule_meeting.py",
+      "source_sha256": "cf74592d5e8cc1e939ca6eb954b19c99e63881e95893ffb140a87a7af9a92e9a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-calendar/scripts/calendar_today_agenda.py",
+      "source_sha256": "c1d1116929ee57f165dddfd7ea2448e133fb631217ff614394e9c8a0a7595d48"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-calendar/SKILL.md",
+      "source_sha256": "f42f6fe6433656a1ae3dd5ff3f040bfc44e2d6b1bd0ce760aeb2d151b900dd1c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/01-messaging.md",
+      "source_sha256": "66ac7a37a4099e93bc576bad28ef45e912fccbfd397ea57fdeba8df6e8350ba0"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/card/a2ui.md",
+      "source_sha256": "03666e1aa709a7bc8bbd17e1e2b304a3c0bdefcdffc164a163de668c03381980"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/card/callback.md",
+      "source_sha256": "f8f8767b491bd1bfedbcdd190bc78ea46844cb66be9cf097d2c1105e9c4081ec"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/card/create.md",
+      "source_sha256": "bc28d02d25b4b8884b973579c3f4d9a2b5e116e5feae3b1d81b2b4feee5219ed"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/card/schema.md",
+      "source_sha256": "faf4a41fbbe54ce937dfe5007f9cb3f67ffa4b1db5d6793238a7e81f5dda1dfb"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/card/update.md",
+      "source_sha256": "f8df3205de37c9fc19c95911c93a67c7f3b6fa638f16aa8318be193d9297337e"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/chat/chat-bot.md",
+      "source_sha256": "e6ba3bde3c2ab3771907afea93e32bb5a658bdbb4e39d0093b997fc13fe318c7"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/chat/chat-conversation.md",
+      "source_sha256": "6474921d449613a4f0b4f120d0df9480d1aea81e6cbf6d96379e59c74010165c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/chat/group-admin.md",
+      "source_sha256": "dd24cfd1177f0120fb9872b3866cec083ee501f2c95a5e63e5caaa26975d2db5"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/chat/group-discovery.md",
+      "source_sha256": "8550e29bb2a8effe9cc04e5221129bd73a874536e2c76544d45555615b3da7d8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/chat/message-actions.md",
+      "source_sha256": "1e886617816a2cfb4efb685bb91fa0733843c46c5d47c62da00a9985f61040ef"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/chat/message-media.md",
+      "source_sha256": "f63e29affce5fa9be29bef2cbbf07505d01cdc51a4305047006c7726affd6688"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/chat/message-query.md",
+      "source_sha256": "b53c2e4bf3c73864b82e3ff12d688d246675b7258f0e61cc4644ac4ac183bf06"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/chat/thread.md",
+      "source_sha256": "171938ab2870f825752128a246a05983ebc280839ee894a933f350272670c97c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/chat-emoji-list.md",
+      "source_sha256": "674349490531742052ebb49deab361e576ff354b727970872a82f58abff9562f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/chat.md",
+      "source_sha256": "860d0d03e1d7d1da7d06242a27462963b0c6934cd2296b2a48d9edb538d4c9bc"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/contracts.md",
+      "source_sha256": "efe14d6b788bd43455d526f5777e2742d348320cd6bce8a004aa2cd51c5aa623"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/references/intent-guide.md",
+      "source_sha256": "c7ec590fd1feb8bb1751e29ea4c74b169dffbdfc23104f1c3e1348572715a54d"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-chat/SKILL.md",
+      "source_sha256": "e256f1b13c8fd966d73f8e88a1a7257776831515a1aede159eb483b71a6996cd"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-contact/references/08-directory.md",
+      "source_sha256": "f8d5e3a4a7e5ee361080f24dbfde8535e05adf1972cf63f9564026e3311d5ef3"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-contact/references/contact.md",
+      "source_sha256": "c860e5a93b711fd36c268aaaf33d1c81d8f3c6bd97390b0f367bd65680806c64"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-contact/references/intent-guide.md",
+      "source_sha256": "57f8ded1cfb15c0c30c5916d204a364995bfd0e9d4d38b0af7078a0fdce87499"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-contact/references/lite-recipes.md",
+      "source_sha256": "7e7b13cd621771cb9777e58f0340ec5e9cb42a65adf3087f402bb058dd6d388f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-contact/references/recipes/conventions.md",
+      "source_sha256": "ba3b7d98cf729b486831558e0bd6e281b6a72f062b3799828ad2180d1d13dc33"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-contact/scripts/contact_dept_members.py",
+      "source_sha256": "a8dc14fce52f12c6f1ff6f6bb856f79448e59d09463a1989f8e2c1d55734f9d1"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-contact/SKILL.md",
+      "source_sha256": "37d1a981669f6f3baba032d9eb5a08caf7276cb75c96d58143d205d5e2fee4d5"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/04-document.md",
+      "source_sha256": "8f147ce3a7747ad5e20d9d7a7518e5e445c4b85180c403ddc61f620646892b42"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/contracts.md",
+      "source_sha256": "2e28c895528a320d4deca6fe2b0ee0dfc561bb23ec3e267f02166fe0eaccfe6e"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/doc-block.md",
+      "source_sha256": "3a236e7893d2240efaf98b34acc07d5171160d7bf8f0f17b50bb10516a21ac88"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/doc-comment.md",
+      "source_sha256": "6f7aa5f4532dd1db43df2b6459114cf2c2b32fabdd449b31f739e2fef4d4b652"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/doc-create.md",
+      "source_sha256": "13f13960780e872d010b6dfb37a7683a0c3501dbe3ceeb7aa191c2388280b616"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/doc-export.md",
+      "source_sha256": "d1c7264a0fe1cac0c892b7ee0598c9b00e0c76f15421dc470ab59a7243cafa88"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/doc-import.md",
+      "source_sha256": "ec9e6ba9e6dc515064d9a9fb21415a4d3e2e63d9b51d52e58b453c57c1c29504"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/doc-info.md",
+      "source_sha256": "d87180022385478715b048b33473deef50f4c7628e74ba08664a7ff48e8c7a2a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/doc-media.md",
+      "source_sha256": "2e66e20de5fd0216480a659ad261aa8b35dfe0787fd7c7534f88a540f55eda2d"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/doc-read.md",
+      "source_sha256": "6a68151aaf6a7c43aad57a06fa5f301081ae51a8267766a4640a74e90a8aa69c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/doc-update.md",
+      "source_sha256": "3934521e678fe5deadf8634968ff583fe23cd97f097ddaa1c81f3f615a9d78b5"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/format/doc-jsonml-cookbook.md",
+      "source_sha256": "74242b129373ce39d68530de136f896c64f97cb9d5761d089e8d67b8fa53b8ed"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/format/doc-jsonml-schema.json",
+      "source_sha256": "7255957d8cdc31bbf37c8b9f1107c5c909901c3dd0abf9a22249bd9762016ada"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/format/doc-jsonml-schema.md",
+      "source_sha256": "0970a3204dcd12a12110567fabb78eb77ff1f7363d14c7f1525e5508cc08b5ee"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/style/doc-create-workflow.md",
+      "source_sha256": "33ea8a0adc9a1ee30a86071e8be9d0116539cb2b9b4204fbd531c9ac9db4cdf3"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/style/doc-style-guideline.md",
+      "source_sha256": "58b6351783d7334226d5ec9d40e56fa28476f3d6a090d502fa03d3c971f06c43"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc/style/doc-update-workflow.md",
+      "source_sha256": "9372d589d7919d6ebf9505bc190bb48e80073c8fb81d4f5d74a8a47d479c2f00"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/doc.md",
+      "source_sha256": "cc2b40bffdf5988becc360db8339aa553bda9424d9c9b16cc84738652b0a948b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/references/intent-guide.md",
+      "source_sha256": "d3577bde4194a903266e8e3eddeed3c046385565777ba9dc38b7b7da84e554da"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-doc/SKILL.md",
+      "source_sha256": "6fbbb5d3b65308da20f04a93ec6d2a578738c61b0e889b881779cca0151fcbdb"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-drive/references/drive.md",
+      "source_sha256": "faa6508cc8582ebd79bd8c170010931e9531affa29f10239903e2d617e1557ac"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-drive/references/folder-sync.md",
+      "source_sha256": "9dc0195b1b4876af1127d8c677423e81fafb976e352aafb49647c395b8a9e944"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-drive/references/intent-guide.md",
+      "source_sha256": "2984ee0b504ab8048c5c23b2ce784ecbb5eeab09d7ae6a97b3fd89af55a44d11"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-drive/references/lite-recipes.md",
+      "source_sha256": "72fcbfc206532d78179f9faa80fc3d071f4a024cb31237dc2e8feab6f26b8a27"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-drive/SKILL.md",
+      "source_sha256": "dfcd65a3a63f1214092f077ab1640dfcedad1314aec6e36703cad71873271b20"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-app.md",
+      "source_sha256": "a88db5100cbb19565d4990e3375f0c7295ffb8a704cbc40dc41968f1394e831a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-calendar.md",
+      "source_sha256": "29c6d23e07f5a67936358ff30fe59f57c00e722a9410d52fccb0fd75ebd75ab9"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-card.md",
+      "source_sha256": "b02ce4a2e50bf35d1afd0c2a6943b127cdf49e3d5a4253c2ba19ae6d2a3836f0"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-contact.md",
+      "source_sha256": "028b439f5bc82bc01a2a5e395d7bd54fcd67ab630957bc2b0187c4d41aeb7185"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-im-keys.md",
+      "source_sha256": "4768da2552ab2e6b2cdc9dc8598efb23ef7cabf853727907f1b540a1132253c2"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-im-lifecycle.md",
+      "source_sha256": "4b042a1ab9c5f5da2ba7e6f66a852b0c0a8615c44015b7053c1a797f06290543"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-im-operations.md",
+      "source_sha256": "37826976d5b2b43e78e5bf7735f940f779a6e51c38b9d99112ca4e66d010af89"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-im-output.md",
+      "source_sha256": "21595773df596583d414cd0dbd67c02e3844f3fcb30db32e36a70b18276157c0"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-im.md",
+      "source_sha256": "3f6245e7d1b552d8ebc1b9322d693a310ca7a1dbbfef59ab5a365b2e428736f0"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-minutes.md",
+      "source_sha256": "ce15133d399c8ffed329eb974d968d9ca89c9decf4254772322a1488ec6db7bd"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-oa.md",
+      "source_sha256": "60cf64da86e1814c265d93b4fdb86e202bb764fdcf6503cb18df60f7f80f7030"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-todo.md",
+      "source_sha256": "1d19cc732a0294b0f12175656838f20ceb0389b099d9164fdce1f92487d38c20"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/references/event-voip.md",
+      "source_sha256": "de4714656874eebb6225d95a299f5fecc8505e720fc9873f475cd9326c164308"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-event/SKILL.md",
+      "source_sha256": "24b28321b960b32ec8a4c20789a46091706216bb2bc62630ffdef0bb993c30a8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-mail/references/09-mail.md",
+      "source_sha256": "86a578a64236e3d006a75aa125cf9f0535aed8648cb9f3751ac296eef260ea0b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-mail/references/intent-guide.md",
+      "source_sha256": "37b7833f49ac36ab9dd08046ff7d0221bf00d21e5bb1ab039739bb1f1bc83cd0"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-mail/references/lite-recipes.md",
+      "source_sha256": "f1c92a427d24f70aa68abd63bc11f04a128831706cc9f5647f766e8d5d5ee06d"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-mail/references/mail.md",
+      "source_sha256": "af52de5c4b7ff53314700c2f54057afa5dfbe69e36797ae97112d802444fb193"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-mail/references/recipes/conventions.md",
+      "source_sha256": "ba3b7d98cf729b486831558e0bd6e281b6a72f062b3799828ad2180d1d13dc33"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-mail/scripts/mail_send_with_cc.py",
+      "source_sha256": "26f3934e6a4bdb736c75e5e159c208d75b150a0973deea441343b059c29565b6"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-mail/scripts/mail_unread_summary.py",
+      "source_sha256": "04614351c0de07a8bbdccc88d27dbf4abf23d2e495aa9df0a786dfbb166a8409"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-mail/SKILL.md",
+      "source_sha256": "664f31a00f46245c270049129da4d25475ccc561b04d9897e7cd634b2c4a6f18"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/references/07-minutes.md",
+      "source_sha256": "a8d8680a6cbd974c38fb561be691ce4f13b90eac8a235139c0ed226d92da99ce"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/references/10-minutes-speaker-match.md",
+      "source_sha256": "8e03fd9d62eaa12705399c6a96b1a608b03cb655caad02dde6dd64d33e3ef84f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/references/11-minutes-speaker-correct.md",
+      "source_sha256": "8f9a0e6fb1dcc528654e4f68921c5e7d037ac13a037a02db7cb02fe1a7227c22"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/references/intent-guide.md",
+      "source_sha256": "40f0e9acb4a911cc9373aadda49c5a87a3999b09eb673e0fb36a8944f2093e49"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/references/lite-recipes.md",
+      "source_sha256": "ecda26b093fc066a2fa3f10a9053c4abd5a88a2487f96255dbe6c8a948cdf0c2"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/references/minutes.md",
+      "source_sha256": "93ca8742d477bc3c4e35cb30c1c548c7b088b5cb69852d1c54081ba24883a78b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/references/recipes/conventions.md",
+      "source_sha256": "0378e27dabf90683ba501e35bf36c021013f340c18a777ced0e95cfe442b6ebd"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/scripts/format_timestamp.py",
+      "source_sha256": "59879cc27743d7593a6b6c7a8b109d970b3777c5b536aae7b6510699e939897a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/scripts/minutes_recent_summary.py",
+      "source_sha256": "6e2588c5f78e5b6471db27618036496d9978fe599fc70d2b29fd14e25346bc0e"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/scripts/test_format_timestamp.py",
+      "source_sha256": "753aed48575fa275cf4fa27e889e74ed2984229c4bc3eb6ca6c8d305748d5c08"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/scripts/test_minutes_scripts.py",
+      "source_sha256": "54f3179d8c80da41e943b26c314ab7fa1a0732566a51a86419b3cfd1397b16ef"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-minutes/SKILL.md",
+      "source_sha256": "9338f90e82dba94f7fb3ce89349096fcaaf13f9db6270632d761d51b51d5cbe2"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/05-reporting.md",
+      "source_sha256": "ef87344a7cd07de399375ce327acc58ee662f37b75571a31db32c7ca29e86219"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/agoal.md",
+      "source_sha256": "a1fd57e4f957b935f6eaff2aa3f1e858c6217fcc2612a51671ffd259c48fd58b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/attendance-intent-guide.md",
+      "source_sha256": "d06b7777b43a683850b13250910cf599f862c4b82f2f2fda4d4f61f4cc3b6042"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/attendance-report.md",
+      "source_sha256": "6ff5e24fd3815d3a8894423ad1d0bd9b7935313737dbfee97d690fa654bd8b42"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/attendance-schedule.md",
+      "source_sha256": "b4770d5ad7f2a72bc25405508a11871ca0317af4ae3664399efbf7f26b04a65c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/attendance-vacation.md",
+      "source_sha256": "3a763435bfd2ff583484c155cb1a5bc231f6a8868a6131f1deb24b74331dba1a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/attendance.md",
+      "source_sha256": "2045a8fffe4866fd5a1a40ed27e2084505e2380694fd4d3fda27c62b239b21ef"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/contract.md",
+      "source_sha256": "edc46d52b03978e9fcc901f98fb5ab09fcb2eeb90e16bb20ee2e3c9d12a68bfc"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/app.md",
+      "source_sha256": "328951cb2c4dc3832cade537ec24593668491575d0126abc86391c92d4a38c26"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/connect.md",
+      "source_sha256": "30ec7893c9d1093477d2a9685028009fe0eb477e8311bdc56ab15677d8c937a7"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/credentials.md",
+      "source_sha256": "e3cdcbe13c1bdc53df23f53e9ca0fe4d8d726d039a39bc927f35cb414425af3f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/dev-index.md",
+      "source_sha256": "17d6eeefd5fdb58367ace7428b9ce02ec680afdbfacf25b62c662fe3380ca21c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/event-definition.md",
+      "source_sha256": "a98da2170a0d03248e2e329623a1b68edfa86118f91185de17a626a075914921"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/event.md",
+      "source_sha256": "f8df00dc27475c23960cd8c0d36c649e3102e633afcc18741c8f955fd3f81fc3"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/liteapp-sso.md",
+      "source_sha256": "d9b3a55d9642fe1619f5d6c3f1e100a149d6016fb78fff2c1872ce5dee5b5bd5"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/liteapp.md",
+      "source_sha256": "98547f5bb48f707997effaf66890edb4e00c7d020db823fb49b54b19a2270e94"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/mcp/api-to-tool.md",
+      "source_sha256": "29f9311296560e760ea8e2970da6c4bce9a891fbce74c83ee35a951496ce008b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/mcp/auth-and-credentials.md",
+      "source_sha256": "8b5f790b3c2e772b30d2a08dc0430a8fec131882273fa172cc1c6a0ab29d9666"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/mcp/expression-functions.md",
+      "source_sha256": "a97746367b1c762065e7c857c5ead26f3a831857857e49ffcc0b3fbcddb1e38b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/mcp/mapping-rules.md",
+      "source_sha256": "9a15fffa32883e8b9db0950e8f7222f7393a147c4947e2e4f0edcc2a89dd930b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/mcp/troubleshooting.md",
+      "source_sha256": "b14a38d96c4680476e5b625a3f58cd65f6c6b767421c6e5c54ba5293f2b2b286"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/mcp.md",
+      "source_sha256": "5f62a9ab0d044e086088a3334ca2bfedd26520d85d4093bd89541d6bb7cfb9b7"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/member.md",
+      "source_sha256": "a9e5fcdac6ceeb9b80d6a5cf04fc23d136a6a0d1cc698d513c536113ef2ca539"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/permission.md",
+      "source_sha256": "a3000f897c5770d410206e9e20cc6fee6403033fc3398fa8f50c084809bca841"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/recipes.md",
+      "source_sha256": "5b94874c399935e20d92cb0fbadc409e1f5f10fa78b2b360cde097ded0ab8ece"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/robot.md",
+      "source_sha256": "03d03fdb1495661b5d2c0f8f7eb58f31cdfcda03c692c40d7e03ff71d7ab4d19"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/scope.md",
+      "source_sha256": "009c439428056896e554321688ab31f595291871a3459497c311be2c6761dc64"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/security.md",
+      "source_sha256": "0fd4eeff5d1c510dc7796e7ef7be857bf6a18f6712bf1a80b5fb38ebef445bb8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/version.md",
+      "source_sha256": "1a0e9542a31a69a2c34f3dc4acff792cbe6128c34a31c4e30903ccdfea078969"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/dev/webapp.md",
+      "source_sha256": "03dd55da9e3b3001e5d00c9e661a149e578ca00c9dcf0b3ca78612780c0e9f3e"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/devapp.md",
+      "source_sha256": "cec0c35d02e67554387bae148a1114654638af48af98592ecb61879cef54f29d"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/devdoc-intent-guide.md",
+      "source_sha256": "a9302795167065a3d229a97bd806b3d4093d540c0c94d60037e6a544b08bb189"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/devdoc.md",
+      "source_sha256": "4101cc6e8f346ab0e43e7a47ef04e1b63c4400d23d9ec6e9a2075220d5108d64"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/ding.md",
+      "source_sha256": "1a6cfb6c05742289e2c74e3d83b3e75ff897d2203ec293f99860b6841de847c3"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/hrbrain.md",
+      "source_sha256": "78cad429313c2372196ff90bf7aecab144168bf781dd874ce1bb2108bb95def7"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/html.md",
+      "source_sha256": "01185e3ed6019e8cd32eef253ddf2dd2efaaeec723cf9b3670bed20a32c58f4e"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/live.md",
+      "source_sha256": "41d3531ef9cae83b888aff4447b0de47f77b79c02a835c6693963a48f7604ed2"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/markdown.md",
+      "source_sha256": "f045ddebd91a4900ed23fd5936675f140d1e1e6315e8559ecc5130700c0c58b5"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/mind/open-nodes-v1.md",
+      "source_sha256": "08f1de46449f54f17fd6afc3cbdd6431ef9f0e709c579dc64ca173fec6954e05"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/mind.md",
+      "source_sha256": "2338972b810d2c338584e29952496a94ca3d0914aff55c6424d9a635cc930daf"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/oa-form-components.md",
+      "source_sha256": "785842f2c2d4f7e1ac2399fd6d594a90b7fe808cd8cc9b9b3e197db1eb1e3c98"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/oa-goout.md",
+      "source_sha256": "0ca2fabb4cf9e9b6bd380bc17a98339b7ad47848a075cb91e57c062db67daa68"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/oa-leave.md",
+      "source_sha256": "f7201223d7611ebc305f77abf274fabb58300674bfcdc27a57b64e7cd70a4ec2"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/oa-overtime.md",
+      "source_sha256": "4adfb2c9c4f00d1d4f7ee4d2e95e57de7672db243ef15aaec998e0fef766f725"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/oa-process-nodes.md",
+      "source_sha256": "6e1d7cb4e2bcf93e868cfcaa13356af1ba5d61afd458653e5b4915bdda9bbc00"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/oa-supply.md",
+      "source_sha256": "cdfc0ef0b110648a47c1aacca553b94830427290a594076687011c7c3042c89b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/AddressField.md",
+      "source_sha256": "92ad9e8b02eb4f8b5a5162f60a34e3616751fcfdebb5de15a24be02c537df299"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/CalculateField.md",
+      "source_sha256": "f70992e4e7e1c087eab982c6b524930848fe076adc3518e8fcdb1709e95f0ac8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/CascadeField.md",
+      "source_sha256": "4c72c1384136c709d43540cfcfc8ded31be2d884730ca6cf80a34b30958346c4"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/ColumnLayout.md",
+      "source_sha256": "3f189301ac342e8ce856a296cfb7f637c2b1bc37ce000355c992e44552254265"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/DDAttachment.md",
+      "source_sha256": "da1b61a1bef8a6a80e4368451e0f42485c468085d23d259c85f0b48cd50583bd"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/DDDateField.md",
+      "source_sha256": "7cc261d8c734a4f6fbc972be8b66f67e68ceda681ca00afa35d7f8eaa1784c35"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/DDDateRangeField.md",
+      "source_sha256": "4cc8ab72b7dadffb81a3f066cdb46e69395ec804d2958640b1ede0c40d544fa7"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/DDMultiSelectField.md",
+      "source_sha256": "87643a318cc8274eadfba5c9461073405684b6dfb61782b901b57af361e022aa"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/DDPhotoField.md",
+      "source_sha256": "03c123eb7370fa2773a88cedb6ae5fe3696d1d540db02a5c7e17eb293a6b2206"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/DDSelectField.md",
+      "source_sha256": "9d3494755a9247009b1eded2a2fe21f9baafe8b9bdc6175270af0235158798e9"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/DepartmentField.md",
+      "source_sha256": "a286e6bcbe3259a71ab1f2704a8eb11e4cef580302c6ffda297742454dbf7d1d"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/ExternalContactField.md",
+      "source_sha256": "8499a0157fdcab6b1baa5eb3728d1c7dab96d7c5695b5460d6f7b59ee658bcac"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/FormRelateField.md",
+      "source_sha256": "73f9291fd2ada236616009320d4ff3f7b5476a1cc3106f490479640b805f7087"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/IdCardField.md",
+      "source_sha256": "e6f3a6611b8f59d952ca6630d3e95da653343ccb7eda4a87d3ca0c3970256a66"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/InnerContactField.md",
+      "source_sha256": "20eef425eaf4d30ce9ec5f08aa3313de4dd2bf21db4ed312fdd40931e9b77819"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/InvoiceField.md",
+      "source_sha256": "79e01774ee7d6e32c086c5edcbc540e48a7f344dcdfd9d7bd02ec85c78c7f1be"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/MoneyField.md",
+      "source_sha256": "f122cf8c4412f2c6e48a2b78a9e6cf90bbee0263f456adbaca10d85220da42fb"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/NumberField.md",
+      "source_sha256": "e1a89f275cb381699d2469aabb8ccdd2976f99a6216029ef0e3bd68023cd0a03"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/OcrIdCardField.md",
+      "source_sha256": "32a0bcd3b35d1bddb018d7ffa4c44362a5f3fc1ba7471dfad0a653ee26725f91"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/OcrTextField.md",
+      "source_sha256": "ae7faf65fe1c603fb7f2e4349243b32c3a38bae7ca92364702a8e688be79da46"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/PhoneField.md",
+      "source_sha256": "a1586790a47a0df7c4cc608995f6be25bf24abdf5aa06f95b2dff2f94251ab5c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/RecipientAccountField.md",
+      "source_sha256": "e0740ce6ec4eca2d28640e0a85a013d312161fe58c582390374799aad3cb4962"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/RelateField.md",
+      "source_sha256": "9c3a1e0e158f42f41ca9c219d141511ac01ea0de67aa8ded383807010c5a3fbf"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/SeqNumberField.md",
+      "source_sha256": "9009edc7c583b19c8ef31783d754d0221b3d3335fa53b506ec96d50f46b973d1"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/SignatureField.md",
+      "source_sha256": "f59769b8f8a347a6d45ff28a68d856f5183acaa86ea636915b12bfdeb9edd607"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/StarRatingField.md",
+      "source_sha256": "83bda8f6fed761a99d478ab4569e6c81b80e0f4470aab6d339239fc09e91490c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/TableField.md",
+      "source_sha256": "0daa63fd5cca7fa7cdf8d4c9c261c43280e67baa6c521f31f74db90618f025c8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/TextareaField.md",
+      "source_sha256": "09a0c03ad3934dc73bf1ddf749a740a76c9e5d6656b75e237ddec0c696f4587e"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/TextField.md",
+      "source_sha256": "2844855cffe2d424c4d4509a697461bf9881c6484d09fb10bb8abad1f456d044"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/TextNote.md",
+      "source_sha256": "b765a3370814b9b35f92fe75ec4a469ad0c0a534820f4d2d0d146b7b0107e191"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/components/TimeAndLocationField.md",
+      "source_sha256": "079bce1487819f1105b37f09e137d5e68d5ff799950695cdb292adf9e1d21ce0"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/example/form_components.json",
+      "source_sha256": "b320f9965ccd6c72a65bab1aa20c5d4e5dd9807e6b5be6d9a396b5d3b4abaee8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/example/process_config.json",
+      "source_sha256": "b466ac973d698520759ce8c89e234f551ed5a54ca190b31d3828c9760234638f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/form-components.md",
+      "source_sha256": "b06b974144bb5d9eea0c8c00c64a63737c6d621baf83eca7af4ed2c8c06666de"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/nodes/approver.md",
+      "source_sha256": "2426d5d52b3f2a88eddf79e7c4c2458ac62dc98b10d62da847b4a4cfc516d29f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/nodes/cc.md",
+      "source_sha256": "3b45daa4135dd8d1984a0449cd903bdcaf08061e4fd3e40ed6b4610ee6971cda"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/nodes/condition.md",
+      "source_sha256": "6f1b6bd73afd8ab35341e700fb9698e2399ec34cdb29b9dd630d3fda87a16dae"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/nodes/handler.md",
+      "source_sha256": "ed9e78b5c82c1ab3fa571a3a12814bd2ddf0856fd86d15328c1a52dca0cf2688"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/nodes/originator.md",
+      "source_sha256": "480a4b5a74e56c57b08f463b83d39bb47500d8fa3d188a95b2dbab4b3a768e92"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/nodes/parallel.md",
+      "source_sha256": "1cd2d83fe4546f15f26c10b541938ccba0dcf7605209fb97f4eccdce03c1a15c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/nodes/payer.md",
+      "source_sha256": "1d2fc0090668cd4db8537febe525d9c5387a058a80e4bf4e508651d0a5f4673f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/process-nodes.md",
+      "source_sha256": "3ab5dc3b0b780e1ce5732aca6de01ceae842a5eac0ac72326170142233adce3f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/rules/target_approval.md",
+      "source_sha256": "c6ae1c192a8de4eceaf5bedee4f58c1d66745762516a2e382065e37ed18e05c4"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/rules/target_connect_approval.md",
+      "source_sha256": "b9d10af6554bce8443dc47bb46519433e885d17fb46886b7e147e5972bf65565"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/rules/target_formcomponent_approval.md",
+      "source_sha256": "492fffb9acd978295f0a1d722da1dda41728dd47f5a60b7a24adc9bd0cb41c0e"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/rules/target_formula_managerOfDept.md",
+      "source_sha256": "b711d068cc49c290e5d3a519b5b0f5c60cc04643b66ca854af112d6ca93c3ad9"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/rules/target_formula_reportLineManager.md",
+      "source_sha256": "a72ca2b7b8a2919e2abccf61a6dfb6258b28ac11a7846aa1d4fca2e2c9254fcd"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/rules/target_label.md",
+      "source_sha256": "8718b6b6cc62a3733113f46f53a5da86afc5dbab870aa9558c4495983f9e96da"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/rules/target_management.md",
+      "source_sha256": "20e247fedf8922879f9935642036ba9b36b36df8a94a977c6fae6449caf1c60a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/rules/target_managers_labels.md",
+      "source_sha256": "8c82ad7e065be7de8a8499cbb2dbd45eee8fec8b96add50cfab5ee6bfa78ea7a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/rules/target_matrix_approval.md",
+      "source_sha256": "ae1034f1b307de4eb487838452e88981f1848d54a443f38172f19489e023fdaf"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/rules/target_originator.md",
+      "source_sha256": "f5947755444cb814e42446725d0b4043f9905aa7f380d0a41252afc6530e6752"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa/template/rules/target_select.md",
+      "source_sha256": "fd9284ac63ae981cf08a5b58cc3c53b873c773151c655f029a34a48fc8a20aa7"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa-attachments.md",
+      "source_sha256": "8e3561f452811b9fa2ecdefb50d59bb2f5d602db5c58878a44be07e4a2696c23"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa-create.md",
+      "source_sha256": "343b77a534af92fd8d7ab09cf37ebedffc012768485bdb2ff223da9062fef807"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa-template-write.md",
+      "source_sha256": "ed5f6e6f1871c448987636e5ac15b09f667c596ec89b96daa67510cdcfb44d2a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/oa.md",
+      "source_sha256": "415b57dd8591c74a2188afa90780be3fd4b2030165a1ef5f9f9a8342c7c0280f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/openapi-explorer.md",
+      "source_sha256": "e4ad98eaa2ab44b3e421529a5aa73858091db58ab946ed52b2fc162236bae723"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/pat.md",
+      "source_sha256": "14a7b8a43b8e7d5cd01fa1186a3ae1c8520c9236b21aa83dc48d087508f88ea8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/profile.md",
+      "source_sha256": "99a69f45ad5334c1bda16ce504e0c87524d02094f4b9e41888e160c7304cead5"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/report-conventions.md",
+      "source_sha256": "49302c46a5eaec27c40ed44ba836e12029b6cc39399d5f33cb94d67ab9b81d76"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/report-intent-guide.md",
+      "source_sha256": "54f74b1fdcc292695e44350c73a1843e54719b584c338deff93d8bd3e9c3d777"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/report-lite-recipes.md",
+      "source_sha256": "8328dce0db44f74a298d68ce5dc752d8398d4953406c6973ae4d4696341854ba"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/report.md",
+      "source_sha256": "130be807597b5902449f8f8e7f0d760eb2455cd69f500a04c3b00b65e49ebf7a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-batch-operations.md",
+      "source_sha256": "7ef62447fb81d5ef5935d9e0790750d304801a1caa3332760f03e13522383357"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-chart.md",
+      "source_sha256": "9c0933d84893549c63e70a7c3bdf9d4ceac60683058112fa006ba2a1c51c2e9a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-comment.md",
+      "source_sha256": "0b7bded5f86dc2f9151f75b793e4c1ec55ba4f963c501889060f82e70fcf3bfe"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-conditional-format.md",
+      "source_sha256": "d86ab2a79151ca7eebb1b113873aae128b1e66f020aff9264423706d31c5e013"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-dimension-operations.md",
+      "source_sha256": "45ece08ad12dc0e0bbeb8a08da47708a3d3948907470b8ec55ff416f39126c5f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-dropdown.md",
+      "source_sha256": "9082212d377c4c657487b004e91e317a5f9ddc4e483505932e81f5a3a82cd6eb"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-export.md",
+      "source_sha256": "379fde038b582e7a0a88518ea80574c1193f8945290ef3d7c44373bcec35fee2"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-filter-view.md",
+      "source_sha256": "4f3b796d065761ce5a4860e6932733fadc104d6a3630774bd483601d72afb259"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-filter.md",
+      "source_sha256": "96f2f163b2a5d27c412d7e7eef6f03cc59298fa0b15640996fdecab83a6b178d"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-formula.md",
+      "source_sha256": "529895fa937e3dfe9816ac776c04f7af6c2bf60ef2ff3ce124f003f99d483ce2"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-import.md",
+      "source_sha256": "a8d028671052390b3693f69703cf5624aa05b58191b939656384647d0b192df1"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-media-image.md",
+      "source_sha256": "f5397cf9bdfc563d22dffe7d43c24c1fea62931d7dfbe54f18d0df698ecde1ba"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-pivot-table.md",
+      "source_sha256": "4e085b6cb328332e10585d2cecb04028dfd5484cef3cfb844423f45746c1c00c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-range-operations.md",
+      "source_sha256": "6274c151291e69b4227255fb7c6b536ad66386f689711f5fb42f6f9ff565271f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-read-data.md",
+      "source_sha256": "00d93c5acf5d439dd4648b800cd7697153eecb128629f8c0f8fa2869bd56b24b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-revision-changeset.md",
+      "source_sha256": "c22a3cfc8c2bb8eafbd44e5a8a761fb6836fb22280455cfcd0d2831f2cc875b3"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-search-replace.md",
+      "source_sha256": "ef6c448884d4c411a8bdfa43a67511d43684f5fed4dcf224585494bc5d7653a7"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-style-format.md",
+      "source_sha256": "813b39109e3265ce630fcd7f3101dda3db78ba2f7f0db44f984726c9792609ee"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-version.md",
+      "source_sha256": "ab577438793150505a08751c734d553f97744bbcd62e6e90dd17cfe00171fcf0"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-workbook.md",
+      "source_sha256": "6c24fbbf3393f2c1e949ff01498e90ffe0dfdd10ab078ce6e969ddd28a234ca3"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet/sheet-write-data.md",
+      "source_sha256": "abc870347a29b318801c771dabe1e324b24df62ece4b2b05e54026387109885a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet-conventions.md",
+      "source_sha256": "ba3b7d98cf729b486831558e0bd6e281b6a72f062b3799828ad2180d1d13dc33"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet-intent-guide.md",
+      "source_sha256": "ace868cd0fa3202ce16c50398ac2eedb54f50527545e01773355368cf6bdfabc"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sheet.md",
+      "source_sha256": "3e444ab19052a63fce97c09900239e23e33c8e6269dea5df6796e0b3602ff89c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/skill.md",
+      "source_sha256": "cd2de21a364100bca4e437299947e73596bd549c17cc34f434aa8122f2ea70ca"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/sport.md",
+      "source_sha256": "c1a8c29d9d0d0ebbd6f319c0f1752602c243715e040a6749c7706825c5d704f6"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/unsupported-scripts.md",
+      "source_sha256": "68dda42997abcc5c86869773e903218d8b11ad9d8c19878a97f1312b5186b452"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/url-patterns.md",
+      "source_sha256": "d1ea93d119afaf255164b0e2af8caaf4219aabc0ddfd6a2dba3cce1e89db5604"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/compose.md",
+      "source_sha256": "5d197c070c9a7a90ad49f4af2746fe1ffc5a2b3f4ae3eaee2bdd738267deada8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/diff.md",
+      "source_sha256": "1c93c7e71f435c8ee4e6dc8055786a2d8007f3594de6d1dc809f098208463d26"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/open-nodes-v1/01-overview.md",
+      "source_sha256": "7db66398061f6ce04839bd82e2fa1f93ee26ba267caf987b9d0dbd8563ccf60b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/open-nodes-v1/02-query.md",
+      "source_sha256": "60aacae3c88d2d4d51d5e0c491003d0275d105806fa7b2c096b333fde1cbda9c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/open-nodes-v1/03-update.md",
+      "source_sha256": "9c12e62d41915084f64f741f2c309a4d1252cb1e0b74a4cd7885cf9c24055961"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/open-nodes-v1/04-text-style.md",
+      "source_sha256": "0c278caa4a624639f91ad92a35fb2da621558d5e2523e64d3ab982d01fe302c9"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/open-nodes-v1/05-shape-frame-group-connector.md",
+      "source_sha256": "aeb448e373a641c0841c327e63a8c8ee1d51d7c80afc76580d5a351c60aae4a3"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/open-nodes-v1/06-vector-icon-path.md",
+      "source_sha256": "0ba9f94ab9d2fdd243f5324b988ac434b82ec5c5c0cfca4db67c4a04c6a12747"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/open-nodes-v1/07-examples-errors-write-support.md",
+      "source_sha256": "1c30165c4ad27a4c34542a28cf761209cc119ae2f526baa460f997fd1bb1221a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/open-nodes-v1/08-catalogs.md",
+      "source_sha256": "c5e6afb853296b070582d95e0361557c4a1e22eb804020db2704ebd518c5d24c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/open-nodes-v1.md",
+      "source_sha256": "9c199a9dd12aaa67c184093872a4fb30ca20f4b382211ab6d6d27024cc738b0d"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/render.md",
+      "source_sha256": "10eef4f33e55ab5f13fa85b896f5812171b93c73ff1da84b0949dd8a68f402c3"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/replace.md",
+      "source_sha256": "e2b865c8bc88da6493dbb170942e3ae22f6c3a6401c0d2e874f3ffb31fbb4a0c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard/vector.md",
+      "source_sha256": "81f646e9294341a88f92e05d60360237ab1dfc2e422a81aac6c159a84bf3171e"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/references/whiteboard.md",
+      "source_sha256": "b40932db9e64533feb655be3a9dc465e02841692abe07334b74373d6b2ca0142"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/aiapp_create_and_poll.py",
+      "source_sha256": "8318e67b851aa9bfd9981e0e08a859a118e469235d617dab8389db3f6ce72098"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/attendance_my_record.py",
+      "source_sha256": "de23144ada2bd293388b60d05a56e724fff52d6eb5c66185ce8ae89f094cffe2"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/attendance_report_checkin.py",
+      "source_sha256": "8073624289330970f4641cc5228516f50c754184761038ce6b0292033ff085bc"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/attendance_report_common.py",
+      "source_sha256": "6bdab253502d38b672a437ff6f7aab319b3c93294d3bc275e916efd07b4ad903"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/attendance_report_daily.py",
+      "source_sha256": "ee528d2b26a9ab3698435738d40316fbd42ece96d62485f4aebe8fb7a7345c05"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/attendance_report_detail.py",
+      "source_sha256": "3114429f18ab73b1327a90eb719f0d8a8604227738cf5c285edaa88b15ad2626"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/attendance_report_monthly.py",
+      "source_sha256": "1a0eca8b4ed89f2f868215d576488d8ad9df17aed47336cb2efbcc2541fe3273"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/attendance_report_record.py",
+      "source_sha256": "5e542d1115511c45b5b4cd8b7d7f5cd7c10a6087201684aec932d25ae349c202"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/attendance_schedule_export.py",
+      "source_sha256": "99f7db7e38ee46dd0d4b47dae415c518318569d3ef528e94ab3054383c617795"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/attendance_schedule_import.py",
+      "source_sha256": "20285caa4039f2f2477029daf17c239ec13a8c3a5f2800a557f7b880703fc014"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/attendance_team_shift.py",
+      "source_sha256": "23309b6d0e69216cde257fa86eb456e39a7f461f94da880c43901e6d4418fa32"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/attendance_vacation_balance.py",
+      "source_sha256": "3453e1b2a56a60fdecd0011134f3bf3331fe095e524e22f380de94f686e43081"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/finance_daily_cashflow.py",
+      "source_sha256": "bf4dc292c1ab3ed33f5c589bcca40a85084e9f4c37f4360de42b0f27d7d6140b"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/finance_expense_flow.py",
+      "source_sha256": "fdef9d02af5fe8b2282e606a432b19ac566c40f66053e6d58622fcca5197aa38"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/generate_form_component_id.py",
+      "source_sha256": "915a4351b91a812b4c878c0bae1b6d6eca9a6e23c42cdf9ba9656d72c1763275"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/generate_node_id.py",
+      "source_sha256": "42e65137830437d21a6650be49f1796eac407c14e8fa03bf2f6a63df323b4b30"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/oa_batch_approve.py",
+      "source_sha256": "f973eed1027645eab9607479951dbdf788f4e65f6e5bd2a0608e4119e2e95e1c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/oa_create_preflight.py",
+      "source_sha256": "472a4ce52f4e411e4a2cf4e469f6bdae5bf566041bbfde466259639bb73ef9b7"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/oa_pending_review.py",
+      "source_sha256": "1f00c742933decbd2bb2132eb067ce385a8ca95ef6147be0abfb46e84806c86d"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/report_received_today.py",
+      "source_sha256": "b1cfaa4fa480e01066c3551a841dbf55a2976cfaeae3e30e7aa1cb5f6d4ffd70"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_custom_page_update.py",
+      "source_sha256": "125ef6949aca5e60c6affac79c858915397037ccd4f07be1766da7ab6c2ea672"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_form_builder.py",
+      "source_sha256": "2ed4fcecbf8160ade6e34cdf5826c543ee4df99c17d4777bb645ec993f8319e4"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_form_fields.py",
+      "source_sha256": "c65c3785bc0d89a4b50916d28922b3ea1996b3aa866434cd9b2311903087c921"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_form_inspector.py",
+      "source_sha256": "a90c9bbc2cbda1b41aa2467c81d108c2a432ece84a2cde0e70ddb35d2576b04a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_form_update.py",
+      "source_sha256": "b4c75f05fcd2f5e5b9de201e65f2e5f0c1ce175a2e0712689c9f801686c74cf6"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_jsx_pipeline.py",
+      "source_sha256": "cba0f269ae24462fc2dcebfc19d79bf66af3fe761aed752c3ea58708bc901c61"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_page_compiler.py",
+      "source_sha256": "6793df2baa9fbfc920da68b907bda1546acfd645ce08878ce1e0c50e3fa485b6"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_page_generate.py",
+      "source_sha256": "6096f1f0f341ddbd12240a76c13bb60001dece54141ced71d41531ad51192866"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_page_schema.py",
+      "source_sha256": "455966a6e8193372aeafbe5d83b204143d32f3802a230710598fef280201dcb3"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_page_self_check.py",
+      "source_sha256": "9a1b077b1b00cee673ff2a348d426a372e3b500e239837ef56cffd61ec002de5"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_process_flow.py",
+      "source_sha256": "fd4e1057b0b4d251201a545d4d42aecb51a7f531495c1161769479e310858afb"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_process_update.py",
+      "source_sha256": "774c2c7f0a46a1359db861a1a98746846e396eaa994c7a743bdea5bab8e4285a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_report_builder.py",
+      "source_sha256": "3f2803356a4a68137980583f50607e4957b477b98345e5025b1bd6d6a34bd773"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_report_charts.py",
+      "source_sha256": "2f0e272f4c310593970e8eaf9420b6a352abbc13362238fdf21d42301ff87c17"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_report_update.py",
+      "source_sha256": "45d8f940cf46fbdbae0cd53a7ba982ec236d850c7f39ce782a76e91e16c60c09"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/scripts/yida_schema_common.py",
+      "source_sha256": "ff0bb7286831ede63904053a6b25d5da5061654476093c36915b4ccbe737baf9"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-misc/SKILL.md",
+      "source_sha256": "417ffb180ab2767075d562197280a6771810f3626d3f6af0252041885e45a1dd"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/capability-limits.md",
+      "source_sha256": "0594e6623cb807f1a2db3e5e16e3edfbcd4f7c5433f57aec543a87154d69c150"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/channel-login.md",
+      "source_sha256": "f2cbdeeb61960bc1a9e73030228be8c862b52429cade18627038ec347c607425"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/confirmation.md",
+      "source_sha256": "29b39a22acfad74cf67be411badae5dcfde47ebe0096362cb13462ed9cda7a87"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/error-codes.md",
+      "source_sha256": "613937e9c2985d26b4867ed1c9b7538cfdc5d457598e2e84fd8f74ce69fe8351"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/global-reference.md",
+      "source_sha256": "3454c889e84ebd03fc0f2b2b0219930a2ca0167f9a5993a780a202104579e79f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/intent-guide.md",
+      "source_sha256": "24070b1a6667e33eefa8c0d39e9306fb854d90a915c8204d0773f92d82f89ec5"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/recipes/conventions.md",
+      "source_sha256": "48c7cd727af3ede8051b4992a2974f62e6f145a7620a70b8a0c03950cdcc2c65"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/recipes/lite-catalog.md",
+      "source_sha256": "f6d5bb313073786bd476f28237827f4a845ab9576ad1ad7868b99b6932a9a49c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/recipes/meta.md",
+      "source_sha256": "a8840d78e260a78c5601f0cfeee2b11c3b5f12b2f6740b42dd8c46597908cd8f"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/routing.md",
+      "source_sha256": "adc7dab2312667421d4c7e9e56427052ec6f9fb73ef361989d84423be1179d71"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/runtime-contract.md",
+      "source_sha256": "8f23a3c443bcae72316973941a69d1d5e5cb8d5b1f935b34cb78274c2e809c7c"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/schema-usage.md",
+      "source_sha256": "c4d36937ca2e43b2e370fa80e74980c94ba751fbff616cda53cc4d769fd8d7ab"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/url-patterns.md",
+      "source_sha256": "193459bb46ad03425fb82a56ba939c8f605de199744efb526512eb4a9d0f8025"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/references/workflow-routing.md",
+      "source_sha256": "8b8030ec3cee3f133a2bd1d47547341051f873aa9cbbb7b61ddf170ab3488fa5"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-shared/SKILL.md",
+      "source_sha256": "7c3f6231072cd0e038b69a94b94957e99a1b1b82b961882413e08a1cf56336fb"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-tag/references/capability.md",
+      "source_sha256": "726aa15aaf5375da86d137a7e1bc1c1291f34433e7d1acf3351cd7814432dbb4"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-tag/references/dingtalk-tag-index.md",
+      "source_sha256": "8e8fff5ba310aab6a9038136eecf979dc2619f904d47c66ca70840f04c88da2e"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-tag/references/manage-and-connect.md",
+      "source_sha256": "61184db7a0b31b3d8a0a0d481e0e1949a98f62390b980e07049a2742b7621dbd"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-tag/references/manage.md",
+      "source_sha256": "2245b3115b75f65d8c22adf143c76131b902836ab755fa949bd13d6cd456ab97"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-tag/references/run.md",
+      "source_sha256": "b8f159d992c041155aca7b3b16b32b0edebf368e86b7118c83f0075e8edd4fef"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-tag/SKILL.md",
+      "source_sha256": "c3b751300a81e6d60f4f435375e7733612686a3b72aeef72c4dc1135befac34d"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-todo/references/02-task.md",
+      "source_sha256": "b745afdb48e9d75a0017668c2eea96992a3c72b7d0a2a06a4358272a0ba5c954"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-todo/references/intent-guide.md",
+      "source_sha256": "bd0d8f5c04932520bed23a7131b819db69783b5facf860e49060aa937d0ac098"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-todo/references/lite-recipes.md",
+      "source_sha256": "1e29a2245f027f1cb5241d9030d72d02336ef95f34176ee36238238e83711519"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-todo/references/recipes/conventions.md",
+      "source_sha256": "ba3b7d98cf729b486831558e0bd6e281b6a72f062b3799828ad2180d1d13dc33"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-todo/references/todo.md",
+      "source_sha256": "db4fec7f8a523757727d5b05a988aef00013b418a533cdda8fdb8938d8a20a22"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-todo/scripts/todo_batch_create.py",
+      "source_sha256": "3ecd1a07780d5775de113cc5d60f71391ce3bc14210c7dd99fe670b6f9b95e23"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-todo/scripts/todo_daily_summary.py",
+      "source_sha256": "6fc5fb724feca3acf2ccb3e3a7cae40e7f5990cde96a29554e7965fdbbc5e5e7"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-todo/scripts/todo_overdue_check.py",
+      "source_sha256": "6db23e0e541ce6ec46762dd26b5819720bb868ed86e62805eccca023b04eb6c8"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-todo/SKILL.md",
+      "source_sha256": "f3a83a0c821cdea73d3fe242e90ba13735b88abe05570b7554b0bdcdac602126"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-wiki/references/intent-guide.md",
+      "source_sha256": "a170582a2ae488c47eaba3ef3bc5222290a562bdf9e83417b2af546857ad86d6"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-wiki/references/lite-recipes.md",
+      "source_sha256": "5077ceda91d677ceeafa1e2ec4cd4c796c9343ec7331f490e4177971546ff7e1"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-wiki/references/wiki-members.md",
+      "source_sha256": "1c6a47eb6bdffe99642b5bdae7ad67b9e6c80afbbdc41415449ee6ec57fdc764"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-wiki/references/wiki-node-ops.md",
+      "source_sha256": "ea0f165bd27e0c980496228ab6e5b498f9196400b96bad673a0a504fca90f089"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-wiki/references/wiki.md",
+      "source_sha256": "e50e9ba5849111c8aeccb4e28f13dadd845234045b14c7e4391f3a9b448ddc0a"
+    },
+    {
+      "file": "plugins/dingtalk-skills/skills/dingtalk-wiki/SKILL.md",
+      "source_sha256": "3cf6079ee074ed4b98a67bba3dd4e0a0ef0d3729935a1c7c910acf6a6462d04f"
+    }
+  ]
+}

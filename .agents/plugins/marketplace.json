@@ -1,0 +1,128 @@
+{
+  "name": "personal-portable",
+  "interface": {
+    "displayName": "Personal Portable"
+  },
+  "plugins": [
+    {
+      "name": "blender-control",
+      "source": {
+        "source": "local",
+        "path": "./plugins/blender-control"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "dingtalk-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/dingtalk-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "kicad-control",
+      "source": {
+        "source": "local",
+        "path": "./plugins/kicad-control"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "lens-toolkit",
+      "source": {
+        "source": "local",
+        "path": "./plugins/lens-toolkit"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "lighttools-control",
+      "source": {
+        "source": "local",
+        "path": "./plugins/lighttools-control"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "personal-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/personal-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "projection-optics",
+      "source": {
+        "source": "local",
+        "path": "./plugins/projection-optics"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "rea-control",
+      "source": {
+        "source": "local",
+        "path": "./plugins/rea-control"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "solidworks-control",
+      "source": {
+        "source": "local",
+        "path": "./plugins/solidworks-control"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "zemax-control",
+      "source": {
+        "source": "local",
+        "path": "./plugins/zemax-control"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "rea-control",
+  "version": "0.2.0+portable.20261113",
+  "description": "Local REA 6.8.0 software reverse engineering MCP and matching investigation skills.",
+  "author": {
+    "name": "Personal"
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "REA 软件逆向",
+    "shortDescription": "软件、Electron、二进制与固件的证据驱动逆向分析",
+    "longDescription": "REA 6.8.0 investigation workflows. Configure local Node, REA and optional analysis engines on each computer.",
+    "developerName": "Personal",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "检查 REA 插件和本机逆向分析工具的可用状态。",
+      "使用 REA 分析这个软件的模块结构，说明关键功能如何实现并给出证据。",
+      "分析这个 Electron 应用的 ASAR，追踪入口、模块依赖和关键调用。"
+    ]
+  },
+  "requires_local_executor": true
+}

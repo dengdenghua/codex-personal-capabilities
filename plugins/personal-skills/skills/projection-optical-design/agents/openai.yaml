@@ -1,0 +1,5 @@
+interface:
+
+  display_name: "投影光机设计（兼容入口）"
+  short_description: "续接旧光机设计任务，定位私人资料并转入已拆分的独立专题技能"
+  default_prompt: "使用 $projection-optical-design，续接已有光机任务并选择对应的独立专题技能。"

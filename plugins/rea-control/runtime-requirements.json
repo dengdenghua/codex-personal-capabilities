@@ -1,0 +1,7 @@
+{
+  "source_version": "0.2.0",
+  "servers": [
+    "rea"
+  ],
+  "setup": "Configure ~/.codex/personal-runtime.json locally. No credentials are included."
+}

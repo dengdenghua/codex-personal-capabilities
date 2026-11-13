@@ -1,0 +1,12 @@
+{
+  "name": "dingtalk-skills",
+  "version": "1.0.0",
+  "description": "Personal installed reusable skills; accounts and project data excluded.",
+  "skills": "./skills/",
+  "author": {
+    "name": "Personal"
+  },
+  "interface": {
+    "displayName": "dingtalk-skills"
+  }
+}

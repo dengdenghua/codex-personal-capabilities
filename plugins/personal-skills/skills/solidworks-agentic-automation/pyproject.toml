@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "solidworks-agentic-automation"
+version = "0.1.0"
+description = "Agent-oriented SolidWorks automation skill and Python COM workflow"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "SolidWorks Agentic Automation contributors" }]
+dependencies = [
+  "pywin32>=305; platform_system == 'Windows'",
+  "comtypes>=1.2.0; platform_system == 'Windows'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.setuptools]
+py-modules = []

@@ -1,0 +1,7 @@
+interface:
+  display_name: "SolidWorks Agentic Automation"
+  short_description: "Run guarded, reviewable SolidWorks CAD workflows"
+  default_prompt: "Use $solidworks-agentic-automation to plan, execute, review, and recover a SolidWorks CAD task with reproducible evidence."
+
+policy:
+  allow_implicit_invocation: true

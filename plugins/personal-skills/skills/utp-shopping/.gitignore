@@ -1,0 +1,26 @@
+.idea/
+.DS_Store
+*.key
+*.pem
+.env
+.env.*
+node_modules/
+
+# 构建/分发产物
+bin/
+dist/
+scripts/*.zip
+scripts/*.tgz
+*.tgz
+
+# 本地安装的第三方 skill / 调试产物（不属于本仓库发布内容）
+.agents/
+.claude/
+
+# 知识库（本地生成，不提交）
+.qoder/
+
+*.pyc
+*.pyd
+*.pyo
+__pycache__/

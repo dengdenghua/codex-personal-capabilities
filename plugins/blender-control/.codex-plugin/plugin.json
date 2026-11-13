@@ -1,0 +1,31 @@
+{
+  "name": "blender-control",
+  "version": "0.1.0+portable.20261113",
+  "description": "本机 Blender 自动化：场景检查、对象定位、装配编辑、截图、渲染和格式导出。",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Blender 本地控制",
+    "shortDescription": "检查和编辑 Blender 场景，完成装配、截图与导出。",
+    "longDescription": "连接本机Blender MCP完成场景检查、装配、截图与导出。提供通用结构五套与堆叠安规，以及面向水循环智能睡眠产品的八套专项：水路防漏、水垫寿命、温控故障、冷凝、声振、液体卫生、补水维护和舒适传感；分别记录标准依据、工程经验及试验待办。 提供智能睡眠产品结构评审总入口，按研发阶段组织14个专项，统一问题清单、风险等级、证据与试验待办。",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write",
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "检查当前 Blender 场景和缺失资源",
+      "给装配体生成等轴测截图",
+      "替换指定板卡并保持原来的位置",
+      "综合检查当前结构的堆叠、公差、装配、散热与制造工艺",
+      "按水循环智能睡眠产品检查水路、水垫、温控故障与冷凝，再检查其他专项",
+      "按当前研发阶段综合评审智能睡眠产品结构，统一输出问题、风险等级和试验待办"
+    ]
+  },
+  "mcpServers": "./.mcp.json",
+  "requires_local_executor": true
+}
