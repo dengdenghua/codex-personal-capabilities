@@ -30,4 +30,6 @@ class PortableTests(unittest.TestCase):
             self.assertTrue(validate.problems(p))
     def test_no_original_private_path(self):
         self.assertEqual(validate.problems(),[])
+    def test_windows_checkout_contract(self):
+        self.assertIn('* text eol=lf',(ROOT/'.gitattributes').read_text(encoding='utf8'))
 if __name__=='__main__':unittest.main()
