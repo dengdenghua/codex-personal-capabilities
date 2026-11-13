@@ -1,4 +1,4 @@
-# 换机安装与依赖检查 — 1.1.0
+# 换机安装与依赖检查 — 1.1.1（运行环境 1.1.0）
 
 仓库包含 Blender、KiCad、SolidWorks 的外置 MCP 源码，以及 LightTools、Zemax 服务和 REA 版本锁定清单。不复制旧电脑的虚拟环境或账号配置。
 

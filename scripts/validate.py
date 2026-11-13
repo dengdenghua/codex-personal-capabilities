@@ -5,6 +5,7 @@ from pathlib import Path
 import re
 import sys
 import os
+import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
 SECRET=re.compile(r'(?<![\w-])(?:gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{25,}|sk-[A-Za-z0-9_-]{30,}|AKIA[A-Z0-9]{16})|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
@@ -50,6 +51,9 @@ def main():
         expected=json.loads(lock.read_text(encoding='utf8'))
         current={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files(ROOT) if p.is_file() and p!=lock}
         if expected!=current:errors.append('file integrity manifest mismatch: refresh intentionally before committing')
+        if '--tracked' in sys.argv:
+            tracked=set(subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode('utf8').rstrip('\0').split('\0'))
+            if tracked!=set(expected)|{'files.sha256.json'}:errors.append('Git tracked files differ from integrity manifest; inspect ignore rules and staging')
     if errors:
         print('\n'.join(errors),file=sys.stderr);return 1
     print(f"PASS: {len(market['plugins'])} plugins; source/privacy/manifest/integrity checks")

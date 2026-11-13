@@ -1,4 +1,4 @@
-# Verification — v1.1.0
+# Verification — v1.1.1
 
 2026-11-13, Windows x64:
 

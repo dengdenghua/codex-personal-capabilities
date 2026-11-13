@@ -18,5 +18,7 @@ node_modules/
 *.bak
 private/
 output/
+!plugins/blender-control/server/mcp/blmcp/data/**/output/
+!plugins/blender-control/server/mcp/blmcp/data/**/output/**
 artifacts/
 plugins/blender-control/server/mcp/build/
