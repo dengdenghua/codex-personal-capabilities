@@ -23,6 +23,8 @@ python scripts/optics_private.py backup --plan <私人目录>/private-plan.json 
 
 可以重复指定 `--search-root`。备份包括工作台、图谱、镜头库与续接记忆的 SQLite 一致性快照、技能中的私有证据、配置的 catalog/audit 和能找回的已索引原始文件。按内容去重存储；原始路径和证据语义保持不变。SQLite 逐库一致，不宣称多个并发写入系统之间的事务快照。
 
+若还有旧备份或迁移后更换了原目录，可在制作归档前运行 `python scripts/optics_private.py rescan --plan <私人目录>/private-plan.json --search-root <补充资料目录>`，按 SHA256 补齐缺失记录；跨 Windows/Linux 的历史路径分隔符可识别。找不到的历史版本不会用同名新文件替代。
+
 工具不联网、不调用 Git、不读取账号登录文件。私人 ZIP 是本地明文备份，需由你保管或存入自己的加密磁盘；归档及 SHA256 校验文件要一起带到新电脑。缺失的原始文件会写入私人清单，不能把不完整备份当作完整迁移。
 
 ## 新电脑一键恢复

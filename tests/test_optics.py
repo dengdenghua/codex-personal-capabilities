@@ -1,5 +1,6 @@
 import copy
 from contextlib import closing
+import importlib.util
 import json
 from pathlib import Path
 import sqlite3
@@ -92,7 +93,7 @@ INSERT INTO locations VALUES (1,'s1','historical.txt');''');self.db.commit()
         a=first/'source.txt';b=second/'source.txt';a.write_bytes(b'first');b.write_bytes(b'other')
         plan=self.base/'plan.json'
         private.write(plan,{'files':[{'source':str(a),'target':'evidence/root-0/source.txt','aliases':[str(a)],'expected_sha256':private.sha(a),'bytes':5}],
-                           'complete':False,'missing':[{'id':'old','sha256':private.sha(b),'bytes':None,'paths':['historical/source.txt']}]})
+                           'complete':False,'missing':[{'id':'old','sha256':private.sha(b),'bytes':None,'paths':[r'C:\historical\source.txt']}]})
         result=private.rescan(plan,[str(second)])
         self.assertTrue(result['complete'])
         self.assertEqual(len({i['target'] for i in result['files']}),2)
@@ -106,15 +107,21 @@ INSERT INTO locations VALUES (1,'s1','historical.txt');''');self.db.commit()
         self.original.write_text('changed')
         with self.assertRaises(ValueError):resolve(self.wb,self.digest)
     def test_lens_copy_uses_identity_when_historical_path_has_multiple_versions(self):
-        from optics_workbench import lens_library
         correct=self.base/'correct.zmx';correct.write_bytes(b'UNIT MM\nSURF 0\n')
         wrong=self.base/'wrong.zmx';wrong.write_bytes(b'other version')
         digest=private.sha(correct);mapping=self.base/'lens-mapping.json'
         private.write(mapping,{'paths':{'old.zmx':{'path':str(wrong)}},'objects':{digest:{'path':str(correct)}}})
         detail={'source':{'local_path':'old.zmx','sha256':digest},'title':'Synthetic','unit':'MM'}
-        with patch.dict('os.environ',{'LENS_PATH_MAP':str(mapping)}),patch.object(lens_library,'detail',return_value=detail):
-            result=lens_library.prepare_case(None,'synthetic',self.base/'working-copy')
-        self.assertEqual(private.sha(Path(result['directory'])/'prescription_source.zmx'),digest)
+        home=self.base/'codex';private.write(home/'lens-toolkit.local.json',{'library_root':str(self.lens),'path_map':str(mapping)})
+        paths=['plugins/lens-toolkit/skills/lens-evidence-search/scripts/library.py','plugins/personal-skills/skills/lens-evidence-search/scripts/library.py','plugins/optics-workbench/server/optics_workbench/lens_library.py']
+        for n,path in enumerate(paths):
+            with self.subTest(package=path):
+                spec=importlib.util.spec_from_file_location('lens_helper_'+str(n),ROOT/path)
+                library=importlib.util.module_from_spec(spec);spec.loader.exec_module(library)
+                with patch.dict('os.environ',{'CODEX_HOME':str(home),'LENS_PATH_MAP':'','LENS_LIBRARY_ROOT':''}),patch.object(library,'detail',return_value=detail):
+                    self.assertEqual(library.resolve_root(),self.lens)
+                    result=library.prepare_case(None,'synthetic',self.base/('working-copy-'+str(n)))
+                self.assertEqual(private.sha(Path(result['directory'])/'prescription_source.zmx'),digest)
         self.assertEqual(detail['source']['local_path'],'old.zmx')
     def test_retry_only_accepts_unchanged_same_archive(self):
         archive=self.make_backup();dest=self.base/'restored';private.restore(archive,dest)

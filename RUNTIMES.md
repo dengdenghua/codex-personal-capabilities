@@ -1,6 +1,6 @@
 # 换机安装与依赖检查 — 1.2.0（按源码指纹复用独立运行环境）
 
-仓库包含 Blender、KiCad、SolidWorks 的外置 MCP 源码，以及 LightTools、Zemax 服务和 REA 版本锁定清单。不复制旧电脑的虚拟环境或账号配置。
+仓库包含光学工作台、Blender、KiCad、SolidWorks 的外置 MCP 源码，以及 LightTools、Zemax 服务和 REA 版本锁定清单。不复制旧电脑的虚拟环境或账号配置。
 
 ## 一键安装
 
@@ -30,6 +30,7 @@ Linux/macOS 跳过 Windows 专用的 SolidWorks、LightTools、Zemax 服务，�
 
 | 服务 | 变量 |
 |---|---|
+| 光学工作台 | OPTICS_WORKBENCH_CONFIG、OPTICS_WORKBENCH_DATA；私人恢复时由安装器生成 |
 | Blender | BLENDER_PATH、BLENDER_MCP_HOST、BLENDER_MCP_PORT |
 | KiCad | KICAD_CLI（发现用）、KICAD_SYMBOL_DIR |
 | SolidWorks | SOLIDWORKS_EXE、SOLIDWORKS_TLB、SOLIDWORKS_TEMPLATES；Flow 可选 SOLIDWORKS_FLOW_HOME |
@@ -41,7 +42,7 @@ SolidWorks 模板若存在多个版本不猜选。模板不上传，调用时仍
 
 ## 私人数据和回退
 
-SolidWorks 的队列、锁和 Flow 状态，以及 LightTools 日志和恢复文件，写到本地 personal-runtimes/private-data，不写入仓库。镜头库、光学记忆、模型、密码、令牌和许可证均未复制。
+SolidWorks 的队列、锁和 Flow 状态，以及 LightTools 日志和恢复文件，写到本地 personal-runtimes/private-data，不写入仓库。公开包不含镜头库、光学记忆、模型、密码、令牌或许可证；私人光学数据通过单独备份显式恢复。
 
 切换版本标签后重跑安装，切换后续会话使用的版本；不会强制结束运行中的旧进程。恢复上次配置前先正常结束相关任务，再用 .previous.json 恢复配置并重开 Codex 对话。
 

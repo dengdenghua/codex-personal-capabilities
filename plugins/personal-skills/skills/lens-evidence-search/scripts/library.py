@@ -17,7 +17,7 @@ KINDS = ('knowledge', 'cases', 'patents', 'pages', 'documents', 'resources')
 def resolve_root(explicit=None):
     value = explicit or os.environ.get('LENS_LIBRARY_ROOT')
     if not value:
-        config = pathlib.Path.home()/'.codex'/'lens-toolkit.local.json'
+        config = pathlib.Path(os.environ.get('CODEX_HOME',pathlib.Path.home()/'.codex'))/'lens-toolkit.local.json'
         if config.is_file():
             value = json.loads(config.read_text(encoding='utf-8-sig')).get('library_root')
     if not value:
@@ -97,7 +97,15 @@ def digest(path):
 
 def prepare_case(c,identifier,destination):
     d=detail(c,'cases',identifier)
-    source=pathlib.Path(d['source']['local_path'])
+    original=d['source']['local_path']
+    source=pathlib.Path(original)
+    config=pathlib.Path(os.environ.get('CODEX_HOME',pathlib.Path.home()/'.codex'))/'lens-toolkit.local.json'
+    mapping=os.environ.get('LENS_PATH_MAP')
+    if not mapping and config.is_file():mapping=json.loads(config.read_text(encoding='utf-8-sig')).get('path_map')
+    if mapping:
+        entries=json.loads(pathlib.Path(mapping).read_text(encoding='utf8'))
+        entry=entries.get('objects',{}).get(d['source']['sha256']) or entries.get('paths',{}).get(original)
+        if entry:source=pathlib.Path(entry['path'])
     if source.suffix.lower()!='.zmx':raise ValueError('Only indexed ZMX source files can be prepared.')
     actual=digest(source)
     if actual!=d['source']['sha256']:raise ValueError('Source SHA-256 changed; resolve source identity before reuse.')

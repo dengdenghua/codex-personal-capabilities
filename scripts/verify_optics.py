@@ -41,7 +41,7 @@ def verify(config,output):
         reference=tool('optics_get_reference',{'slug':knowledge[0]['slug']});assert reference['body']
         nodes=tool('optics_search_graph',{'query':'复眼','limit':1})['items'];assert nodes
         neighbors=tool('optics_graph_neighbors',{'node_id':nodes[0]['id']});assert neighbors['nodes']
-        memories=tool('optics_search_memory',{'query':'','limit':1});assert memories
+        memories=tool('optics_search_memory',{'query':'','limit':1});assert memories['items']
         workflow=tool('optics_search_workflow_memory',{'query':'','limit':1});assert workflow['entries']
         lens=tool('optics_search_lens',{'kind':'cases','query':'','limit':1});assert lens['rows']
         case=tool('optics_lens_detail',{'kind':'cases','identifier':str(lens['rows'][0]['id'])});assert case['surfaces']

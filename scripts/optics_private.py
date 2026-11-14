@@ -17,6 +17,7 @@ BLOCKED={'.git','__pycache__','.venv','venv','node_modules'}
 PRIVATE_CONFIG_KEYS={'snapshot_note','coverage_file','data_dir','skill_dir','knowledge_catalogs','pending_knowledge_catalogs','startup_sync'}
 
 def read(path):return json.loads(Path(path).read_text(encoding='utf-8-sig'))
+def source_name(path):return str(path).replace('\\','/').rsplit('/',1)[-1].lower()
 def write(path,value):
     p=Path(path);p.parent.mkdir(parents=True,exist_ok=True)
     p.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
@@ -92,7 +93,7 @@ def plan(config,lens,memory,search_roots,output):
             except OSError:continue
     def evidence(identifier,expected,size,aliases):
         aliases=list(dict.fromkeys(aliases));candidates=[Path(a) for a in aliases if Path(a).is_file()]
-        for a in aliases:candidates.extend(index.get((Path(a).name.lower(),size),[]))
+        for a in aliases:candidates.extend(index.get((source_name(a),size),[]))
         match=next((p for p in dict.fromkeys(candidates) if p.stat().st_size==size and digest(p)==expected),None)
         if match:
             target='evidence/'+expected+'/'+match.name
@@ -180,7 +181,7 @@ def backup(plan_path,archive):
     return manifest
 
 def rescan(plan_path,roots):
-    data=read(plan_path);index=defaultdict(list);wanted={Path(p).name.lower() for m in data['missing'] for p in m['paths']}
+    data=read(plan_path);index=defaultdict(list);wanted={source_name(p) for m in data['missing'] for p in m['paths']}
     for n,root in enumerate(map(Path,roots)):
         for p in files(root):
             if p.name.lower() in wanted:
@@ -190,7 +191,7 @@ def rescan(plan_path,roots):
     for item in data['missing']:
         candidates=[]
         for alias in item['paths']:
-            name=Path(alias).name.lower()
+            name=source_name(alias)
             if item['bytes'] is None:
                 for (candidate_name,_),values in index.items():
                     if candidate_name==name:candidates.extend(values)
