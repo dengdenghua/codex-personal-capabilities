@@ -25,3 +25,5 @@ python skills/lens-evidence-search/scripts/library.py prepare-case <案例ID> --
 ```
 
 新 Skill 或插件安装后，在新对话中核对发现状态。可直接输入 `$lens-evidence-search` 等名称。当地客户端尚未刷新时，脚本仍可直接运行；不要据安装文件存在声称当前会话已自动加载。
+
+本仓库 1.2.0 的光学恢复器会生成本机库位置和历史路径映射。`prepare_case` 按恢复映射读取原处方并核 SHA256，来源字段保持原样；配置位置支持 CODEX_HOME。完整步骤见仓库 OPTICS.md。

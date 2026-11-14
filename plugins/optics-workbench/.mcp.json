@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "optics_workbench": {
+      "command": "python",
+      "args": [
+        "${PLUGIN_ROOT}/scripts/launch_mcp.py",
+        "optics_workbench"
+      ]
+    }
+  }
+}

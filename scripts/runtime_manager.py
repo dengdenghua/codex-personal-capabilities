@@ -17,9 +17,11 @@ import urllib.request
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION='1.1.0'
+VERSION='1.2.0'
+ENVIRONMENT_VERSION='1.1.0'  # Reuse unchanged, content-addressed native environments.
 NODE_VERSION='24.22.1'
 SERVERS={
+ 'optics_workbench':dict(plugin='optics-workbench',requirements='server/requirements.txt',include=['server/optics_workbench','server/requirements.txt'],module='optics_workbench.mcp_server',cwd='server'),
  'solidworks_local':dict(plugin='solidworks-control', requirements='server/requirements-lock.txt', include=['server'], entry='server/server.py', windows=True),
  'kicad':dict(plugin='kicad-control',requirements='server/requirements.lock.txt',include=['server'],entry='server/kicad_mcp_local.py'),
  'blender_official':dict(plugin='blender-control',requirements='server/requirements.lock',include=['server'],module='blmcp',cwd='server/mcp'),
@@ -94,7 +96,7 @@ def ensure_node(base):
 def install_server(name,base,repair=False):
     spec=SERVERS[name]
     if spec.get('windows') and os.name!='nt':return None,'unsupported_platform'
-    digest=fingerprint(spec);folder=base/VERSION/(name+'-'+digest[:12]);folder.mkdir(parents=True,exist_ok=True)
+    digest=fingerprint(spec);folder=base/ENVIRONMENT_VERSION/(name+'-'+digest[:12]);folder.mkdir(parents=True,exist_ok=True)
     mark=folder/'installed.json';source=folder/'source';log=folder/'install.log'
     cached=json.loads(mark.read_text(encoding='utf8')) if mark.is_file() else None
     if not repair and cached and cached.get('source_sha256')==digest and Path(cached['record']['command']).is_file():
@@ -124,6 +126,7 @@ def install_server(name,base,repair=False):
     record.update(managed_by='codex-personal-capabilities',release=VERSION,source_sha256=digest,env={'PYTHONUTF8':'1','PYTHONUNBUFFERED':'1','PYTHONDONTWRITEBYTECODE':'1','PERSONAL_MCP_DATA':str(base/'private-data')})
     if name=='blender_official':record['env'].update(BLENDER_MCP_HOST='127.0.0.1',BLENDER_MCP_PORT='9876')
     if name=='rea':record['env'].update(REA_MCP_INPUT_SCHEMA_PROFILE='compact',REA_MCP_OUTPUT_SCHEMA_PROFILE='off')
+    if name=='optics_workbench':record['env']['OPTICS_WORKBENCH_DATA']=str(base/'private-data/optics-workbench')
     if name=='blender_official':create_addon_archive(folder,source)
     write_json(mark,{'source_sha256':digest,'record':record})
     return record,'installed'

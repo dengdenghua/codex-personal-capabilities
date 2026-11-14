@@ -1,6 +1,6 @@
 {
   "name": "personal-skills",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Personal installed reusable skills; accounts and project data excluded.",
   "skills": "./skills/",
   "author": {

@@ -1,0 +1,10 @@
+{
+  "name": "optics-workbench",
+  "version": "1.2.0",
+  "description": "Local optical evidence, graph, memory and portable private-library recovery.",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "author": {
+    "name": "Optics Workbench contributors"
+  }
+}

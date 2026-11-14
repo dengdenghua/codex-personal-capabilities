@@ -9,7 +9,7 @@ import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
 SECRET=re.compile(r'(?<![\w-])(?:gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{25,}|sk-[A-Za-z0-9_-]{30,}|AKIA[A-Z0-9]{16})|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
-FORBIDDEN={'.env','auth.json','credentials.json','personal-runtime.json','config.toml'}
+FORBIDDEN={'.env','auth.json','credentials.json','personal-runtime.json','config.toml','private-plan.json','path-map.json','restore-report.json','lens-toolkit.local.json','optical-workflow-memory.local.json'}
 SUFFIX={'.sqlite','.sqlite3','.db','.jsonl','.log','.pem','.key','.pfx','.pyc','.zmx','.zos','.sldprt','.sldasm','.blend','.drwdot','.slddrt'}
 
 def files(root):
@@ -28,6 +28,10 @@ def problems(root=ROOT):
         try:s=f.read_text(encoding='utf8')
         except UnicodeDecodeError:errors.append(str(rel)+': unreviewed binary');continue
         if SECRET.search(s):errors.append(str(rel)+': credential pattern')
+        if f.suffix.lower()=='.json':
+            try:obj=json.loads(s)
+            except ValueError:obj=None
+            if isinstance(obj,dict) and obj.get('format') in {'optics-private-plan-v1','optics-private-backup-v1'}:errors.append(str(rel)+': private optical manifest')
         if re.search(r'[C-Z]:[\\/]+Users[\\/]+Administrator|E:[\\/]+(?:AGENT|工作区)|D:[\\/]+AI[\\/]',s):errors.append(str(rel)+': original machine/project path')
     return errors
 

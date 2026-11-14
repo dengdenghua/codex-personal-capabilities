@@ -1,18 +1,17 @@
 # Codex Personal Capabilities
 
-个人 Codex 技能与插件的私人 Git 仓库。版本：`v1.1.1`（2026-11-13）。
+个人 Codex 技能与插件的公开 Git 仓库。版本：`v1.2.0`（2026-11-15）。
 
-包含 8 个个人工具/光学插件，以及 `personal-skills`、`dingtalk-skills` 两个技能集合。保留技能来源声明与上游许可证，不代表这些第三方技能均由仓库所有者编写。OpenAI 内置、官方商店下载包不复制；新电脑从官方插件目录重新安装。
+包含 9 个个人工具/光学插件，以及 `personal-skills`、`dingtalk-skills` 两个技能集合。保留技能来源声明与上游许可证，不代表这些第三方技能均由仓库所有者编写。OpenAI 内置、官方商店下载包不复制；新电脑从官方插件目录重新安装。
 
 ## 换电脑安装
 
-先安装 Git、Python 3.11+ 和可用的 Codex CLI；使用自己的 GitHub 账号登录以访问私人仓库。
+先安装 Git、Python 3.11+ 和可用的 Codex CLI；公开下载不需要登录 GitHub。
 
 ```powershell
-gh auth login
-gh repo clone dengdenghua/codex-personal-capabilities
+git clone https://github.com/dengdenghua/codex-personal-capabilities.git
 cd codex-personal-capabilities
-git checkout v1.1.1
+git checkout v1.2.0
 ./Install.ps1
 ```
 
@@ -28,7 +27,7 @@ python scripts/install.py --plugins personal-skills projection-optics lens-toolk
 
 ```powershell
 git fetch origin --tags
-git checkout v1.1.1
+git checkout v1.2.0
 python scripts/install.py
 ```
 
@@ -36,7 +35,7 @@ python scripts/install.py
 
 ## 本地软件依赖
 
-安装器自动创建六种 MCP 隔离运行环境并检查服务。商业软件、许可证、私人资料库由你配置，Blender 附加组件首次需要启用，详见 [RUNTIMES.md](RUNTIMES.md)。安装成功不是原生 CAD 建模或仿真验收通过。
+安装器自动创建七种 MCP 隔离运行环境并检查服务。商业软件、许可证、私人资料库由你配置，Blender 附加组件首次需要启用，详见 [RUNTIMES.md](RUNTIMES.md)。安装成功不是原生 CAD 建模或仿真验收通过。
 
 ## 隐私和内容边界
 
@@ -44,7 +43,7 @@ python scripts/install.py
 - 未验证嵌入元数据的二进制图纸模板、示例工程也不上传；需在本机配置。
 - 保留通用方法、技能源码、公开来源引用与必要服务代码。本机路径已移除或改为本地配置。
 - `provenance.json` 保存原文件指纹；`files.sha256.json` 保存最终文件指纹。完整排除清单只留在原电脑，不把私人文件路径写进仓库。
-- 不自动迁移记忆、对话、授权或购买的软件；第三方登录由新电脑重新完成。
+- 默认安装不迁移私人记忆、对话或账号授权；光学记忆可通过显式指定的私人备份恢复。购买的软件和第三方登录由新电脑重新配置。
 
 ## 维护
 
@@ -55,3 +54,5 @@ python scripts/validate.py
 ```
 
 隐私扫描检查常见密钥格式和禁传文件，不能代替人工审查。新增文件先检查内容，再刷新指纹。通用参考资料里有公开案例，不得当作用户当前项目已经验证的结论。
+
+光学工作台、私人知识库备份和新电脑一键恢复见 [OPTICS.md](OPTICS.md)。私人备份始终位于公开仓库之外。

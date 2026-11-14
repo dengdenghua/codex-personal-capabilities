@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lens-toolkit",
-  "version": "0.1.0+portable.20261113",
+  "version": "1.2.0",
   "description": "Source-backed lens evidence search, patent resource research and reproducible prescription handoff.",
   "extensions": {
     "com.openai": {

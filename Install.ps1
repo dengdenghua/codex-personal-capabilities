@@ -1,4 +1,4 @@
-param([switch]$SkillsOnly, [string]$RuntimeRoot, [string]$Config)
+param([switch]$SkillsOnly, [string]$RuntimeRoot, [string]$Config, [string]$PrivateBackup, [string]$RestoreTo, [switch]$AllowIncompleteBackup)
 $ErrorActionPreference = 'Stop'
 $pythonExe = $null
 $launcher = Get-Command py -ErrorAction SilentlyContinue
@@ -28,5 +28,8 @@ $installArgs = @((Join-Path $PSScriptRoot 'scripts\install.py'))
 if ($SkillsOnly) { $installArgs += '--skills-only' }
 if ($RuntimeRoot) { $installArgs += @('--runtime-root', $RuntimeRoot) }
 if ($Config) { $installArgs += @('--config', $Config) }
+if ($PrivateBackup) { $installArgs += @('--private-backup', $PrivateBackup) }
+if ($RestoreTo) { $installArgs += @('--restore-to', $RestoreTo) }
+if ($AllowIncompleteBackup) { $installArgs += '--allow-incomplete-backup' }
 & $pythonExe @installArgs
 if ($LASTEXITCODE -ne 0) { throw 'Installation/check failed. Read the local runtime install.log and doctor.json before retrying.' }

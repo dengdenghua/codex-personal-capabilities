@@ -1,0 +1,19 @@
+{
+  "origin": "Optics Workbench 0.4.0 local source, MIT",
+  "files": {
+    "plugins/optics-workbench/server/optics_workbench/__init__.py": "a96e7b16523c5ebb6e180bbf56ce02ce01e2bf20ac9c438e20437d6664c789b8",
+    "plugins/optics-workbench/server/optics_workbench/__main__.py": "e3da231473221541f3027a9a4433832707bd4ba31394aa8ffbe1809bcdd8a7f3",
+    "plugins/optics-workbench/server/optics_workbench/ai.py": "a3cc88370b89b11b7844c8c9439f0ba1b58e30008d855a3504863efc847df7b3",
+    "plugins/optics-workbench/server/optics_workbench/calculations.py": "edfe27939a4bb6fdb0ee801f6f3ebead53071872d17048e3fb2785da972e834f",
+    "plugins/optics-workbench/server/optics_workbench/color.py": "dd50665afbd226abcd39f82c7eb72008a5e75a7a843fec503936c0b14ba79f68",
+    "plugins/optics-workbench/server/optics_workbench/color_cases.py": "1ff083dbda9eaec68e81fca9488b49594a742de94d5a4025d15e5b7c29f5be15",
+    "plugins/optics-workbench/server/optics_workbench/core.py": "2a7b2ccbe58d77a79ae57e17bd9696d599bfdff68e52e7a3e837bc6e871fc92a",
+    "plugins/optics-workbench/server/optics_workbench/design.py": "c461958e7b41912ef506e6391fc85a24e6bfac06b10c210d5e55632917a2f8ea",
+    "plugins/optics-workbench/server/optics_workbench/graph.py": "3816d21d5d872913775c6e638e8c7591dfb709839c447c84fc799ae68b3d7d69",
+    "plugins/optics-workbench/server/optics_workbench/mcp_server.py": "1d77b5d9b973a4ad377051c5b8ea2cad81fdb652ff54b50e904b07eaef08c09e",
+    "plugins/optics-workbench/server/optics_workbench/scaling.py": "7be2698c509f5334e8fc1bb801e8bb9c26463a1130cabec3abfb980675ae570e",
+    "plugins/optics-workbench/server/optics_workbench/scene.py": "baea2706eda5d1b74602785dbfb1272784817d9b5edfbb7420a1a8245e192081",
+    "plugins/optics-workbench/server/optics_workbench/schema.sql": "c006c76548026949bf471c6fff464a51e324b2a5901a317b7d63d8aceab68307",
+    "plugins/optics-workbench/server/optics_workbench/server.py": "bdc0659c5ec49ba4ef66e74165407070e68972991af220ef798dab42d21dcf34"
+  }
+}

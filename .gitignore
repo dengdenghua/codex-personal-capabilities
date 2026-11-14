@@ -22,3 +22,9 @@ output/
 !plugins/blender-control/server/mcp/blmcp/data/**/output/**
 artifacts/
 plugins/blender-control/server/mcp/build/
+*.private.zip
+*.private.zip.*
+*.partial
+private-plan.json
+path-map.json
+restore-report.json

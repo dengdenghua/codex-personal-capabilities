@@ -44,6 +44,8 @@ def search(db,query,limit=10):
 
 def main():
     default=Path(os.environ.get('CODEX_HOME',Path.home()/'.codex'))/'optical-workflow-memory'/'memory.sqlite3'
+    config=Path(os.environ.get('CODEX_HOME',Path.home()/'.codex'))/'optical-workflow-memory.local.json'
+    if config.is_file():default=Path(json.loads(config.read_text(encoding='utf-8-sig'))['store'])
     ap=argparse.ArgumentParser();ap.add_argument('--store',default=str(default));sub=ap.add_subparsers(dest='command',required=True)
     p=sub.add_parser('add');p.add_argument('record_json')
     p=sub.add_parser('search');p.add_argument('query');p.add_argument('--limit',type=int,default=10)
