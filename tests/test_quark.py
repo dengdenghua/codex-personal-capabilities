@@ -136,6 +136,21 @@ class QuarkProtocolTests(unittest.TestCase):
         with self.assertRaises(ValueError):quark.backup(self.ticket,self.archive,self.root/'next-readback',client,self.tools)
         self.assertEqual(private.read(self.ticket),before)
 
+    def test_next_snapshot_reuses_immutable_cloud_objects(self):
+        client=SyntheticClient(self.root/'synthetic-cloud');quark.publish(self.ticket,client,self.tools)
+        quark.verify(self.ticket,self.root/'readback',client,self.tools)
+        before=private.read(self.ticket)
+        source=self.root/'synthetic.txt';source.write_text('Changed synthetic optical evidence',encoding='utf8')
+        plan=self.root/'plan.json';record=private.read(plan)
+        record['files'][0].update(expected_sha256=private.sha(source),bytes=source.stat().st_size)
+        private.write(plan,record)
+        archive=self.root/'next.private.zip';private.backup(plan,archive)
+        quark.backup(self.ticket,archive,self.root/'next-readback',client,self.tools)
+        after=private.read(self.ticket)
+        self.assertNotEqual(after['snapshot'],before['snapshot'])
+        self.assertEqual(client.uploads,len(after['quark']['objects']))
+        self.assertEqual(private.read(self.ticket.with_name('previous-recovery.json')),before)
+
     def test_download_cannot_follow_a_hardlink_or_unrelated_directory(self):
         client=SyntheticClient(self.root/'synthetic-cloud');quark.publish(self.ticket,client,self.tools)
         readback=self.root/'readback';quark.materialize(self.ticket,readback,client)

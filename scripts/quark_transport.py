@@ -215,7 +215,9 @@ def publish(ticket_path,client,tools=None):
     if vault.key.is_relative_to(source):raise ValueError('Unlock key must never be uploaded')
     objects=inventory(source)
     old=vault.ticket.get('quark',{})
-    previous={obj['path']:obj for obj in old.get('objects',[])} if old.get('snapshot')==vault.ticket['snapshot'] else {}
+    # Restic objects are immutable. Reuse matching ciphertext across snapshots,
+    # not just across retries, so updates do not duplicate the entire cloud vault.
+    previous={obj['path']:obj for obj in old.get('objects',[])}
     for obj in objects:
         existing=previous.get(obj['path'],{})
         if existing.get('sha256')==obj['sha256'] and existing.get('bytes')==obj['bytes'] and existing.get('fid'):obj['fid']=existing['fid']
