@@ -28,6 +28,12 @@ class TransferError(RuntimeError):
         super().__init__(message)
 
 
+def download_mode(help_text):
+    if re.search(r'^\s+download\s+\[',help_text,re.M):return 'download'
+    if re.search(r'^\s+read-file\s+\[',help_text,re.M):return 'read-file'
+    raise ValueError('Installed Quark CLI has no supported file retrieval command; repair/update the official skill')
+
+
 def install_skill(destination):
     """Bootstrap official files globally; never vendor runtime or credentials."""
     destination=private.outside(destination)
@@ -90,7 +96,7 @@ class Client:
         self.session=session_id or str(int(time.time()))+'-'+secrets.token_hex(3)
         if not re.fullmatch(r'\d+-[a-zA-Z0-9]{6}',self.session):raise ValueError('Invalid Quark session ID')
         self.session_input=session_input
-        self.checked=False;self.updated=False;self.setup_lock=threading.Lock()
+        self.checked=False;self.updated=False;self.setup_lock=threading.Lock();self.read_mode=None
 
     def setup(self):
         if self.checked:return
@@ -103,6 +109,11 @@ class Client:
             try:record=json.loads(line)
             except ValueError:continue
             if record.get('type')=='install_result':self.updated=bool(record.get('success') and record.get('updated'))
+        command=[self.node,str(self.skill/'scripts/quark-drive.cjs'),'--help','--session-id',self.session]
+        if self.session_input is not None:command+=['--session-input',self.session_input]
+        help_result=subprocess.run(command,capture_output=True,text=True,encoding='utf8',timeout=30)
+        if help_result.returncode:raise ValueError('Could not check the official Quark CLI capabilities')
+        self.read_mode=download_mode(help_result.stdout)
         self.checked=True
 
     def run(self,args,runtime,on_record=None):
@@ -155,8 +166,15 @@ class Client:
     def read(self,obj,runtime,receive):
         # 1.0.25's shipped CLI exposes download, although its reference document
         # describes read-file. Use the actual --help contract, including output dir.
-        final,_=self.run(['download','--fid',obj['fid'],'--output-dir',str(runtime)],runtime)
-        data=final.get('data',{})
+        with self.setup_lock:self.setup()
+        if self.read_mode=='download':
+            final,_=self.run(['download','--fid',obj['fid'],'--output-dir',str(runtime)],runtime)
+            data=final.get('data',{})
+        else:
+            final,records=self.run(['read-file','--fid',obj['fid']],runtime)
+            matches=[r['data'] for r in records if r.get('type')=='list' and r.get('code')==0 and r.get('data',{}).get('fid')==obj['fid']]
+            if len(matches)!=1:raise ValueError('Quark returned an ambiguous downloaded object')
+            data=matches[0]
         if not data.get('filePath'):raise ValueError('Quark returned no downloaded file')
         receive({'type':'list','code':0,'data':{**data,'fid':obj['fid']}})
 

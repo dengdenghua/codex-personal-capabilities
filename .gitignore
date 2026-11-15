@@ -32,3 +32,7 @@ recovery.json
 password.key
 rclone.conf
 cloud-profile.json
+next-recovery.json
+previous-recovery.json
+.quark-cache.json
+last-provider-result.json

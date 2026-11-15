@@ -95,6 +95,9 @@ class CloudIntegrationTests(unittest.TestCase):
 
     def test_tampered_encrypted_pack_fails_authenticated_readback(self):
         pack=next(p for p in (self.root/'ciphertext/data').rglob('*') if p.is_file())
+        # Restic deliberately makes Linux packs read-only. This synthetic fault
+        # injection must first make its own temporary object writable.
+        pack.chmod(0o600)
         content=bytearray(pack.read_bytes());content[len(content)//2]^=1;pack.write_bytes(content)
         with self.assertRaises((ValueError,RuntimeError)):self.vault.verify()
 

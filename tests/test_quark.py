@@ -45,6 +45,13 @@ class SyntheticClient:
 
 
 class QuarkBoundaryTests(unittest.TestCase):
+    def test_retrieval_uses_actual_cli_capabilities(self):
+        self.assertEqual(quark.download_mode('Commands:\n  download [options]  Retrieve files'),'download')
+        self.assertEqual(quark.download_mode('Commands:\n  read-file [options] [fids...] Retrieve'),'read-file')
+
+    def test_missing_retrieval_capability_fails_before_transfer(self):
+        with self.assertRaises(ValueError):quark.download_mode('Commands:\n  upload [options]')
+
     def test_paths_reject_secret_traversal_and_platform_escapes(self):
         for path in ['password.key','../config','data/../config','/config','C:/config','keys/password.key','data\\xx','locks/'+'a'*64,'data/ab/'+'c'*64]:
             with self.subTest(path=path),self.assertRaises(ValueError):quark.safe_relative(path)
