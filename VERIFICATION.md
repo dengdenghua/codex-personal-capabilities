@@ -2,12 +2,13 @@
 
 Cloud extension (2026-11-15):
 
-- Windows acceptance: 54 portable/cloud tests and 112 optical workbench tests passed (166 total). Real pinned encryption/transport tools were enabled; Quark protocol fixtures are explicitly synthetic.
+- Windows and Linux CI: 59 portable/cloud tests and 112 optical workbench tests passed (171 per platform), including real pinned encryption/transport tools. Quark protocol fixtures are explicitly synthetic.
 - Pinned official restic 0.19.1 and rclone 1.76.0 executables, verified against fixed upstream SHA256 values, with separate local tool storage.
 - A full existing private archive was encrypted locally and completely decrypted/read back to its original SHA256 without uploading its unlock secret. The existing missing-originals status is preserved.
 - New tests cover real encryption/SQLite recovery, wrong keys, authenticated corruption detection, interrupted download repair, hardlink and existing-data protection, local secret permissions, upload boundaries, and the real rclone transport against a local fixture. Local transport tests are explicitly labeled as tests, never live cloud backups.
-- Quark's official installed CLI was tested against a real authorized account: a synthetic encrypted sample uploaded, every encrypted object was read back, the archive decrypted to its original SHA256, and Restore-Cloud.ps1 restored its source file into a fresh directory. No public sharing link was created. The full private archive is a separate live transfer and is not claimed complete by this small-sample acceptance.
+- Quark's official installed CLI was tested against a real authorized account: a synthetic encrypted sample uploaded, every encrypted object was read back, the archive decrypted to its original SHA256, and Restore-Cloud.ps1 restored its source file into a fresh directory. A second recovery succeeded with the original local mirror path unavailable, reusing confirmed cloud downloads and retrying a TLS-interrupted object. No public sharing link was created. The full private archive is a separate live transfer and is not claimed complete by this small-sample acceptance.
 - Quark recovery tests use synthetic cloud objects plus real restic encryption. They cover transfer checkpoints, altered ciphertext, local path/hardlink protection, restoration after removal of the original mirror, fresh cloud verification despite an existing cache, and preservation of the current recovery record when an update fails.
+- Network retries preserve confirmed objects and do not blindly retry authorization or unsupported-command errors. A subsequent snapshot reuses unchanged immutable cloud objects and retains the preceding recovery record.
 - Public code does not contain the ciphertext repository, recovery file, cloud login configuration, plaintext data, or unlock secret. Restic's standard encrypted key envelopes are part of the encrypted repository; the usable unlock secret remains local.
 - Verification checks all encrypted packs without using a metadata cache before decrypting and hashing the archive. This also detects corruption in sidecar packs that the selected archive alone would not read.
 
