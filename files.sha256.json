@@ -5352,7 +5352,7 @@
   "scripts/launch_mcp.py": "91eeee04b6229979ebb946de8511bbd2dadfedc070c9a8130238c522a0084660",
   "scripts/optics_cloud.py": "c29a97505d3da8bfc4c5aecbde52161ad1c52aa26dc90306e1f495c18cf4ce54",
   "scripts/optics_private.py": "bcf0d2d5555d178a9872e1ac2b7c662155ff2089d8b03ab0f4a2603b163ae005",
-  "scripts/quark_transport.py": "3de9a6ff94bd9c08473988160d654030d5e5522d2c1dd9c023eb01de071e4e31",
+  "scripts/quark_transport.py": "0950762a1371400b4c1a220750bfa11d48163a71a6a9c25c40032adafd8361e8",
   "scripts/refresh_lock.py": "035d8fc65b00de5b9dbd13d48d0146cf0b6baf1cdeec1d268f380eed8a05a75f",
   "scripts/runtime_manager.py": "186891e295f25c4c0358120704df7ab043587b901bcd5f41afb48451c8e4bc77",
   "scripts/validate.py": "b7fa17cd8f747d5e126bdc0ad165696fca3aaf7d96e8602bbd42d32b49ed7a98",
@@ -5360,7 +5360,7 @@
   "tests/test_cloud.py": "5ca47f96cec60a9fec27eb29fa33e7c7f23064fd40b7721b4afac6a0e26ce174",
   "tests/test_optics.py": "7f9ba6a04a5e511039b321f53773dfea42889fcd23652e1944b01ca1347ee187",
   "tests/test_portable.py": "a8d1f4782e3abfef3580097ad865c00fa433ac9e759cf6a6e620c412cf276f04",
-  "tests/test_quark.py": "91b4aaba260c100428f8840098b508b91457343b493d635562981695ac86748c",
+  "tests/test_quark.py": "95c37b5d6105c714823c70c9ad09eeb4ed6bd2686214384617a9bdd120766070",
   "tests/test_runtimes.py": "e3beabc6e45431aa2564cd6cb460d1af12e3cb3367ad55bb9bd260abf5613aaf",
   "VERIFICATION.md": "b158a5dcaa615f6e28412e9783c45f3dc12e29c5f85e26d94e3b718f374548a0"
 }

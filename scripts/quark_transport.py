@@ -164,6 +164,14 @@ class Client:
         return final,records
 
     def read(self,obj,runtime,receive):
+        for attempt in range(3):
+            try:return self._read_once(obj,runtime,receive)
+            except TransferError as error:
+                if error.code not in {1007,-1704} or attempt==2:raise
+                print('Quark network interruption; retrying this ciphertext read',flush=True)
+                time.sleep(5*(attempt+1))
+
+    def _read_once(self,obj,runtime,receive):
         # 1.0.25's shipped CLI exposes download, although its reference document
         # describes read-file. Use the actual --help contract, including output dir.
         with self.setup_lock:self.setup()

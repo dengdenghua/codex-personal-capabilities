@@ -7,6 +7,7 @@ import sys
 import tempfile
 import unittest
 from unittest.mock import patch
+from unittest.mock import Mock
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -45,6 +46,18 @@ class SyntheticClient:
 
 
 class QuarkBoundaryTests(unittest.TestCase):
+    def test_network_read_retry_delivers_once(self):
+        client=object.__new__(quark.Client)
+        client._read_once=Mock(side_effect=[quark.TransferError(1007),'verified'])
+        with patch.object(quark.time,'sleep'):
+            self.assertEqual(client.read({'fid':'synthetic'},Path('synthetic'),None),'verified')
+        self.assertEqual(client._read_once.call_count,2)
+
+    def test_authorization_failure_is_not_blindly_retried(self):
+        client=object.__new__(quark.Client);client._read_once=Mock(side_effect=quark.TransferError(-1408))
+        with self.assertRaises(quark.TransferError):client.read({'fid':'synthetic'},Path('synthetic'),None)
+        self.assertEqual(client._read_once.call_count,1)
+
     def test_retrieval_uses_actual_cli_capabilities(self):
         self.assertEqual(quark.download_mode('Commands:\n  download [options]  Retrieve files'),'download')
         self.assertEqual(quark.download_mode('Commands:\n  read-file [options] [fids...] Retrieve'),'read-file')
