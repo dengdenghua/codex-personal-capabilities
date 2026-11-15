@@ -21,8 +21,9 @@ import optics_private as private
 
 
 class TransferError(RuntimeError):
-    def __init__(self,code):
+    def __init__(self,code,provider_message=''):
         self.code=code
+        self.retryable=code in {1007,-1704} or (code==-100 and any(marker in provider_message.lower() for marker in ['socket disconnected','econnreset','etimedout','tls connection']))
         message='Quark transfer failed (code '+str(code)+'); inspect the local provider result. Successful objects remain checkpointed.'
         if code in {-1408,-118}:message+=' Log in locally with the official Quark CLI login command, then retry; never send credentials in chat.'
         super().__init__(message)
@@ -98,6 +99,9 @@ class Client:
         self.session_input=session_input
         self.checked=False;self.updated=False;self.setup_lock=threading.Lock();self.read_mode=None
 
+    def prepare(self):
+        with self.setup_lock:self.setup()
+
     def setup(self):
         if self.checked:return
         candidates=[Path(os.environ.get('ProgramFiles',''))/'Git/bin/bash.exe'] if os.name=='nt' else []
@@ -160,14 +164,14 @@ class Client:
             # Service messages may include signed URLs. Keep the complete provider
             # result locally, and expose only a safe failure category to automation.
             private.write(runtime/'last-provider-result.json',final)
-            raise TransferError(final.get('code'))
+            raise TransferError(final.get('code'),final.get('msg',''))
         return final,records
 
     def read(self,obj,runtime,receive):
         for attempt in range(3):
             try:return self._read_once(obj,runtime,receive)
             except TransferError as error:
-                if error.code not in {1007,-1704} or attempt==2:raise
+                if not error.retryable or attempt==2:raise
                 print('Quark network interruption; retrying this ciphertext read',flush=True)
                 time.sleep(5*(attempt+1))
 
@@ -226,6 +230,7 @@ def publish(ticket_path,client,tools=None):
                 obj['fid']=data['fileId'];cloud.save_ticket(vault.path,vault.ticket)
     pending=[obj for obj in objects if not obj.get('fid')]
     runtime=vault.path.parent/'quark-runtime'
+    client.prepare()
     # Send exact approved files. Restic pre-creates hundreds of empty folders;
     # traversing them through a drive API is unnecessary. The offline inventory
     # reconstructs their original paths from immutable file identities.
@@ -240,7 +245,7 @@ def publish(ticket_path,client,tools=None):
                 final,_=client.run(['upload',*[str(source/o['path']) for o in remaining]],runtime/str(start),checkpoint)
                 break
             except TransferError as error:
-                if error.code not in {1007,-1704} or attempt==2:raise
+                if not error.retryable or attempt==2:raise
                 print('Quark network interruption; retaining confirmed files and retrying missing objects',flush=True)
                 time.sleep(5*(attempt+1))
         with checkpoint_lock:
@@ -285,6 +290,7 @@ def materialize(ticket_path,destination,client,fresh=False):
         raise OSError('Insufficient disk space for encrypted Quark readback')
     runtime=destination.parent/(destination.name+'-transfer')
     cloud.reject_link(runtime)
+    if pending:client.prepare()
     for start in range(0,len(pending),24):
         batch=pending[start:start+24];wanted={o['fid']:o for o in batch};received=set()
         def receive(item):

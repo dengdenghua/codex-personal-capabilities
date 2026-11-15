@@ -18,6 +18,7 @@ import test_cloud
 
 
 class SyntheticClient:
+    def prepare(self):pass
     def __init__(self,remote):self.remote=remote;remote.mkdir();self.uploads=0;self.reads=0;self.fail=False;self.tamper=False
     def run(self,args,runtime,on_record=None):
         runtime=Path(runtime);runtime.mkdir(parents=True,exist_ok=True)
@@ -48,15 +49,16 @@ class SyntheticClient:
 class QuarkBoundaryTests(unittest.TestCase):
     def test_network_read_retry_delivers_once(self):
         client=object.__new__(quark.Client)
-        client._read_once=Mock(side_effect=[quark.TransferError(1007),'verified'])
+        client._read_once=Mock(side_effect=[quark.TransferError(-100,'Client network socket disconnected before secure TLS connection was established'),quark.TransferError(1007),'verified'])
         with patch.object(quark.time,'sleep'):
             self.assertEqual(client.read({'fid':'synthetic'},Path('synthetic'),None),'verified')
-        self.assertEqual(client._read_once.call_count,2)
+        self.assertEqual(client._read_once.call_count,3)
 
     def test_authorization_failure_is_not_blindly_retried(self):
-        client=object.__new__(quark.Client);client._read_once=Mock(side_effect=quark.TransferError(-1408))
-        with self.assertRaises(quark.TransferError):client.read({'fid':'synthetic'},Path('synthetic'),None)
-        self.assertEqual(client._read_once.call_count,1)
+        for error in [quark.TransferError(-1408),quark.TransferError(-100,"unknown command 'read-file'")]:
+            client=object.__new__(quark.Client);client._read_once=Mock(side_effect=error)
+            with self.assertRaises(quark.TransferError):client.read({'fid':'synthetic'},Path('synthetic'),None)
+            self.assertEqual(client._read_once.call_count,1)
 
     def test_retrieval_uses_actual_cli_capabilities(self):
         self.assertEqual(quark.download_mode('Commands:\n  download [options]  Retrieve files'),'download')
