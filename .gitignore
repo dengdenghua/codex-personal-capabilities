@@ -35,4 +35,5 @@ cloud-profile.json
 next-recovery.json
 previous-recovery.json
 .quark-cache.json
+.quark-readback-progress.json
 last-provider-result.json

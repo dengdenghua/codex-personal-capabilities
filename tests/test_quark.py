@@ -47,6 +47,9 @@ class SyntheticClient:
 
 
 class QuarkBoundaryTests(unittest.TestCase):
+    def test_read_worker_bounds_are_checked_before_setup(self):
+        for count in [0,33,-1,True]:
+            with self.assertRaises(ValueError):quark.Client(workers=count)
     def test_network_read_retry_delivers_once(self):
         client=object.__new__(quark.Client)
         client._read_once=Mock(side_effect=[quark.TransferError(-100,'Client network socket disconnected before secure TLS connection was established'),quark.TransferError(1007),'verified'])
@@ -77,12 +80,34 @@ class QuarkBoundaryTests(unittest.TestCase):
             root=Path(temporary);(root/'password.key').write_text('synthetic')
             with self.assertRaises(ValueError):quark.inventory(root)
 
+    def test_readback_receipts_are_excluded_from_retained_mirror_upload(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);(root/'config').write_bytes(b'opaque')
+            for name in ['keys','snapshots']:
+                (root/name).mkdir();(root/name/('a'*64 if name=='keys' else 'b'*64)).write_bytes(b'opaque')
+            for name in ['.quark-cache.json','.quark-readback-progress.json']:
+                (root/name).write_text('{}')
+            self.assertEqual(len(quark.inventory(root)),3)
+            (root/'data').mkdir();(root/'data/.quark-cache.json').write_text('{}')
+            with self.assertRaises(ValueError):quark.inventory(root)
+
 
 @unittest.skipUnless(os.environ.get('OPTICS_CLOUD_INTEGRATION')=='1','Real restic with synthetic Quark transport')
 class QuarkProtocolTests(unittest.TestCase):
     setUpClass=classmethod(lambda cls:setattr(cls,'tools',cloud.cloud_tools.ensure_tools()))
     setUp=test_cloud.CloudIntegrationTests.setUp
     tearDown=test_cloud.CloudIntegrationTests.tearDown
+
+    def test_unfinished_readback_can_resume_without_refetching_verified_objects(self):
+        client=SyntheticClient(self.root/'synthetic-cloud');client.workers=4
+        quark.publish(self.ticket,client,self.tools)
+        quark.materialize(self.ticket,self.root/'readback',client)
+        count=client.reads
+        quark.verify(self.ticket,self.root/'readback',client,self.tools,resume=True)
+        self.assertEqual(client.reads,count)
+        progress=private.read(self.root/'readback/.quark-readback-progress.json')
+        self.assertEqual(progress['verified_objects'],progress['objects'])
+        with self.assertRaises(ValueError):quark.verify(self.ticket,self.root/'readback',client,self.tools,resume=True)
 
     def test_roundtrip_real_crypto_and_sqlite_using_synthetic_transport(self):
         client=SyntheticClient(self.root/'synthetic-cloud')

@@ -316,7 +316,7 @@ def publish(ticket_path,remote,rclone_config=None,tools=None,allow_local_test=Fa
     return {'status':'transport_test_verified' if local_test else 'cloud_verified','snapshot':vault.ticket['snapshot'],'plaintext_uploaded':False,'unlock_secret_uploaded':False}
 
 
-def recover(ticket_path,destination,cache_dir=None,rclone_config=None,allow_incomplete=False,install=True,tools=None,quark_client=None):
+def recover(ticket_path,destination,cache_dir=None,rclone_config=None,allow_incomplete=False,install=True,tools=None,quark_client=None,ntfs_compressed=False,ciphertext_cache=None):
     _,record,_=load_ticket(ticket_path);destination=private.outside(destination)
     if not record['complete'] and not allow_incomplete:raise ValueError('Historical originals are missing; use --allow-incomplete only after reviewing that status')
     reuse=destination.exists()
@@ -326,18 +326,27 @@ def recover(ticket_path,destination,cache_dir=None,rclone_config=None,allow_inco
             raise FileExistsError('Restore destination contains unrelated knowledge; choose a new directory')
     destination.parent.mkdir(parents=True,exist_ok=True)
     cache=local_only(cache_dir or destination.parent/(destination.name+'-download'))
-    needed=(0 if reuse else record['restore_bytes'])+256*1024*1024
+    if ntfs_compressed and os.name!='nt':raise ValueError('NTFS compressed restore is only supported on Windows')
+    needed=(0 if reuse or ntfs_compressed else record['restore_bytes'])+(2*1024**3 if ntfs_compressed else 256*1024*1024)
+    cache.mkdir(parents=True,exist_ok=True)
+    cache_needed=0
     if not (cache/record['archive_name']).exists():
         staged=cache/('.download-'+record['snapshot'])/record['archive_name']
-        needed+=max(0,record['archive_bytes']-(staged.stat().st_size if staged.is_file() else 0))
-    if record['storage']=='quark':needed+=sum(o['bytes'] for o in record['quark']['objects'])
-    if shutil.disk_usage(destination.parent).free<needed:raise OSError('Insufficient disk space for download and independent restored data')
+        cache_needed+=max(0,record['archive_bytes']-(staged.stat().st_size if staged.is_file() else 0))
+    cipher=local_only(ciphertext_cache or cache/'ciphertext')
+    if record['storage']=='quark' and not ciphertext_cache:cache_needed+=sum(o['bytes'] for o in record['quark']['objects'] if not (cipher/o['path']).exists())
+    shared=destination.parent.stat().st_dev==cache.stat().st_dev
+    if shutil.disk_usage(destination.parent).free<needed+(cache_needed if shared else 0):raise OSError('Insufficient disk space for download and independent restored data')
+    if shutil.disk_usage(cache).free<cache_needed+256*1024*1024:raise OSError('Insufficient space on the archive cache volume')
     repository=None
     if record['storage']=='quark':
         import quark_transport
-        repository=str(quark_transport.materialize(ticket_path,cache/'ciphertext',quark_client or quark_transport.Client()))
+        repository=str(quark_transport.materialize(ticket_path,cipher,quark_client or quark_transport.Client()))
     vault=Vault(ticket_path,tools,rclone_config,repository=repository)
     archive=vault.download(cache)
+    if ntfs_compressed and not reuse:
+        private.restore(archive,destination,allow_incomplete,ntfs_compressed=True)
+        reuse=True
     if install:
         command=[sys.executable,str(ROOT/'scripts/install.py'),'--private-backup',str(archive),'--restore-to',str(destination)]
         if allow_incomplete:command.append('--allow-incomplete-backup')
@@ -348,19 +357,19 @@ def recover(ticket_path,destination,cache_dir=None,rclone_config=None,allow_inco
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--rclone-config');parser.add_argument('--quark-skill');parser.add_argument('--session-input');parser.add_argument('--session-id');sub=parser.add_subparsers(dest='action',required=True)
+    parser=argparse.ArgumentParser();parser.add_argument('--rclone-config');parser.add_argument('--quark-skill');parser.add_argument('--session-input');parser.add_argument('--session-id');parser.add_argument('--quark-workers',type=int,default=3);sub=parser.add_subparsers(dest='action',required=True)
     p=sub.add_parser('init');p.add_argument('--key-dir',required=True);p.add_argument('--local-repository',required=True)
     p=sub.add_parser('backup');p.add_argument('--recovery',required=True);p.add_argument('--archive',required=True)
     p=sub.add_parser('publish');p.add_argument('--recovery',required=True);p.add_argument('--remote',required=True)
     p=sub.add_parser('verify');p.add_argument('--recovery',required=True)
     p=sub.add_parser('publish-quark');p.add_argument('--recovery',required=True)
-    p=sub.add_parser('verify-quark');p.add_argument('--recovery',required=True);p.add_argument('--cache-dir',required=True)
+    p=sub.add_parser('verify-quark');p.add_argument('--recovery',required=True);p.add_argument('--cache-dir',required=True);p.add_argument('--resume-readback',action='store_true')
     p=sub.add_parser('backup-quark');p.add_argument('--recovery',required=True);p.add_argument('--archive',required=True);p.add_argument('--cache-dir',required=True)
-    p=sub.add_parser('restore');p.add_argument('--recovery',required=True);p.add_argument('--destination',required=True);p.add_argument('--cache-dir');p.add_argument('--allow-incomplete',action='store_true');p.add_argument('--skip-install',action='store_true')
+    p=sub.add_parser('restore');p.add_argument('--recovery',required=True);p.add_argument('--destination',required=True);p.add_argument('--cache-dir');p.add_argument('--allow-incomplete',action='store_true');p.add_argument('--skip-install',action='store_true');p.add_argument('--ntfs-compressed',action='store_true');p.add_argument('--ciphertext-cache')
     a=parser.parse_args()
     def quark_client():
         import quark_transport
-        return quark_transport.Client(a.quark_skill,a.session_input,a.session_id)
+        return quark_transport.Client(a.quark_skill,a.session_input,a.session_id,a.quark_workers)
     if a.action=='init':result={'status':'initialized_locally','recovery_file':str(initialize(a.key_dir,a.local_repository))}
     elif a.action=='backup':result=Vault(a.recovery,rclone_config=a.rclone_config).backup(a.archive)
     elif a.action=='publish':result=publish(a.recovery,a.remote,a.rclone_config)
@@ -370,11 +379,11 @@ def main():
         result=quark_transport.publish(a.recovery,quark_client())
     elif a.action=='verify-quark':
         import quark_transport
-        result=quark_transport.verify(a.recovery,a.cache_dir,quark_client())
+        result=quark_transport.verify(a.recovery,a.cache_dir,quark_client(),resume=a.resume_readback)
     elif a.action=='backup-quark':
         import quark_transport
         result=quark_transport.backup(a.recovery,a.archive,a.cache_dir,quark_client())
-    else:result=recover(a.recovery,a.destination,a.cache_dir,a.rclone_config,a.allow_incomplete,not a.skip_install,quark_client=quark_client() if load_ticket(a.recovery)[1]['storage']=='quark' else None)
+    else:result=recover(a.recovery,a.destination,a.cache_dir,a.rclone_config,a.allow_incomplete,not a.skip_install,quark_client=quark_client() if load_ticket(a.recovery)[1]['storage']=='quark' else None,ntfs_compressed=a.ntfs_compressed,ciphertext_cache=a.ciphertext_cache)
     print(json.dumps(result,ensure_ascii=False))
 
 if __name__=='__main__':

@@ -33,6 +33,8 @@ python scripts/optics_cloud.py publish-quark --recovery <密钥目录>/recovery.
 python scripts/optics_cloud.py verify-quark --recovery <密钥目录>/recovery.json --cache-dir <独立的密文回读目录>
 ```
 
+全量回读中断时，在同一目录添加 `--resume-readback`，逐文件重新核对本地 SHA256 后只下载缺失对象。仅限尚未完成验证的快照；已验证的快照仍需重新读取云端。可在子命令前指定 `--quark-workers 8` 调整并发（1–32，默认 3），按网络与可用内存选择，避免大量 CLI 进程占满内存。回读目录中的 `.quark-readback-progress.json` 记录当前已核对数量和字节数，不代表最终解密验证通过。
+
 后续备份仍使用 `-Provider Quark`。工具保留当前已验证恢复记录，新的快照上传并验证完成后才切换，最近一次记录另存为同一密钥目录中的 `previous-recovery.json`。不删除旧云端对象。若原本的本地密文镜像已不存在，会停止追加备份，提示先恢复镜像。
 
 ### 其他 rclone 云盘
@@ -61,11 +63,15 @@ python scripts/optics_cloud.py --rclone-config <本机配置> publish --recovery
 
 第一次在新电脑安装 Git、Python 3.11+、Codex CLI（夸克另需 Node.js 16+），登录同一个云存储，并把 **`recovery.json` 与 `password.key` 两个文件**从离线介质放到本机私有目录。不能把密钥上传网盘来完成这一步。恢复入口从记录自动识别夸克或 rclone；rclone 连接使用与恢复记录相同的 remote 名称。
 
-从此仓库检出 `v1.3.0`，然后运行：
+从此仓库检出 `v1.3.1`，然后运行：
 
 ```powershell
 ./Restore-Cloud.ps1 -Recovery 'D:\OfflineRecovery\recovery.json' -RestoreTo 'D:\OpticsKnowledge' -AllowIncompleteBackup
 ```
+
+可用 `-QuarkWorkers 8` 调整下载并发。`-CacheDir` 可把解密归档放到另一块盘；`-CiphertextCache` 可复用工具先前建立的回读目录，所有已有密文仍会重新核对 SHA256。复用缓存的恢复测试与再次从云端下载验证是两件事，报告应分别记录。
+
+Windows NTFS 空间紧张时，可添加 `-NtfsCompressed`，只对新建的恢复目录启用透明压缩，按原字节恢复并验证全部文件。它不修改系统压缩设置，也不保证任意资料都能压缩到可用空间内；恢复过程持续检查余量，低于 2 GiB 时停止、保留部分暂存目录，不覆盖现有资料。正常模式仍预检完整逻辑大小；跨盘缓存分别检查空间。目录压缩语义见 [Microsoft compact 文档](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/compact)。
 
 这一条命令安装固定版本工具、验证库身份、下载解密、验证归档 SHA256、恢复数据库/原文/路径映射，并安装插件与 MCP。下载在快照专属暂存目录中进行，中断后重跑可修复和复用暂存文件；认证和校验成功前不会交给安装器。已有非本次恢复的资料目录不会被覆盖。
 

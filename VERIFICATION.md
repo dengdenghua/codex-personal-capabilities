@@ -1,6 +1,10 @@
-# Verification — v1.3.0
+# Verification — v1.3.1
 
-Cloud extension (2026-11-15):
+Recovery follow-up (2026-11-15):
+
+- Windows follow-up covers unfinished SHA256 readback resume, worker bounds, Windows NTFS compressed restore, cross-volume cache preflight, and exclusion of local readback receipts from ciphertext upload. Full private cloud recovery is still pending; small-fixture passes do not substitute for it.
+
+Cloud extension, retained v1.3.0 evidence (2026-11-15):
 
 - Windows and Linux CI: 59 portable/cloud tests and 112 optical workbench tests passed (171 per platform), including real pinned encryption/transport tools. Quark protocol fixtures are explicitly synthetic.
 - Pinned official restic 0.19.1 and rclone 1.76.0 executables, verified against fixed upstream SHA256 values, with separate local tool storage.

@@ -74,6 +74,15 @@ class CloudIntegrationTests(unittest.TestCase):
 
     def tearDown(self):self.temp.cleanup()
 
+    @unittest.skipUnless(os.name=='nt','Windows NTFS compression')
+    def test_compressed_restore_keeps_sqlite_and_hashes_valid(self):
+        destination=self.root/'compressed-recovery'
+        result=cloud.recover(self.ticket,destination,install=False,tools=self.tools,ntfs_compressed=True)
+        self.assertEqual(result['status'],'restored')
+        self.assertTrue(private.read(destination/'restore-report.json')['ntfs_compressed'])
+        private.verify_restored(self.archive,destination)
+        self.assertEqual(private.database_counts(destination/'workflow-memory/memory.sqlite3'),{'entries':1})
+
     def test_real_encrypted_sqlite_restore_and_retry(self):
         before=(self.ticket.parent/'password.key').read_bytes()
         self.assertEqual(cloud.initialize(self.ticket.parent,self.root/'ciphertext',self.tools),self.ticket)

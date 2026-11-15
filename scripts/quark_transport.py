@@ -89,7 +89,9 @@ def validate_objects(objects,complete=True):
 
 
 class Client:
-    def __init__(self,skill_dir=None,session_input=None,session_id=None):
+    def __init__(self,skill_dir=None,session_input=None,session_id=None,workers=3):
+        if type(workers) is not int or not 1<=workers<=32:raise ValueError('Quark read workers must be between 1 and 32')
+        self.workers=workers
         self.skill=Path(skill_dir or Path(os.environ.get('CODEX_HOME',Path.home()/'.codex'))/'skills/quarkclouddrive').expanduser().resolve()
         self.node=shutil.which('node')
         if not self.node:raise ValueError('Install Node.js 16+ before using Quark backup')
@@ -198,7 +200,11 @@ def inventory(source):
     for base,dirs,files in os.walk(source):
         for name in [*dirs,*files]:cloud.reject_link(Path(base,name))
         for name in files:
-            file=Path(base,name);relative=file.relative_to(source).as_posix();safe_relative(relative)
+            file=Path(base,name);relative=file.relative_to(source).as_posix()
+            # A verified readback can become the retained local mirror. These
+            # root-only local receipts must never be sent back to the provider.
+            if relative in {'.quark-cache.json','.quark-readback-progress.json'}:continue
+            safe_relative(relative)
             if name in names:raise ValueError('Ambiguous encrypted object name')
             names.add(name)
             objects.append({'path':relative,'bytes':file.stat().st_size,'sha256':private.sha(file)})
@@ -277,7 +283,7 @@ def materialize(ticket_path,destination,client,fresh=False):
         if private.read(marker)!=expected:raise ValueError('Cache belongs to a different encrypted snapshot')
     elif any(destination.iterdir()):raise ValueError('Choose an empty dedicated Quark ciphertext cache')
     else:private.write(marker,expected)
-    pending=[];missing_bytes=0
+    pending=[];missing_bytes=0;confirmed=0;confirmed_bytes=0
     for obj in objects:
         target=destination/obj['path']
         for parent in [target,*target.parents]:
@@ -287,15 +293,26 @@ def materialize(ticket_path,destination,client,fresh=False):
             if not target.is_file() or target.stat().st_size!=obj['bytes'] or private.sha(target)!=obj['sha256']:
                 raise ValueError('Ciphertext cache changed or corrupted; use a fresh cache instead of overwriting')
             if fresh:pending.append(obj)
+            else:confirmed+=1;confirmed_bytes+=obj['bytes']
         else:pending.append(obj);missing_bytes+=obj['bytes']
     if shutil.disk_usage(destination).free<missing_bytes+256*1024*1024:
         raise OSError('Insufficient disk space for encrypted Quark readback')
     runtime=destination.parent/(destination.name+'-transfer')
     cloud.reject_link(runtime)
+    progress_lock=threading.Lock()
+    progress_path=destination/'.quark-readback-progress.json'
+    cloud.reject_link(progress_path)
+    def save_progress(status):
+        cloud.save_ticket(progress_path,{'status':status,'snapshot':ticket['snapshot'],'objects':len(objects),'verified_objects':confirmed,'verified_bytes':confirmed_bytes,'total_bytes':sum(o['bytes'] for o in objects),'updated_at':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'mode':'fresh' if fresh else 'resumed'})
+    save_progress('reading')
     if pending:client.prepare()
-    for start in range(0,len(pending),24):
-        batch=pending[start:start+24];wanted={o['fid']:o for o in batch};received=set()
+    workers=getattr(client,'workers',3)
+    if type(workers) is not int or not 1<=workers<=32:raise ValueError('Invalid Quark read concurrency')
+    batch_size=max(24,workers*2)
+    for start in range(0,len(pending),batch_size):
+        batch=pending[start:start+batch_size];wanted={o['fid']:o for o in batch};received=set()
         def receive(item):
+            nonlocal confirmed,confirmed_bytes
             if item.get('type')!='list' or item.get('code')!=0:return
             data=item['data'];obj=wanted.get(data.get('fid'))
             if obj is None or data.get('fid') in received:raise ValueError('Unexpected or duplicate downloaded object')
@@ -309,20 +326,23 @@ def materialize(ticket_path,destination,client,fresh=False):
                 if not fresh or private.sha(target)!=obj['sha256']:raise ValueError('Concurrent change in ciphertext cache')
                 downloaded.unlink()
             else:os.replace(downloaded,target)
-            received.add(obj['fid'])
-        with ThreadPoolExecutor(max_workers=3) as pool:
+            with progress_lock:
+                received.add(obj['fid']);confirmed+=1;confirmed_bytes+=obj['bytes'];save_progress('reading')
+        with ThreadPoolExecutor(max_workers=workers) as pool:
             list(pool.map(lambda obj:client.read(obj,runtime/obj['sha256'],receive),batch))
         if received!=set(wanted):raise ValueError('Quark did not return every requested ciphertext object')
-        print('Ciphertext readback:',min(start+24,len(pending)),'/',len(pending),flush=True)
+        print('Ciphertext readback:',confirmed,'/',len(objects),flush=True)
+    save_progress('objects_verified')
     return destination
 
 
-def verify(ticket_path,cache_dir,client,tools=None):
+def verify(ticket_path,cache_dir,client,tools=None,resume=False):
     import optics_cloud as cloud
     path,ticket,_=cloud.load_ticket(ticket_path)
     if Path(ticket['repository']).is_absolute() and Path(cache_dir).resolve()==Path(ticket['repository']).resolve():
         raise ValueError('Cloud verification needs an independent readback cache')
-    repository=materialize(path,cache_dir,client,fresh=True)
+    if resume and ticket.get('quark',{}).get('verified'):raise ValueError('Completed cloud verification requires a fresh read; resume is only for an unfinished snapshot')
+    repository=materialize(path,cache_dir,client,fresh=not resume)
     result=cloud.Vault(path,tools,repository=str(repository)).verify()
     ticket['quark']['verified']=True;ticket['quark']['verified_at']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())
     # Keep the original local mirror for incremental future uploads and rollback.

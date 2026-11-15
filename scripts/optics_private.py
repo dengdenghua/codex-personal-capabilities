@@ -9,6 +9,8 @@ from pathlib import Path, PurePosixPath
 import re
 import shutil
 import sqlite3
+import stat
+import subprocess
 import tempfile
 import zipfile
 
@@ -214,7 +216,8 @@ def safe_relative(name):
     if p.is_absolute() or '..' in p.parts or '\\' in name or ':' in name or not name:raise ValueError('Unsafe backup path')
     return p
 
-def restore(archive,destination,allow_incomplete=False):
+def restore(archive,destination,allow_incomplete=False,ntfs_compressed=False):
+    if ntfs_compressed and os.name!='nt':raise ValueError('NTFS compressed restore is only supported on Windows')
     archive=Path(archive).resolve();destination=outside(destination)
     if destination.exists():raise FileExistsError('Restore into a NEW directory; existing data is never overwritten')
     checksum=read(archive.with_suffix(archive.suffix+'.sha256.json'))
@@ -230,7 +233,9 @@ def restore(archive,destination,allow_incomplete=False):
         if not manifest['complete'] and not allow_incomplete:raise ValueError('Backup has missing originals; review manifest before allowing partial recovery')
         total=sum(i['bytes'] for i in manifest['files'])
         destination.parent.mkdir(parents=True,exist_ok=True)
-        if shutil.disk_usage(destination.parent).free<total+256*1024*1024:raise OSError('Insufficient space for independent restored files')
+        reserve=2*1024**3
+        required=(max((i['bytes'] for i in manifest['files']),default=0)+reserve) if ntfs_compressed else total+256*1024*1024
+        if shutil.disk_usage(destination.parent).free<required:raise OSError('Insufficient space for independent restored files')
         targets=set()
         for item in manifest['files']:
             target=str(safe_relative(item['target'])).casefold()
@@ -241,10 +246,20 @@ def restore(archive,destination,allow_incomplete=False):
             if info.file_size!=item['bytes']:raise ValueError('Size mismatch')
         stage=destination.with_name(destination.name+'.restoring')
         stage.mkdir(exist_ok=False);mapping={};objects={}
+        if ntfs_compressed:
+            compact=Path(os.environ['SystemRoot'])/'System32/compact.exe'
+            result=subprocess.run([str(compact),'/C',str(stage)],capture_output=True)
+            if result.returncode or not (getattr(stage.stat(),'st_file_attributes',0)&stat.FILE_ATTRIBUTE_COMPRESSED):
+                raise OSError('Could not enable NTFS compression on the new restore directory')
+        since_space_check=0
         for n,item in enumerate(manifest['files']):
             target=stage/item['target'];target.parent.mkdir(parents=True,exist_ok=True);h=hashlib.sha256()
             with z.open('objects/'+item['sha256']) as src,target.open('xb') as out:
-                for chunk in iter(lambda:src.read(1024*1024),b''):h.update(chunk);out.write(chunk)
+                for chunk in iter(lambda:src.read(1024*1024),b''):
+                    h.update(chunk);out.write(chunk);since_space_check+=len(chunk)
+                    if ntfs_compressed and since_space_check>=64*1024*1024:
+                        if shutil.disk_usage(stage).free<reserve:raise OSError('Compressed recovery stopped to preserve disk reserve; partial stage retained, original data unchanged')
+                        since_space_check=0
             if h.hexdigest()!=item['sha256']:raise ValueError('Restored object checksum mismatch')
             if item.get('sqlite_counts') is not None:
                 with closing(sqlite3.connect(target.as_uri()+'?mode=ro',uri=True)) as db:
@@ -263,7 +278,7 @@ def restore(archive,destination,allow_incomplete=False):
                    lens_library_root=str(destination/'lens'),workflow_memory=str(destination/'workflow-memory/memory.sqlite3'),path_map=str(destination/'path-map.json'),restore_report=str(destination/'restore-report.json'))
         write(stage/'workbench/config.json',cfg)
         write(stage/'path-map.json',{'paths':mapping,'objects':objects})
-        write(stage/'restore-report.json',{'complete':manifest['complete'],'missing':manifest['missing'],'files_verified':len(manifest['files']),'archive_sha256':checksum['sha256']})
+        write(stage/'restore-report.json',{'complete':manifest['complete'],'missing':manifest['missing'],'files_verified':len(manifest['files']),'archive_sha256':checksum['sha256'],'ntfs_compressed':ntfs_compressed})
         stage.rename(destination)
     print('Restore verified:',len(manifest['files']),'files; original provenance unchanged',flush=True)
     return destination

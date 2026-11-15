@@ -11,6 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SECRET=re.compile(r'(?<![\w-])(?:gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{25,}|sk-[A-Za-z0-9_-]{30,}|AKIA[A-Z0-9]{16})|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
 FORBIDDEN={'.env','auth.json','credentials.json','personal-runtime.json','config.toml','private-plan.json','path-map.json','restore-report.json','lens-toolkit.local.json','optical-workflow-memory.local.json','recovery.json','rclone.conf','cloud-profile.json'}
 FORBIDDEN.update({'next-recovery.json','previous-recovery.json','.quark-cache.json','last-provider-result.json'})
+FORBIDDEN.add('.quark-readback-progress.json')
 SUFFIX={'.sqlite','.sqlite3','.db','.jsonl','.log','.pem','.key','.pfx','.pyc','.zmx','.zos','.sldprt','.sldasm','.blend','.drwdot','.slddrt'}
 
 def files(root):
