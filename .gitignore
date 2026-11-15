@@ -28,3 +28,7 @@ plugins/blender-control/server/mcp/build/
 private-plan.json
 path-map.json
 restore-report.json
+recovery.json
+password.key
+rclone.conf
+cloud-profile.json

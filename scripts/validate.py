@@ -9,7 +9,8 @@ import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
 SECRET=re.compile(r'(?<![\w-])(?:gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-9_]{25,}|sk-[A-Za-z0-9_-]{30,}|AKIA[A-Z0-9]{16})|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----')
-FORBIDDEN={'.env','auth.json','credentials.json','personal-runtime.json','config.toml','private-plan.json','path-map.json','restore-report.json','lens-toolkit.local.json','optical-workflow-memory.local.json'}
+FORBIDDEN={'.env','auth.json','credentials.json','personal-runtime.json','config.toml','private-plan.json','path-map.json','restore-report.json','lens-toolkit.local.json','optical-workflow-memory.local.json','recovery.json','rclone.conf','cloud-profile.json'}
+FORBIDDEN.update({'next-recovery.json','previous-recovery.json','.quark-cache.json','last-provider-result.json'})
 SUFFIX={'.sqlite','.sqlite3','.db','.jsonl','.log','.pem','.key','.pfx','.pyc','.zmx','.zos','.sldprt','.sldasm','.blend','.drwdot','.slddrt'}
 
 def files(root):
@@ -25,13 +26,15 @@ def problems(root=ROOT):
         if f.is_symlink():errors.append(str(rel)+': symlink');continue
         if not f.is_file():continue
         if f.name in FORBIDDEN or f.name.startswith('.env.') or f.suffix.lower() in SUFFIX:errors.append(str(rel)+': forbidden file')
+        if re.fullmatch('[0-9a-f]{64}',f.name) and any(part in {'keys','data','snapshots','index','locks'} for part in rel.parts):
+            errors.append(str(rel)+': private encrypted-vault object')
         try:s=f.read_text(encoding='utf8')
         except UnicodeDecodeError:errors.append(str(rel)+': unreviewed binary');continue
         if SECRET.search(s):errors.append(str(rel)+': credential pattern')
         if f.suffix.lower()=='.json':
             try:obj=json.loads(s)
             except ValueError:obj=None
-            if isinstance(obj,dict) and obj.get('format') in {'optics-private-plan-v1','optics-private-backup-v1'}:errors.append(str(rel)+': private optical manifest')
+            if isinstance(obj,dict) and obj.get('format') in {'optics-private-plan-v1','optics-private-backup-v1','optics-cloud-recovery-v1'}:errors.append(str(rel)+': private optical manifest')
         if re.search(r'[C-Z]:[\\/]+Users[\\/]+Administrator|E:[\\/]+(?:AGENT|工作区)|D:[\\/]+AI[\\/]',s):errors.append(str(rel)+': original machine/project path')
     return errors
 
