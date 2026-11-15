@@ -52,7 +52,7 @@ class QuarkBoundaryTests(unittest.TestCase):
             with self.assertRaises(ValueError):quark.Client(workers=count)
     def test_network_read_retry_delivers_once(self):
         client=object.__new__(quark.Client)
-        client._read_once=Mock(side_effect=[quark.TransferError(-100,'Client network socket disconnected before secure TLS connection was established'),quark.TransferError(1007),'verified'])
+        client._read_once=Mock(side_effect=[quark.TransferError(-100,'Request timeout after 60000ms: POST [redacted]'),quark.TransferError(1007),'verified'])
         with patch.object(quark.time,'sleep'):
             self.assertEqual(client.read({'fid':'synthetic'},Path('synthetic'),None),'verified')
         self.assertEqual(client._read_once.call_count,3)

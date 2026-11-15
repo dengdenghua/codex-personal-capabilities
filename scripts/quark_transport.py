@@ -23,7 +23,7 @@ import optics_private as private
 class TransferError(RuntimeError):
     def __init__(self,code,provider_message=''):
         self.code=code
-        self.retryable=code in {1007,-1704} or (code==-100 and any(marker in provider_message.lower() for marker in ['socket disconnected','econnreset','etimedout','tls connection']))
+        self.retryable=code in {1007,-1704} or (code==-100 and any(marker in provider_message.lower() for marker in ['socket disconnected','econnreset','etimedout','tls connection','request timeout after']))
         message='Quark transfer failed (code '+str(code)+'); inspect the local provider result. Successful objects remain checkpointed.'
         if code in {-1408,-118}:message+=' Log in locally with the official Quark CLI login command, then retry; never send credentials in chat.'
         super().__init__(message)
