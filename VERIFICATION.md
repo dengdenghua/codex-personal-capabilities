@@ -2,7 +2,8 @@
 
 Recovery follow-up (2026-11-15):
 
-- Windows follow-up covers unfinished SHA256 readback resume, worker bounds, Windows NTFS compressed restore, cross-volume cache preflight, and exclusion of local readback receipts from ciphertext upload. Full private cloud recovery is still pending; small-fixture passes do not substitute for it.
+- Windows CI passed 63 portable/cloud tests and 112 optical workbench tests. Linux CI passed the same suites with the Windows-only compression case skipped (62 + 112 passed). Both platforms passed source/privacy/tracked-hash checks at commit b07847f.
+- Follow-up covers unfinished SHA256 readback resume, worker bounds, bounded API-timeout retry, Windows NTFS compressed restore, cross-volume cache handling, and exclusion of local readback receipts from ciphertext upload. Full private cloud recovery is still pending; small-fixture passes do not substitute for it.
 
 Cloud extension, retained v1.3.0 evidence (2026-11-15):
 
