@@ -135,7 +135,7 @@ class Client:
         if self.session_input is not None:command+=['--session-input',self.session_input]
         if self.updated:command+=['--skill-updated']
         env=os.environ.copy();env['OPENCLAW_RUNTIME_DIR']=str(runtime)
-        final=None;records=[];last=-1
+        final=None;records=[];last=-1;observed_percent=None
         with tempfile.TemporaryFile() as errors:
             child=subprocess.Popen(command,cwd=runtime,env=env,stdout=subprocess.PIPE,stderr=errors,text=True,encoding='utf8')
             timeout=[False]
@@ -145,9 +145,16 @@ class Client:
             timer=threading.Timer(300,expire);timer.daemon=True;timer.start()
             try:
                 for line in child.stdout:
-                    timer.cancel();timer=threading.Timer(300,expire);timer.daemon=True;timer.start()
                     try:item=json.loads(line)
                     except ValueError:continue
+                    # SDK heartbeats can repeat 99% forever while the last
+                    # response body stalls. Output alone is not transfer progress.
+                    active=item.get('type') in {'list','result'}
+                    if item.get('type')=='progress':
+                        percent=item.get('data',{}).get('percent',0)
+                        active=percent!=observed_percent;observed_percent=percent
+                    if active:
+                        timer.cancel();timer=threading.Timer(300,expire);timer.daemon=True;timer.start()
                     if item.get('type')=='progress':
                         percent=item.get('data',{}).get('percent',0)
                         if percent>=last+5:print('Quark transfer:',percent,'%',flush=True);last=percent

@@ -47,6 +47,30 @@ class SyntheticClient:
 
 
 class QuarkBoundaryTests(unittest.TestCase):
+    def run_synthetic_cli(self,source):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);scripts=root/'scripts';scripts.mkdir()
+            (scripts/'install.sh').write_text('synthetic setup already checked')
+            (scripts/'quark-drive.cjs').write_text(source,encoding='utf8')
+            client=quark.Client(skill_dir=root);client.node=sys.executable;client.checked=True
+            real_timer=quark.threading.Timer;real_popen=quark.subprocess.Popen;children=[]
+            def popen(*args,**kwargs):
+                child=real_popen(*args,**kwargs);children.append(child);return child
+            try:
+                with patch.object(quark.threading,'Timer',side_effect=lambda delay,callback:real_timer(1.0,callback)),patch.object(quark.subprocess,'Popen',side_effect=popen):
+                    return client.run([],root/'runtime')
+            finally:
+                self.assertTrue(children)
+                self.assertTrue(all(child.poll() is not None for child in children),'Owned CLI must exit after completion or idle timeout')
+
+    def test_repeated_progress_heartbeat_cannot_keep_stalled_cli_alive(self):
+        with self.assertRaises(quark.TransferIdleTimeout):
+            self.run_synthetic_cli('import json,time\nwhile True:\n print(json.dumps({"type":"progress","data":{"percent":99}}),flush=True)\n time.sleep(.02)\n')
+
+    def test_changing_progress_extends_idle_deadline_until_completed(self):
+        final,_=self.run_synthetic_cli('import json,time\nfor percent in range(0,101,20):\n print(json.dumps({"type":"progress","data":{"percent":percent}}),flush=True)\n time.sleep(.2)\nprint(json.dumps({"type":"result","code":0,"data":{}}),flush=True)\n')
+        self.assertEqual(final['code'],0)
+
     def test_cli_idle_timeout_uses_bounded_read_retry(self):
         client=object.__new__(quark.Client)
         client._read_once=Mock(side_effect=[quark.TransferIdleTimeout(),'verified'])
