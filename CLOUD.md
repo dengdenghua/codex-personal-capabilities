@@ -6,7 +6,7 @@
 
 使用固定版本 restic 0.19.1 做加密、认证和快照。夸克通过官方 Quark Drive CLI 传输，其他私人云盘或对象存储可选 rclone 1.76.0。下载官方程序时核对固定 SHA256，不自行实现加密算法。自动安装工具目前支持 Windows/Linux x64。
 
-正文、原文件名、目录树和快照内容经过本地加密。云端会存在 restic 标准的**加密密钥封装**及少量库格式信息，不含可直接解密的明文密钥；恢复所需的随机密码仅写入本机 `password.key`，不上传。具体格式见 [restic 官方设计](https://restic.readthedocs.io/en/stable/100_references.html)，云传输方式见 [官方 rclone 后端说明](https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html#other-services-via-rclone)。
+正文、原文件名、目录树和快照内容经过本地加密。云端会存在 restic 标准的**加密密钥封装**及少量库格式信息，不含可直接解密的明文密钥；恢复所需的随机密码保存在本机 `password.key`；可选使用独立口令加密封装后上传密文，见下文。具体格式见 [restic 官方设计](https://restic.readthedocs.io/en/stable/100_references.html)，云传输方式见 [官方 rclone 后端说明](https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html#other-services-via-rclone)。
 
 密钥目录与密文目录强制分离，拒绝 Git 工作区和已知同步文件夹。Windows 新密钥目录仅授权当前用户和 SYSTEM；Linux 使用目录 0700、密钥 0600。请把恢复记录和密钥另存到自己的离线介质；丢失本地恢复秘密后，云盘账号本身不能解密资料。
 
@@ -61,7 +61,7 @@ python scripts/optics_cloud.py --rclone-config <本机配置> publish --recovery
 
 ## 换电脑一键下载恢复
 
-第一次在新电脑安装 Git、Python 3.11+、Codex CLI（夸克另需 Node.js 16+），登录同一个云存储，并把 **`recovery.json` 与 `password.key` 两个文件**从离线介质放到本机私有目录。不能把密钥上传网盘来完成这一步。恢复入口从记录自动识别夸克或 rclone；rclone 连接使用与恢复记录相同的 remote 名称。
+第一次在新电脑安装 Git、Python 3.11+、Codex CLI（夸克另需 Node.js 16+），登录同一个云存储，并把 **`recovery.json` 与 `password.key` 两个文件**从离线介质放到本机私有目录。也可使用下文的独立口令加密密钥包从私人云盘解锁；明文密钥不得上传。恢复入口从记录自动识别夸克或 rclone；rclone 连接使用与恢复记录相同的 remote 名称。
 
 从此仓库检出 `v1.4.0`，然后运行：
 
@@ -90,3 +90,26 @@ python scripts/optics_cloud.py --rclone-config <本机配置> verify --recovery 
 自动化覆盖真实 restic 加密/解密、SQLite 恢复、错误密钥、密文篡改、断点暂存修复、硬链接保护、既有资料保护、rclone 传输适配和秘密上传边界。真实用户云盘上传必须另外确认账号、容量与权限；测试通过不等于已经上传你的资料。
 
 夸克适配另有合成协议测试，覆盖逐文件断点、损坏密文、恢复路径保护和移除原镜像后的恢复。该测试中的网盘是合成适配器，不等同于真实云端验收；真实账号结果单独记录。官方 1.0.25 文档描述 `read-file`，实际 CLI 帮助提供 `download --fid --output-dir`；适配器检测实际命令后选择对应模式，两种模式均有边界测试，不修改或分析官方运行时源码。
+
+## 用独立口令加密的云端恢复材料
+
+可以自愿把恢复材料封装为加密文件放在私人云盘，独立口令只在本地输入，不存入 Git、云盘或命令行参数。此功能需要 Python 3.11+ 和 `cryptography` 包。密钥包使用 scrypt 派生密钥与 AES-GCM 认证加密；加密文件本身不得当成口令的替代品。请使用独立且足够随机的长口令，并存放在自己的密码管理器；口令丢失且没有其他密钥副本时无法恢复。
+
+在旧电脑上生成密钥包（输出文件必须不存在），在提示符输入并再次确认口令：
+
+```powershell
+python -m pip install cryptography
+python scripts/recovery_bundle.py encrypt 'D:/OfflineRecovery' 'D:/PrivateBackup/recovery-bundle.enc'
+```
+
+只上传生成的 `.enc` 密文到自己的私人云盘，不上传恢复目录里的明文。上传后重新下载，核对文件 SHA256，并验证解锁。保留旧的密钥与已验证备份，密钥包不要公开分享。
+
+换电脑后先取得此版本仓库、Python、`cryptography`，登录自己的夸克并下载加密密钥包。解锁到不存在的私人目录，程序验证口令和完整性后创建仅当前用户与系统可访问的目录：
+
+```powershell
+python -m pip install cryptography
+python scripts/recovery_bundle.py decrypt 'D:/Downloads/recovery-bundle.enc' 'D:/PrivateRecovery'
+./Restore-Cloud.ps1 -Recovery 'D:/PrivateRecovery/recovery.json' -RestoreTo 'D:/OpticsKnowledge' -AllowIncompleteBackup
+```
+
+密钥包内恢复记录只反映生成时的版本，后续自动增量备份**不会自动更新此密钥包**。如需换机恢复最新版本，需重新生成、加密、上传并验证新的密钥包；在新包验证通过之前保留旧包。解锁验证和下载字节一致不等于对新电脑完整恢复和检索已完成验收。
