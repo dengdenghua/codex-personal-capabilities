@@ -8,7 +8,7 @@
   "Backup-Cloud.ps1": "f53e74e75ae4343b679f674ca8b7ec64cca8c47bdc69490090ef2b1687592329",
   "CHANGELOG.md": "da1d3ed185aaca21c538fbe4d5f9376723af3f17f0dbf61f6360331f8841c9f0",
   "cloud-tools.json": "602b9d4e2c090a8b5200513d02a49e4465cf7ac8d18fd03d9807fbd87c19bdd0",
-  "CLOUD.md": "f4e4af72f09a90099a31952a3ae5e5e078f4934493bdd773d5156338d01eb769",
+  "CLOUD.md": "17f0f05c651eed5ec8e64ae96d9e9f920619fd6c14e19ef4b58a8f2039efa420",
   "Install.ps1": "fd64d1793b0ad47bfca5533e6dd6fdf9152a7700276150c5a253a764c0f3401f",
   "List-BackupVersions.ps1": "0da6ae371d1fcd1166fb889eb9d7be10d65780ace0aff941252d1955b8759351",
   "OPTICS.md": "056b2ca6164fa7c037a7efe9790875cb652821b78b44c2329192cee880071ef8",
@@ -5358,7 +5358,7 @@
   "scripts/optics_incremental.py": "b7476d7382e106b2d35ee76b069aeb3073d5adc91c289afc80b32804f6438a90",
   "scripts/optics_private.py": "dd6a811c99d74e7baa6cda9d5d30818338129a66ad0283caeed4fb8ecf08fe16",
   "scripts/quark_transport.py": "23d65f71fbd536d513e2aa667acb4660d9bc82118cc1a18ba9984516d7549b6f",
-  "scripts/recovery_bundle.py": "ad85caee8111b51971852ab66c08c454aa1bdc43e1a18581830faf979afe441d",
+  "scripts/recovery_bundle.py": "7ba08935693d8c0b125f844f886002fc10b29956c9cb65c103279932a1ae0c0c",
   "scripts/refresh_lock.py": "035d8fc65b00de5b9dbd13d48d0146cf0b6baf1cdeec1d268f380eed8a05a75f",
   "scripts/runtime_manager.py": "186891e295f25c4c0358120704df7ab043587b901bcd5f41afb48451c8e4bc77",
   "scripts/validate.py": "64a62cf8b4eee47701dda75e6aef4b2669123ea02b0699cee8c21ba56233094a",
@@ -5368,7 +5368,7 @@
   "tests/test_optics.py": "7f9ba6a04a5e511039b321f53773dfea42889fcd23652e1944b01ca1347ee187",
   "tests/test_portable.py": "a8d1f4782e3abfef3580097ad865c00fa433ac9e759cf6a6e620c412cf276f04",
   "tests/test_quark.py": "030919ed37123c28843f72b0d6e9f532954d266ef4b3d2b38328a8f9c4096234",
-  "tests/test_recovery_bundle.py": "1f056023015e3016faac802b78a67a6a10f9c8dd7a60b8f05262bf18d3c80a73",
+  "tests/test_recovery_bundle.py": "42f06acf0e5df450e17b6c801d25a64e57f3094ad89f7c24a66ea911255c4970",
   "tests/test_runtimes.py": "e3beabc6e45431aa2564cd6cb460d1af12e3cb3367ad55bb9bd260abf5613aaf",
   "VERIFICATION.md": "030ed5836b84f77bed9c49dab435a608bc7ddf7f9c056292a250faca0cd6ddab"
 }
