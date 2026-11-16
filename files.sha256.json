@@ -4,9 +4,9 @@
   ".github/workflows/validate.yml": "df701f5f5f8cffac204fc72a592da17ab1533a8be7dd7e79c4078fc16a18bae9",
   ".gitignore": "dac5577d12f5898393e95de553f747e70403ce795cc80410ac51687a0b91d688",
   "Backup-Cloud.ps1": "f53e74e75ae4343b679f674ca8b7ec64cca8c47bdc69490090ef2b1687592329",
-  "CHANGELOG.md": "21309eaaafaf187dae16fcb84ff2711f18df727bb4222565117f57b103e7fac0",
+  "CHANGELOG.md": "855456273558b9d89e3dd03dd6d4440c27fd12912498afc2d9170bc225f79f57",
   "cloud-tools.json": "602b9d4e2c090a8b5200513d02a49e4465cf7ac8d18fd03d9807fbd87c19bdd0",
-  "CLOUD.md": "ddd0628e627b4fb5febf90fc5b17031c5de82832f3a70e17503ded72002d130c",
+  "CLOUD.md": "e01cafff8697b006f82968ab0c934f8bf58e38992bf8c083536435f24a099015",
   "Install.ps1": "fd64d1793b0ad47bfca5533e6dd6fdf9152a7700276150c5a253a764c0f3401f",
   "OPTICS.md": "056b2ca6164fa7c037a7efe9790875cb652821b78b44c2329192cee880071ef8",
   "plugins/blender-control/.codex-plugin/plugin.json": "9bce67a361e15cde1afaa67377ecc842343c87a385c41c4e060b4ee20e35943f",
@@ -5343,7 +5343,7 @@
   "plugins/zemax-control/zemax_mcp/server.py": "73004670d385187fb3a1701b92fc1e064fc3123bc067d47579dc461d3ee6f7b8",
   "provenance.json": "02c82beb83163ec343119d0875e3f413fe83b2ff295e1649018ac05af85ff7e3",
   "quark-tool.json": "38e7d417087ac3cb1b623d079fe44f8453174f5fc2963b9dc423929100667b4c",
-  "README.md": "bc703b785d9f4dc85ce5cb27bbdd53c0c9c0db6ea2b81e6d60e144e07792e5ff",
+  "README.md": "138033ffd2bbc32abf0d5274014cab8db9c60bd7560729e56a0983197a9f0ad3",
   "Restore-Cloud.ps1": "4f5be70b19c763c60f04ae0745120ee1192dcd24ceb35aaeb3d1e650bab4c1f3",
   "runtime-source-provenance.json": "0fe5ecb1dd4b342e3bcc4162d76c1df66c1c4167f0cb09a08252f57423d82471",
   "RUNTIMES.md": "0a00e405e686bb2e5d632a08f8f2eee8269025001d2e6ebac9b9a73613eafa09",
@@ -5362,5 +5362,5 @@
   "tests/test_portable.py": "a8d1f4782e3abfef3580097ad865c00fa433ac9e759cf6a6e620c412cf276f04",
   "tests/test_quark.py": "030919ed37123c28843f72b0d6e9f532954d266ef4b3d2b38328a8f9c4096234",
   "tests/test_runtimes.py": "e3beabc6e45431aa2564cd6cb460d1af12e3cb3367ad55bb9bd260abf5613aaf",
-  "VERIFICATION.md": "88810ae22eb7614fd08b4a46c4e2eb9389a6d69abe84016fdba68b540163f5f3"
+  "VERIFICATION.md": "030ed5836b84f77bed9c49dab435a608bc7ddf7f9c056292a250faca0cd6ddab"
 }

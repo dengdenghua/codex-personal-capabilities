@@ -1,9 +1,22 @@
-# Verification — v1.3.1
+# Verification — v1.3.2
+
+Full private cloud recovery acceptance (2026-11-16):
+
+- The authorized full encrypted backup was independently read back through Quark's official CLI. Every ciphertext object matched its SHA256, the entire restic repository passed `check --read-data`, and the complete decrypted archive matched the original SHA256 and length.
+- The cloud-origin archive restored every available archived file into a new directory. Every restored file passed SHA256 validation; all four SQLite databases passed integrity and table-count checks. Historical originals already absent from the source remain explicitly listed as missing, with the operator's accepted incomplete-source status preserved.
+- A fresh GitHub checkout installed the optical plugins and personal helpers in an isolated Codex home. Both the runtime and installed plugin launcher passed real Chinese retrieval, reference readback, graph and workflow memory queries, lens prescription/source verification and project inventory. Additional checks required source resolution to stay inside the newly restored tree, preventing old machine paths from satisfying acceptance accidentally.
+- This was a full local simulation of migration using independently downloaded cloud data, not a test on a second physical computer. Active Codex configuration was not changed; native commercial application operation and licenses were not tested.
+- A compressed recovery attempt correctly stopped at the disk reserve boundary. After fingerprint-verified duplicate retirement and local storage relocation, full recovery passed on a volume with sufficient uncompressed capacity. The canonical local archive retains the exact original bytes; the retained copy was independently decrypted from Quark. Private transfer identifiers, source paths, data inventories and raw logs remain local.
+- Fixes cover stalled CLI downloads with bounded retries, repeated progress heartbeats, optional worker limits, and rebinding the authenticated local mirror after migration so subsequent incremental backups succeed without the old machine path.
+- Windows CI at d21a3c2 passed 66 portable/cloud tests plus 112 optical workbench tests. Linux ran the same suites with one Windows-only compression test skipped: 65 plus 112 passed. Both passed source/privacy/tracked-hash validation. Cloud protocol fixtures in CI are synthetic; the private full-cloud acceptance above is a separate real-account test.
+- No unlock secret, recovery record, cloud credentials or private source data was published; no public cloud share was created. The public release contains generic source, documentation and synthetic tests only.
+
+Retained v1.3.1 acceptance:
 
 Recovery follow-up (2026-11-15):
 
 - Windows CI passed 63 portable/cloud tests and 112 optical workbench tests. Linux CI passed the same suites with the Windows-only compression case skipped (62 + 112 passed). Both platforms passed source/privacy/tracked-hash checks at commit b07847f.
-- Follow-up covers unfinished SHA256 readback resume, worker bounds, bounded API-timeout retry, Windows NTFS compressed restore, cross-volume cache handling, and exclusion of local readback receipts from ciphertext upload. Full private cloud recovery is still pending; small-fixture passes do not substitute for it.
+- Follow-up covers unfinished SHA256 readback resume, worker bounds, bounded API-timeout retry, Windows NTFS compressed restore, cross-volume cache handling, and exclusion of local readback receipts from ciphertext upload. At that release, full private cloud recovery was pending; it is covered by the separate v1.3.2 acceptance above. Small-fixture passes alone do not substitute for it.
 
 Cloud extension, retained v1.3.0 evidence (2026-11-15):
 

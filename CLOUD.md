@@ -63,7 +63,7 @@ python scripts/optics_cloud.py --rclone-config <本机配置> publish --recovery
 
 第一次在新电脑安装 Git、Python 3.11+、Codex CLI（夸克另需 Node.js 16+），登录同一个云存储，并把 **`recovery.json` 与 `password.key` 两个文件**从离线介质放到本机私有目录。不能把密钥上传网盘来完成这一步。恢复入口从记录自动识别夸克或 rclone；rclone 连接使用与恢复记录相同的 remote 名称。
 
-从此仓库检出 `v1.3.1`，然后运行：
+从此仓库检出 `v1.3.2`，然后运行：
 
 ```powershell
 ./Restore-Cloud.ps1 -Recovery 'D:\OfflineRecovery\recovery.json' -RestoreTo 'D:\OpticsKnowledge' -AllowIncompleteBackup
@@ -71,13 +71,13 @@ python scripts/optics_cloud.py --rclone-config <本机配置> publish --recovery
 
 可用 `-QuarkWorkers 8` 调整下载并发。`-CacheDir` 可把解密归档放到另一块盘；`-CiphertextCache` 可复用工具先前建立的回读目录，所有已有密文仍会重新核对 SHA256。复用缓存的恢复测试与再次从云端下载验证是两件事，报告应分别记录。
 
-Windows NTFS 空间紧张时，可添加 `-NtfsCompressed`，只对新建的恢复目录启用透明压缩，按原字节恢复并验证全部文件。它不修改系统压缩设置，也不保证任意资料都能压缩到可用空间内；恢复过程持续检查余量，低于 2 GiB 时停止、保留部分暂存目录，不覆盖现有资料。正常模式仍预检完整逻辑大小；跨盘缓存分别检查空间。目录压缩语义见 [Microsoft compact 文档](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/compact)。
+Windows NTFS 空间紧张时，可添加 `-NtfsCompressed`，只对新建的恢复目录启用透明压缩，按原字节恢复并验证全部文件。它不修改系统压缩设置，也不保证任意资料都能压缩到可用空间内；恢复过程持续检查余量，低于 2 GiB 时停止、保留部分暂存目录，不覆盖现有资料。可分配空间还可能受系统预留和其他程序影响，不应仅凭少量文件的压缩率估算全量空间。正常模式仍预检完整逻辑大小；跨盘缓存分别检查空间。目录压缩语义见 [Microsoft compact 文档](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/compact)。
 
 这一条命令安装固定版本工具、验证库身份、下载解密、验证归档 SHA256、恢复数据库/原文/路径映射，并安装插件与 MCP。下载在快照专属暂存目录中进行，中断后重跑可修复和复用暂存文件；认证和校验成功前不会交给安装器。已有非本次恢复的资料目录不会被覆盖。
 
 `-AllowIncompleteBackup` 仅用于你已经接受历史缺失清单的备份；完整备份不需此参数。缺失状态会继续显示，云端加密不会把原本缺失的文件变回来。`-CacheDir` 可复用已验证的归档；正常安装后重开 Codex 对话。不安装插件、仅验收恢复时可显式使用 `-SkipInstall`。
 
-为密文缓存、下载归档和独立恢复副本预留足够磁盘空间；夸克恢复需要三者之和。程序会预检空间，并保留可复用的缓存以便中断后续接。恢复校验通过后可删除本次专用缓存，保留离线恢复记录和密码。备份程序只加密已有一致性快照，不直接复制正在写入的原始数据库；明文旧备份可作为本地回退。
+为密文缓存、下载归档和独立恢复副本预留足够磁盘空间；夸克恢复需要三者之和。程序会预检空间，并保留可复用的缓存以便中断后续接。密文下载可以复用已校验对象；部分解包目录不会自动覆盖，空间不足后请换用有足够空间的新恢复目录。失败暂存文件仅在逐项确认可从已验证归档重新生成后，才按明确清单清理；不要直接删除不明目录。恢复通过后可清理重复的下载归档；保留离线恢复记录、密码及记录指向的有效密文镜像，以便后续增量备份。备份程序只加密已有一致性快照，不直接复制正在写入的原始数据库；明文旧备份可作为本地回退。
 
 ## 验证与版本
 
