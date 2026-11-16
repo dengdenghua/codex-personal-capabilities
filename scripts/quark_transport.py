@@ -29,6 +29,12 @@ class TransferError(RuntimeError):
         super().__init__(message)
 
 
+class TransferIdleTimeout(TransferError):
+    """The owned CLI was terminated after a bounded interval without progress."""
+    def __init__(self):
+        super().__init__(-100,'Request timeout after CLI idle deadline')
+
+
 def download_mode(help_text):
     if re.search(r'^\s+download\s+\[',help_text,re.M):return 'download'
     if re.search(r'^\s+read-file\s+\[',help_text,re.M):return 'read-file'
@@ -159,7 +165,9 @@ class Client:
                 timer.cancel()
                 child.stdout.close()
                 if child.poll() is None:child.terminate();child.wait(timeout=10)
-        if final is None:raise RuntimeError('Quark CLI '+('timed out without progress' if timeout[0] else 'ended without a completed result')+'; retained checkpoints can be retried')
+        if final is None:
+            if timeout[0]:raise TransferIdleTimeout()
+            raise RuntimeError('Quark CLI ended without a completed result; retained checkpoints can be retried')
         notice=final.get('notice',{}).get('text')
         if notice:print(notice,flush=True)
         if final.get('code')!=0 or final.get('data',{}).get('failCount',0):

@@ -47,6 +47,16 @@ class SyntheticClient:
 
 
 class QuarkBoundaryTests(unittest.TestCase):
+    def test_cli_idle_timeout_uses_bounded_read_retry(self):
+        client=object.__new__(quark.Client)
+        client._read_once=Mock(side_effect=[quark.TransferIdleTimeout(),'verified'])
+        with patch.object(quark.time,'sleep'):
+            self.assertEqual(client.read({'fid':'synthetic'},Path('synthetic'),None),'verified')
+        self.assertEqual(client._read_once.call_count,2)
+        client._read_once=Mock(side_effect=quark.TransferIdleTimeout())
+        with patch.object(quark.time,'sleep'),self.assertRaises(quark.TransferIdleTimeout):
+            client.read({'fid':'synthetic'},Path('synthetic'),None)
+        self.assertEqual(client._read_once.call_count,3)
     def test_read_worker_bounds_are_checked_before_setup(self):
         for count in [0,33,-1,True]:
             with self.assertRaises(ValueError):quark.Client(workers=count)
