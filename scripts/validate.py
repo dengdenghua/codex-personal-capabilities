@@ -12,6 +12,7 @@ SECRET=re.compile(r'(?<![\w-])(?:gh[pousr]_[A-Za-z0-9]{25,}|github_pat_[A-Za-z0-
 FORBIDDEN={'.env','auth.json','credentials.json','personal-runtime.json','config.toml','private-plan.json','path-map.json','restore-report.json','lens-toolkit.local.json','optical-workflow-memory.local.json','recovery.json','rclone.conf','cloud-profile.json'}
 FORBIDDEN.update({'next-recovery.json','previous-recovery.json','.quark-cache.json','last-provider-result.json'})
 FORBIDDEN.add('.quark-readback-progress.json')
+FORBIDDEN.update({'automatic-backup.json','automatic-state.json','automatic-source-cache.json','automatic-next-recovery.json'})
 SUFFIX={'.sqlite','.sqlite3','.db','.jsonl','.log','.pem','.key','.pfx','.pyc','.zmx','.zos','.sldprt','.sldasm','.blend','.drwdot','.slddrt'}
 
 def files(root):
@@ -35,7 +36,7 @@ def problems(root=ROOT):
         if f.suffix.lower()=='.json':
             try:obj=json.loads(s)
             except ValueError:obj=None
-            if isinstance(obj,dict) and obj.get('format') in {'optics-private-plan-v1','optics-private-backup-v1','optics-cloud-recovery-v1'}:errors.append(str(rel)+': private optical manifest')
+            if isinstance(obj,dict) and obj.get('format') in {'optics-private-plan-v1','optics-private-backup-v1','optics-cloud-recovery-v1','optics-automatic-backup-v1'}:errors.append(str(rel)+': private optical manifest')
         if re.search(r'[C-Z]:[\\/]+Users[\\/]+Administrator|E:[\\/]+(?:AGENT|工作区)|D:[\\/]+AI[\\/]',s):errors.append(str(rel)+': original machine/project path')
     return errors
 

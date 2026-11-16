@@ -63,7 +63,7 @@ python scripts/optics_cloud.py --rclone-config <本机配置> publish --recovery
 
 第一次在新电脑安装 Git、Python 3.11+、Codex CLI（夸克另需 Node.js 16+），登录同一个云存储，并把 **`recovery.json` 与 `password.key` 两个文件**从离线介质放到本机私有目录。不能把密钥上传网盘来完成这一步。恢复入口从记录自动识别夸克或 rclone；rclone 连接使用与恢复记录相同的 remote 名称。
 
-从此仓库检出 `v1.3.2`，然后运行：
+从此仓库检出 `v1.4.0`，然后运行：
 
 ```powershell
 ./Restore-Cloud.ps1 -Recovery 'D:\OfflineRecovery\recovery.json' -RestoreTo 'D:\OpticsKnowledge' -AllowIncompleteBackup

@@ -1,6 +1,6 @@
 # Codex Personal Capabilities
 
-个人 Codex 技能与插件的公开 Git 仓库。版本：`v1.3.2`（2026-11-16）。
+个人 Codex 技能与插件的公开 Git 仓库。版本：`v1.4.0`（2026-11-16）。
 
 包含 9 个个人工具/光学插件，以及 `personal-skills`、`dingtalk-skills` 两个技能集合。保留技能来源声明与上游许可证，不代表这些第三方技能均由仓库所有者编写。OpenAI 内置、官方商店下载包不复制；新电脑从官方插件目录重新安装。
 
@@ -11,7 +11,7 @@
 ```powershell
 git clone https://github.com/dengdenghua/codex-personal-capabilities.git
 cd codex-personal-capabilities
-git checkout v1.3.2
+git checkout v1.4.0
 ./Install.ps1
 ```
 
@@ -27,7 +27,7 @@ python scripts/install.py --plugins personal-skills projection-optics lens-toolk
 
 ```powershell
 git fetch origin --tags
-git checkout v1.3.2
+git checkout v1.4.0
 python scripts/install.py
 ```
 
@@ -58,3 +58,5 @@ python scripts/validate.py
 光学工作台、私人知识库备份和新电脑一键恢复见 [OPTICS.md](OPTICS.md)。私人备份始终位于公开仓库之外。
 
 云端加密备份与一键下载恢复见 [CLOUD.md](CLOUD.md)：云端只接收密文，本地保管恢复秘密；首次换机需要离线导入恢复材料并登录自己的云存储。
+
+自动增量备份、失败续跑及历史回退见 [AUTOMATIC.md](AUTOMATIC.md)。

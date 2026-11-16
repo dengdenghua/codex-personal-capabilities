@@ -176,7 +176,10 @@ class Client:
             if timeout[0]:raise TransferIdleTimeout()
             raise RuntimeError('Quark CLI ended without a completed result; retained checkpoints can be retried')
         notice=final.get('notice',{}).get('text')
-        if notice:print(notice,flush=True)
+        if notice:
+            if not hasattr(self,'notices'):self.notices=[]
+            self.notices.append(notice)
+            print(notice,flush=True)
         if final.get('code')!=0 or final.get('data',{}).get('failCount',0):
             # Service messages may include signed URLs. Keep the complete provider
             # result locally, and expose only a safe failure category to automation.
