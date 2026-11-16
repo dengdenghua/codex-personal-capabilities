@@ -33,7 +33,7 @@ python scripts/optics_cloud.py publish-quark --recovery <密钥目录>/recovery.
 python scripts/optics_cloud.py verify-quark --recovery <密钥目录>/recovery.json --cache-dir <独立的密文回读目录>
 ```
 
-全量回读中断时，在同一目录添加 `--resume-readback`，逐文件重新核对本地 SHA256 后只下载缺失对象。仅限尚未完成验证的快照；已验证的快照仍需重新读取云端。可在子命令前指定 `--quark-workers 8` 调整并发（1–32，默认 3），按网络与可用内存选择，避免大量 CLI 进程占满内存。回读目录中的 `.quark-readback-progress.json` 记录当前已核对数量和字节数，不代表最终解密验证通过。
+全量回读中断时，在同一目录添加 `--resume-readback`，逐文件重新核对本地 SHA256 后只下载缺失对象。仅限尚未完成验证的快照；已验证的快照仍需重新读取云端。可在子命令前指定 `--quark-workers 8` 调整并发（1–64，默认 3；高并发须先核对 RAM 与可分配内存余量），按网络与可用内存选择，避免大量 CLI 进程占满内存。回读目录中的 `.quark-readback-progress.json` 记录当前已核对数量和字节数，不代表最终解密验证通过。
 
 后续备份仍使用 `-Provider Quark`。工具保留当前已验证恢复记录，新的快照上传并验证完成后才切换，最近一次记录另存为同一密钥目录中的 `previous-recovery.json`。不删除旧云端对象。若原本的本地密文镜像已不存在，会停止追加备份，提示先恢复镜像。
 

@@ -58,7 +58,7 @@ class QuarkBoundaryTests(unittest.TestCase):
             client.read({'fid':'synthetic'},Path('synthetic'),None)
         self.assertEqual(client._read_once.call_count,3)
     def test_read_worker_bounds_are_checked_before_setup(self):
-        for count in [0,33,-1,True]:
+        for count in [0,65,-1,True]:
             with self.assertRaises(ValueError):quark.Client(workers=count)
     def test_network_read_retry_delivers_once(self):
         client=object.__new__(quark.Client)

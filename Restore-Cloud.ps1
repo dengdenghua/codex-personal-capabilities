@@ -6,7 +6,7 @@ param(
     [string]$CiphertextCache,
     [switch]$NtfsCompressed,
     [string]$QuarkSkill,
-    [ValidateRange(1,32)][int]$QuarkWorkers=3,
+    [ValidateRange(1,64)][int]$QuarkWorkers=3,
     [string]$SessionInput,
     [string]$SessionId,
     [switch]$AllowIncompleteBackup,

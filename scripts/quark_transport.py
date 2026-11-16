@@ -96,7 +96,7 @@ def validate_objects(objects,complete=True):
 
 class Client:
     def __init__(self,skill_dir=None,session_input=None,session_id=None,workers=3):
-        if type(workers) is not int or not 1<=workers<=32:raise ValueError('Quark read workers must be between 1 and 32')
+        if type(workers) is not int or not 1<=workers<=64:raise ValueError('Quark read workers must be between 1 and 64')
         self.workers=workers
         self.skill=Path(skill_dir or Path(os.environ.get('CODEX_HOME',Path.home()/'.codex'))/'skills/quarkclouddrive').expanduser().resolve()
         self.node=shutil.which('node')
@@ -315,7 +315,7 @@ def materialize(ticket_path,destination,client,fresh=False):
     save_progress('reading')
     if pending:client.prepare()
     workers=getattr(client,'workers',3)
-    if type(workers) is not int or not 1<=workers<=32:raise ValueError('Invalid Quark read concurrency')
+    if type(workers) is not int or not 1<=workers<=64:raise ValueError('Invalid Quark read concurrency')
     batch_size=max(24,workers*2)
     for start in range(0,len(pending),batch_size):
         batch=pending[start:start+batch_size];wanted={o['fid']:o for o in batch};received=set()
