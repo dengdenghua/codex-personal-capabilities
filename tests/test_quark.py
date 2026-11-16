@@ -154,6 +154,10 @@ class QuarkProtocolTests(unittest.TestCase):
         shutil.rmtree(self.root/'ciphertext')
         cloud.recover(self.ticket,self.root/'restored',install=False,tools=self.tools,quark_client=client)
         self.assertEqual(private.database_counts(self.root/'restored/workflow-memory/memory.sqlite3'),{'entries':1})
+        self.assertEqual(private.read(self.ticket)['quark']['local_repository'],str(self.root/'restored-download/ciphertext'))
+        uploads=client.uploads
+        quark.backup(self.ticket,self.archive,self.root/'after-migration-readback',client,self.tools)
+        self.assertEqual(client.uploads,uploads)
 
     def test_interruption_reuses_only_recorded_successful_objects(self):
         client=SyntheticClient(self.root/'synthetic-cloud');client.fail=True

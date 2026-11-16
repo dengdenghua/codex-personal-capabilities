@@ -353,6 +353,15 @@ def recover(ticket_path,destination,cache_dir=None,rclone_config=None,allow_inco
         subprocess.run(command,check=True)
     elif reuse:private.verify_restored(archive,destination,allow_incomplete)
     else:private.restore(archive,destination,allow_incomplete)
+    if record['storage']=='quark':
+        # The old machine's mirror path is not usable after migration. Promote
+        # this authenticated local cache only after recovery/install succeeds,
+        # so subsequent incremental backups work without editing recovery.json.
+        path,current,_=load_ticket(ticket_path)
+        if current['storage']!='quark' or current['snapshot']!=record['snapshot'] or current['repository_id']!=record['repository_id']:
+            raise RuntimeError('Recovery record changed during restoration; retained restored files, locator unchanged')
+        current['quark']['local_repository']=repository
+        save_ticket(path,current)
     return {'status':'restored','complete':vault.ticket['complete'],'missing_originals':vault.ticket['missing_originals'],'installed':install}
 
 
